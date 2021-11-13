@@ -11,14 +11,24 @@
   },
 
   // Set *default* container specific settings.json values on container create.
-  "settings": {},
+  "settings": {
+    "css.validate": false,
+    "editor.quickSuggestions": {
+      "strings": true
+    },
+    "tailwindCSS.classAttributes": ["class"],
+    "tailwindCSS.includeLanguages": {
+      "svelte": "html"
+    }
+  },
 
   // Add the IDs of extensions you want installed when the container is created.
   "extensions": [
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
     "svelte.svelte-vscode",
-    "eamodio.gitlens"
+    "eamodio.gitlens",
+    "bradlc.vscode-tailwindcss"
   ],
 
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
