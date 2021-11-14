@@ -1,6 +1,0 @@
-<nav class="bg-gray-800">
-  <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 flex">
-    <img src="/static/favicon/favicon-32x32.png" alt="Logo" />
-    <span>Soundly</span>
-  </div>
-</nav>
