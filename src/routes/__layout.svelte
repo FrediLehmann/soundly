@@ -1,4 +1,5 @@
-<script>
+<script type="ts">
+  import '$lib/api/auth/aws';
   import '../app.css';
 
   import { Header } from '$lib/components/organisms';
