@@ -1,4 +1,4 @@
 export enum ButtonTypes {
-    Primary,
-    Secondary
+  Primary,
+  Secondary
 }
