@@ -7,6 +7,10 @@
     %svelte.head%
   </head>
   <body>
+    <script>
+      window.global = window;
+      var exports = {};
+    </script>
     <div id="svelte">%svelte.body%</div>
   </body>
 </html>
