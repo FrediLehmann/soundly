@@ -7,5 +7,5 @@
   <button class="px-2 bg-gray-400">
     <Account />
   </button>
-  <Button class="hidden sm:block" type="submit">Login</Button>
+  <Button href="/login" class="hidden sm:flex">Login</Button>
 </div>
