@@ -9,9 +9,10 @@
   <a
     {href}
     {...$$restProps}
-    class={`flex items-center px-4 h-full ${$$props.class || ''}`}
+    class={` ${$$props.class || ''} flex items-center px-5 py-2 h-full`}
     class:bg-gray-300={btnType === ButtonTypes.Secondary}
-    class:bg-blue-500={btnType === ButtonTypes.Primary}
+    class:bg-blue-600={btnType === ButtonTypes.Primary}
+    class:text-white={btnType === ButtonTypes.Primary}
   >
     <slot />
   </a>
@@ -19,9 +20,10 @@
   <button
     type="button"
     {...$$restProps}
-    class={`my-auto px-4 h-full ${$$props.class || ''}`}
+    class={`${$$props.class || ''} my-auto px-5 py-2 h-full`}
     class:bg-gray-300={btnType === ButtonTypes.Secondary}
-    class:bg-blue-500={btnType === ButtonTypes.Primary}
+    class:bg-blue-600={btnType === ButtonTypes.Primary}
+    class:text-white={btnType === ButtonTypes.Primary}
   >
     <slot />
   </button>
