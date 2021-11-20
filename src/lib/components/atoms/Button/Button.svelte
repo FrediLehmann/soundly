@@ -2,14 +2,14 @@
   import { ButtonTypes } from './ButtonTypes.enum';
 
   export let btnType: ButtonTypes = ButtonTypes.Secondary;
-  export let href: string;
+  export let href: string = '';
 </script>
 
 {#if href}
   <a
     {href}
     {...$$restProps}
-    class={`flex items-center px-4 h-full ${$$props.class}`}
+    class={`flex items-center px-4 h-full ${$$props.class || ''}`}
     class:bg-gray-300={btnType === ButtonTypes.Secondary}
     class:bg-blue-500={btnType === ButtonTypes.Primary}
   >
@@ -19,7 +19,7 @@
   <button
     type="button"
     {...$$restProps}
-    class={`my-auto px-4 h-full ${$$props.class}`}
+    class={`my-auto px-4 h-full ${$$props.class || ''}`}
     class:bg-gray-300={btnType === ButtonTypes.Secondary}
     class:bg-blue-500={btnType === ButtonTypes.Primary}
   >
