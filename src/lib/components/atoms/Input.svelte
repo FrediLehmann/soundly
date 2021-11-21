@@ -19,7 +19,8 @@
     bind:value
     class={`${
       $$props.class || ''
-    } bg-gray-100 px-3 py-1 outline-none col-span-2`}
+    } bg-gray-100 px-3 py-1 focus:outline-none focus:ring focus:border-blue-300 col-span-2`}
+    class:col-span-3={labelSrOnly}
   />
   {#if error}
     <span
