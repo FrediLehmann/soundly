@@ -1,17 +1,31 @@
 <script lang="ts">
   export let name: string;
   export let label: string;
+  export let value: any;
+  export let error: string = '';
 
   // Show label only to screen-readers
   // https://tailwindcss.com/docs/screen-readers
   export let labelSrOnly: boolean = false;
 </script>
 
-<div class="flex flex-row w-full">
-  <label for={name} class:sr-only={labelSrOnly}>{label}</label>
+<div class="grid grid-cols-3 w-full">
+  <label for={name} class="self-center" class:sr-only={labelSrOnly}>
+    {label}
+  </label>
   <input
     id={name}
     {...$$restProps}
-    class={`${$$props.class || ''} bg-gray-100 px-3 py-1 outline-none ml-auto`}
+    bind:value
+    class={`${
+      $$props.class || ''
+    } bg-gray-100 px-3 py-1 outline-none col-span-2`}
   />
+  {#if error}
+    <span
+      class="text-red-500 mt-1 text-xs font-semibold col-start-2 col-span-2"
+    >
+      {error}
+    </span>
+  {/if}
 </div>
