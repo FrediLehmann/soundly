@@ -9,6 +9,7 @@
   <a
     {href}
     {...$$restProps}
+    on:click
     class={` ${$$props.class || ''} flex items-center px-5 py-2 h-full`}
     class:bg-gray-300={btnType === ButtonTypes.Secondary}
     class:bg-blue-600={btnType === ButtonTypes.Primary}
@@ -20,6 +21,7 @@
   <button
     type="button"
     {...$$restProps}
+    on:click
     class={`${$$props.class || ''} my-auto px-5 py-2 h-full`}
     class:bg-gray-300={btnType === ButtonTypes.Secondary}
     class:bg-blue-600={btnType === ButtonTypes.Primary}
