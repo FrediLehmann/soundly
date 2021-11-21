@@ -13,7 +13,6 @@
   const signin = e => console.log('Login', e);
 
   const signup = async () => {
-    console.log('signup');
     if (!email) emailError = 'Email is required.';
     if (!pwd) pwdRequired = 'Password is required.';
     if (!email || !pwd) return;
