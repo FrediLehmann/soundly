@@ -1,8 +1,10 @@
 <script type="ts">
   import '$lib/api/auth/aws';
   import '../../app.css';
+
+  import { PageFrame, PageFrameTypes } from '$lib/components/atoms';
 </script>
 
-<main class="max-w-lg mx-auto pt-32 px-4 sm:px-8 lg:px-10">
+<PageFrame type={PageFrameTypes.small}>
   <slot />
-</main>
+</PageFrame>
