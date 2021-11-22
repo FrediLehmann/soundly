@@ -3,6 +3,7 @@
   export let label: string;
   export let value: any;
   export let error: string = '';
+  export let required: boolean = false;
 
   // Show label only to screen-readers
   // https://tailwindcss.com/docs/screen-readers
@@ -12,6 +13,9 @@
 <div class="grid grid-cols-3 w-full">
   <label for={name} class="self-center" class:sr-only={labelSrOnly}>
     {label}
+    {#if required}
+      <span class="ordinal">*</span>
+    {/if}
   </label>
   <input
     id={name}

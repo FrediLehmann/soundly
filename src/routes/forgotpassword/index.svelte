@@ -58,12 +58,14 @@
   name="email"
   label="Email"
   class="mb-3"
+  required
   disabled={inputCode}
   error={emailError}
   bind:value={email}
 />
 {#if inputCode}
   <Input
+    required
     type="text"
     name="code"
     label="Reset code"
@@ -71,6 +73,7 @@
     bind:value={code}
   />
   <Input
+    required
     type="password"
     name="passowrd"
     label="Password"
@@ -78,7 +81,7 @@
     error={pwdRequired}
     bind:value={pwd}
   />
-  <ul class="pl-4 mt-4 list-disc text-red-500 text-xs font-semibold">
+  <ul class="list-inside mt-4 list-disc text-red-500 text-xs font-semibold">
     {#each pwdErros as e}
       <li>{e}</li>
     {/each}

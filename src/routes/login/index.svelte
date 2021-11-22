@@ -71,6 +71,7 @@
 <h1 class="text-3xl mb-6">Login</h1>
 <div class="flex flex-col gap-3">
   <Input
+    required
     type="email"
     name="email"
     label="Email"
@@ -78,6 +79,7 @@
     bind:value={email}
   />
   <Input
+    required
     type="password"
     name="passowrd"
     label="Password"
@@ -85,7 +87,7 @@
     bind:value={pwd}
   />
 </div>
-<ul class="pl-4 mt-4 list-disc text-red-500 text-xs font-semibold">
+<ul class="list-inside mt-4 list-disc text-red-500 text-xs font-semibold">
   {#each pwdErros as e}
     <li>{e}</li>
   {/each}
