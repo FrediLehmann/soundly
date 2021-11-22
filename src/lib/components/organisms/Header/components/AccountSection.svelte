@@ -1,5 +1,5 @@
 <script type="ts">
-  import { Button } from '$lib/components/atoms';
+  import { Link, LinkStyles } from '$lib/components/atoms';
   import { Account } from '$lib/components/Icons';
 </script>
 
@@ -7,5 +7,12 @@
   <button class="px-2 bg-gray-400">
     <Account />
   </button>
-  <Button href="/login" class="hidden sm:flex px-4 py-0">Login</Button>
+  <Link
+    href="/login"
+    class="hidden sm:flex px-4 py-0"
+    prefetch
+    style={LinkStyles.buttonSecondary}
+  >
+    Login
+  </Link>
 </div>

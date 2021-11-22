@@ -1,7 +1,7 @@
 <script type="ts">
   import { ArrowLeft } from '$lib/components/Icons';
   import { Signup, Signin } from '$lib/api/auth';
-  import { Button, ButtonTypes, Input } from '$lib/components/atoms';
+  import { Button, ButtonTypes, Link, Input } from '$lib/components/atoms';
   import { validatePassword, validateEmail } from '$lib/helpers';
 
   let email: string;
@@ -64,10 +64,10 @@
   };
 </script>
 
-<a href="/" class="flex text-blue-700 mb-2 items-center font-semibold">
+<Link href="/" prefetch class="flex mb-2 items-center font-semibold">
   <ArrowLeft class="w-5 h-5" />
   <span>Home</span>
-</a>
+</Link>
 <h1 class="text-3xl mb-6">Login</h1>
 <div class="flex flex-col gap-3">
   <Input
@@ -97,9 +97,9 @@
   <Button btnType={ButtonTypes.Secondary} on:click={signup}>Sign up</Button>
   <Button btnType={ButtonTypes.Primary} on:click={signin}>Sign in</Button>
 </div>
-<a href="/forgotpassword" class="text-blue-700 text-sm mt-2 block">
+<Link href="/forgotpassword" prefetch class="text-sm mt-2">
   Forgot password
-</a>
+</Link>
 
 {#if successfullSignedUp}
   <div
