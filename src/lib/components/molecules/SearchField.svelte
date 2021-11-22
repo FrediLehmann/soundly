@@ -7,6 +7,7 @@
   <Input
     name="Search"
     label="Search"
+    value=""
     labelSrOnly={true}
     placeholder="Search"
     class="w-full py-0"
