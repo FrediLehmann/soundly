@@ -2,10 +2,10 @@
   import { ArrowLeft } from '$lib/components/Icons';
   import { Signup, Signin } from '$lib/api/auth';
   import { Button, ButtonTypes, Link, Input } from '$lib/components/atoms';
-  import { validatePassword, validateEmail } from '$lib/helpers';
+  import { EmailInput } from '$lib/components/molecules';
+  import { validatePassword } from '$lib/helpers';
 
-  let email: string;
-  let emailError: string;
+  let email;
   let pwd: string;
   let pwdRequired: string;
   let pwdErros: string[] = [];
@@ -14,17 +14,11 @@
   let successfullSignedUp: boolean = false;
 
   const signin = async () => {
-    if (!email) emailError = 'Email is required.';
+    if (!email.validate()) return;
     if (!pwd) pwdRequired = 'Password is required.';
-    if (!email || !pwd) return;
+    if (!pwd) return;
 
-    emailError = '';
     pwdRequired = '';
-
-    if (!validateEmail(email)) {
-      emailError = 'Invalid Email address.';
-      return;
-    }
 
     try {
       const user = await Signin(email, pwd);
@@ -35,11 +29,10 @@
   };
 
   const signup = async () => {
-    if (!email) emailError = 'Email is required.';
+    if (!email.validate()) return;
     if (!pwd) pwdRequired = 'Password is required.';
-    if (!email || !pwd) return;
+    if (!pwd) return;
 
-    emailError = '';
     pwdRequired = '';
 
     const validatedPwd = validatePassword(pwd);
@@ -48,11 +41,6 @@
       return;
     } else {
       pwdErros = [];
-    }
-
-    if (!validateEmail(email)) {
-      emailError = 'Invalid Email address.';
-      return;
     }
 
     try {
@@ -70,14 +58,7 @@
 </Link>
 <h1 class="text-3xl mb-6">Login</h1>
 <div class="flex flex-col gap-3">
-  <Input
-    required
-    type="email"
-    name="email"
-    label="Email"
-    error={emailError}
-    bind:value={email}
-  />
+  <EmailInput bind:this={email} />
   <Input
     required
     type="password"

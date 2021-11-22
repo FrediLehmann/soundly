@@ -1,3 +1,4 @@
 import SearchField from './SearchField.svelte'
+import EmailInput from './EmailInput.svelte'
 
-export { SearchField }
+export { SearchField, EmailInput }

@@ -1,24 +1,20 @@
 <script type="ts">
   import { Button, ButtonTypes, Input } from '$lib/components/atoms';
-  import { validateEmail, validatePassword } from '$lib/helpers';
+  import { validatePassword } from '$lib/helpers';
   import { ForgotPassword, ConfirmReset } from '$lib/api/auth';
+  import { EmailInput } from '$lib/components/molecules';
   import { goto } from '$app/navigation';
+
+  let email;
 
   let code: string;
   let inputCode: boolean = false;
   let pwd: string;
   let pwdRequired: string;
   let pwdErros: string[] = [];
-  let email: string;
-  let emailError: string = '';
 
   const resetPassword = async () => {
-    if (!validateEmail(email)) {
-      emailError = 'Invalid Email address.';
-      return;
-    }
-
-    emailError = '';
+    if (!email.validate()) return;
 
     try {
       await ForgotPassword(email);
@@ -53,16 +49,7 @@
   };
 </script>
 
-<Input
-  type="email"
-  name="email"
-  label="Email"
-  class="mb-3"
-  required
-  disabled={inputCode}
-  error={emailError}
-  bind:value={email}
-/>
+<EmailInput bind:this={email} />
 {#if inputCode}
   <Input
     required
