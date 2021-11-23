@@ -1,27 +1,20 @@
 <script type="ts">
   import { ArrowLeft } from '$lib/components/Icons';
   import { Signup, Signin } from '$lib/api/auth';
-  import { Button, ButtonTypes, Link, Input } from '$lib/components/atoms';
-  import { EmailInput } from '$lib/components/molecules';
-  import { validatePassword } from '$lib/helpers';
+  import { Button, ButtonTypes, Link } from '$lib/components/atoms';
+  import { EmailInput, PasswordInput } from '$lib/components/molecules';
 
   let email;
-  let pwd: string;
-  let pwdRequired: string;
-  let pwdErros: string[] = [];
+  let pwd;
   let signupError: string;
 
   let successfullSignedUp: boolean = false;
 
   const signin = async () => {
-    if (!email.validate()) return;
-    if (!pwd) pwdRequired = 'Password is required.';
-    if (!pwd) return;
-
-    pwdRequired = '';
+    if (!email.validate() || !pwd.validate()) return;
 
     try {
-      const user = await Signin(email, pwd);
+      const user = await Signin(email.get(), pwd.get());
       console.log(user);
     } catch (e) {
       signupError = e.message;
@@ -29,22 +22,10 @@
   };
 
   const signup = async () => {
-    if (!email.validate()) return;
-    if (!pwd) pwdRequired = 'Password is required.';
-    if (!pwd) return;
-
-    pwdRequired = '';
-
-    const validatedPwd = validatePassword(pwd);
-    if (!validatedPwd.isValid) {
-      pwdErros = validatedPwd.errors;
-      return;
-    } else {
-      pwdErros = [];
-    }
+    if (!email.validate() || !pwd.validate()) return;
 
     try {
-      await Signup(email, pwd);
+      await Signup(email.get(), pwd.get());
       successfullSignedUp = true;
     } catch (e) {
       signupError = e.message;
@@ -59,20 +40,8 @@
 <h1 class="text-3xl mb-6">Login</h1>
 <div class="flex flex-col gap-3">
   <EmailInput bind:this={email} />
-  <Input
-    required
-    type="password"
-    name="passowrd"
-    label="Password"
-    error={pwdRequired}
-    bind:value={pwd}
-  />
+  <PasswordInput bind:this={pwd} />
 </div>
-<ul class="list-inside mt-4 list-disc text-red-500 text-xs font-semibold">
-  {#each pwdErros as e}
-    <li>{e}</li>
-  {/each}
-</ul>
 {#if signupError}
   <span class="text-red-500 text-xs font-semibold">{signupError}</span>
 {/if}

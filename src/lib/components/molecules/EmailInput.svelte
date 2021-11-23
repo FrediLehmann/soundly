@@ -19,6 +19,8 @@
     emailError = '';
     return true;
   };
+
+  export const get = (): string => email;
 </script>
 
 <Input
