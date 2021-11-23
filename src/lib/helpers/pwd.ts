@@ -2,7 +2,6 @@ interface PasswordValidationResult {
     isValid: boolean,
     errors: PasswordValidationErrorTypes[]
 }
-//Test01?!
 
 enum PasswordValidationErrorTypes {
     charCount = "Password has to contain at least 8 characters.",
