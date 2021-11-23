@@ -15,7 +15,7 @@
     if (!email.validate()) return;
 
     try {
-      // await ForgotPassword(email.get());
+      await ForgotPassword(email.get());
       inputCode = true;
     } catch (e) {
       console.log(e);
