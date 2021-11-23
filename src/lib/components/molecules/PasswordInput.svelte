@@ -4,7 +4,7 @@
 
   let pwd: string;
   let pwdRequired: string;
-  let pwdErros: string[] = [];
+  let pwdErrors: string[] = [];
 
   export let label: string = 'Password';
 
@@ -18,11 +18,11 @@
 
     const validationResult = validatePassword(pwd);
     if (!validationResult.isValid) {
-      pwdErros = validationResult.errors;
+      pwdErrors = validationResult.errors;
       return false;
     }
 
-    pwdErros = [];
+    pwdErrors = [];
     return true;
   };
 
@@ -37,8 +37,10 @@
   error={pwdRequired}
   bind:value={pwd}
 />
-<ul class="list-inside mt-4 list-disc text-red-500 text-xs font-semibold">
-  {#each pwdErros as e}
-    <li>{e}</li>
-  {/each}
-</ul>
+{#if pwdErrors.length > 0}
+  <ul class="list-inside mt-4 list-disc text-red-500 text-xs font-semibold">
+    {#each pwdErrors as e}
+      <li>{e}</li>
+    {/each}
+  </ul>
+{/if}

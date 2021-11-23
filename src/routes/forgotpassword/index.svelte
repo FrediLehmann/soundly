@@ -10,6 +10,7 @@
   let code: string;
   let inputCode: boolean = false;
   let codeRequired: string = '';
+  let resetError: string = '';
 
   const resetPassword = async () => {
     if (!email.validate()) return;
@@ -18,7 +19,7 @@
       await ForgotPassword(email.get());
       inputCode = true;
     } catch (e) {
-      console.log(e);
+      resetError = e.message;
     }
   };
 
@@ -36,27 +37,35 @@
       await ConfirmReset(email.get(), code, pwd.get());
       goto('/');
     } catch (e) {
-      console.log(e);
+      resetError = e.message;
     }
   };
 </script>
 
-<EmailInput bind:this={email} />
-{#if inputCode}
-  <Input
-    required
-    type="text"
-    name="code"
-    label="Reset code"
-    error={codeRequired}
-    bind:value={code}
-  />
-  <PasswordInput bind:this={pwd} label="New Password" />
-  <Button class="mt-3" btnType={ButtonTypes.Primary} on:click={confirmReset}>
-    Reset password
-  </Button>
-{:else}
-  <Button class="mt-3" btnType={ButtonTypes.Primary} on:click={resetPassword}>
-    Reset password
-  </Button>
-{/if}
+<div class="flex flex-col gap-3">
+  <EmailInput bind:this={email} />
+  {#if inputCode}
+    <Input
+      required
+      type="text"
+      name="code"
+      label="Reset code"
+      error={codeRequired}
+      bind:value={code}
+    />
+    <PasswordInput bind:this={pwd} label="New Password" />
+    {#if resetError}
+      <span class="text-red-500 text-xs font-semibold">{resetError}</span>
+    {/if}
+    <Button btnType={ButtonTypes.Primary} on:click={confirmReset}>
+      Confirm new password
+    </Button>
+  {:else}
+    {#if resetError}
+      <span class="text-red-500 text-xs font-semibold">{resetError}</span>
+    {/if}
+    <Button btnType={ButtonTypes.Primary} on:click={resetPassword}>
+      Reset password
+    </Button>
+  {/if}
+</div>
