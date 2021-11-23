@@ -42,6 +42,10 @@
   };
 </script>
 
+<svelte:head>
+  <title>Reset Password</title>
+</svelte:head>
+
 <div class="flex flex-col gap-3">
   <EmailInput bind:this={email} />
   {#if inputCode}

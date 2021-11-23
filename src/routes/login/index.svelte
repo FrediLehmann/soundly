@@ -1,7 +1,7 @@
 <script type="ts">
   import { ArrowLeft } from '$lib/components/Icons';
   import { Signup, Signin } from '$lib/api/auth';
-  import { Button, ButtonTypes, Link } from '$lib/components/atoms';
+  import { Button, ButtonTypes, Link, Flyin } from '$lib/components/atoms';
   import { EmailInput, PasswordInput } from '$lib/components/molecules';
 
   let email;
@@ -33,6 +33,10 @@
   };
 </script>
 
+<svelte:head>
+  <title>Login to Soundly</title>
+</svelte:head>
+
 <Link href="/" prefetch class="flex mb-2 items-center font-semibold">
   <ArrowLeft class="w-5 h-5" />
   <span>Home</span>
@@ -53,11 +57,4 @@
   Forgot password
 </Link>
 
-{#if successfullSignedUp}
-  <div
-    class="mt-3 mx-auto max-w-lg bg-green-400 text-white font-semibold w-full rounded px-4 py-3"
-  >
-    <span>Successfully signed up.</span>
-    <!-- <a class="underline" href="/">go back to the homepage</a> -->
-  </div>
-{/if}
+<Flyin />
