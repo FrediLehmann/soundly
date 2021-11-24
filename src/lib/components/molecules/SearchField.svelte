@@ -4,7 +4,14 @@
 </script>
 
 <div class="flex w-full">
-  <Input class="px-3 w-full" placeholder="Search" />
+  <Input
+    name="Search"
+    label="Search"
+    value=""
+    labelSrOnly={true}
+    placeholder="Search"
+    class="w-full py-0"
+  />
   <Button class="px-2">
     <Search />
   </Button>

@@ -10,7 +10,6 @@ const config = {
       postcss: true
     })
   ],
-
   kit: {
     // hydrate the <div id="svelte"> element in src/app.html
     target: '#svelte',
@@ -19,7 +18,21 @@ const config = {
       pages: 'build',
       assets: 'build',
       fallback: null
-    })
+    }),
+    vite: {
+      build: {
+        rollupOptions: {
+          output: {
+            intro: 'if(exports === undefined){var exports ={}; var self = {}}'
+          }
+        }
+      },
+      resolve: {
+        alias: {
+          './runtimeConfig': './runtimeConfig.browser'
+        }
+      }
+    }
   }
 };
 
