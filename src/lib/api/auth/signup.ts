@@ -1,16 +1,16 @@
-import { Auth } from 'aws-amplify';
-import type { CognitoUser } from 'amazon-cognito-identity-js'
 
-const signup = async (email: string, pwd: string): Promise<CognitoUser> => {
-    const { user } = await Auth.signUp({
-        username: email,
-        password: pwd,
-        attributes: {
-            email
-        }
-    });
+const signup = async (email: string, pwd: string): Promise<{ email: string }> => {
+    return await new Promise((resolve, reject) => resolve({ email }))
 
-    return user
+    // const { user } = await Auth.signUp({
+    //     username: email,
+    //     password: pwd,
+    //     attributes: {
+    //         email
+    //     }
+    // });
+
+    // return user
 }
 
 export default signup
