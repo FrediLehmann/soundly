@@ -10,7 +10,7 @@
   <Link
     href="/login"
     class="hidden sm:flex px-4 py-0"
-    prefetch
+    sveltekit:prefetch
     style={LinkStyles.buttonSecondary}
   >
     Login

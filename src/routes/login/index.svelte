@@ -37,7 +37,7 @@
   <title>Login to Soundly</title>
 </svelte:head>
 
-<Link href="/" prefetch class="flex mb-2 items-center font-semibold">
+<Link href="/" sveltekit:prefetch class="flex mb-2 items-center font-semibold">
   <ArrowLeft class="w-5 h-5" />
   <span>Home</span>
 </Link>
@@ -53,7 +53,7 @@
   <Button btnType={ButtonTypes.Secondary} on:click={signup}>Sign up</Button>
   <Button btnType={ButtonTypes.Primary} on:click={signin}>Sign in</Button>
 </div>
-<Link href="/forgotpassword" prefetch class="text-sm mt-2">
+<Link href="/forgotpassword" sveltekit:prefetch class="text-sm mt-2">
   Forgot password
 </Link>
 
