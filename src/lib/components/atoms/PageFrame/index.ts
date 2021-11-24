@@ -1,4 +1,4 @@
-import PageFrame from './PageFrame.svelte'
+import PageFrame from './PageFrame.svelte';
 import { PageFrameTypes } from './PageFrameTypes.enum';
 
-export { PageFrame, PageFrameTypes }
+export { PageFrame, PageFrameTypes };
