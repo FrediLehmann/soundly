@@ -1,5 +1,5 @@
 <script type="ts">
-  import '$lib/api/auth/aws';
+  import '../../../aws';
   import '../../app.css';
 
   import { PageFrame, PageFrameTypes } from '$lib/components/atoms';
