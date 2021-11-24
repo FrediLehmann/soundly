@@ -1,6 +1,4 @@
-import Input from './Input.svelte';
-export { Input };
-
+export { Input } from './Input'
 export { Button, ButtonTypes } from './Button';
 export { Link, LinkStyles } from './Link';
 export { PageFrame, PageFrameTypes } from './PageFrame';
