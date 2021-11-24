@@ -10,7 +10,7 @@
 {#if prefetch}
   <a
     {href}
-    class={`${$$props.class || ''} ${style}`}
+    class={`${$$props.class ? `${$$props.class} ` : ''}${style}`}
     rel={external && 'external'}
     sveltekit:prefetch
   >
@@ -19,7 +19,7 @@
 {:else}
   <a
     {href}
-    class={`${$$props.class || ''} ${style}`}
+    class={`${$$props.class ? `${$$props.class} ` : ''}${style}`}
     rel={external && 'external'}
   >
     <slot />

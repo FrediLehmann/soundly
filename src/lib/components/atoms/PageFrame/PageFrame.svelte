@@ -4,6 +4,6 @@
   export let type: PageFrameTypes = PageFrameTypes.default;
 </script>
 
-<main class={`${$$props.class || ''} ${type}`}>
+<main class={`${$$props.class ? `${$$props.class} ` : ''}${type}`}>
   <slot />
 </main>
