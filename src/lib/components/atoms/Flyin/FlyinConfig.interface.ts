@@ -1,3 +1,3 @@
 export interface FlyinConfig {
-    message: string
+  message: string;
 }

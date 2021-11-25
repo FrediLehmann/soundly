@@ -1,2 +1,2 @@
-export { validatePassword } from './pwd'
-export { validateEmail } from './email'
+export { validatePassword } from './pwd';
+export { validateEmail } from './email';
