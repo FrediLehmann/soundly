@@ -1,3 +1,7 @@
+<script type="ts" context="module">
+  export const prerender = true;
+</script>
+
 <script type="ts">
   import { ArrowLeft } from '$lib/components/Icons';
   import { Signup, Signin } from '$lib/api/auth';

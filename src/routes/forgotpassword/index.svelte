@@ -1,3 +1,7 @@
+<script type="ts" context="module">
+  export const prerender = true;
+</script>
+
 <script type="ts">
   import { Button, ButtonTypes, Input } from '$lib/components/atoms';
   import { ForgotPassword, ConfirmReset } from '$lib/api/auth';
