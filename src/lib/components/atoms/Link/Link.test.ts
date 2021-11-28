@@ -4,7 +4,7 @@
 
 import '@testing-library/jest-dom';
 import { render } from '@testing-library/svelte';
-import { ButtonStyles } from '$lib/components/atoms';
+import { ButtonStyles } from '../Button';
 
 import Link from './Link.svelte';
 import { LinkStyles } from './LinkStyles.enum';
@@ -25,15 +25,6 @@ describe('Link component', () => {
     });
 
     expect(getByRole('link').className).toEqual(ButtonStyles.Primary);
-  });
-
-  test('redners secondary Link', () => {
-    const { getByRole } = render(Link, {
-      href: '/test',
-      style: ButtonStyles.Primary
-    });
-
-    expect(getByRole('link').className).toEqual(ButtonStyles.Secondary);
   });
 
   test('redners secondary Link', () => {
