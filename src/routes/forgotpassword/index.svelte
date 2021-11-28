@@ -12,8 +12,8 @@
   } from '$lib/components/molecules';
   import { goto } from '$app/navigation';
 
-  let email;
-  let pwd;
+  let email: EmailInput;
+  let pwd: PasswordInput;
 
   let code: string;
   let inputCode = false;

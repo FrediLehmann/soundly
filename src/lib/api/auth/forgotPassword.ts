@@ -6,6 +6,6 @@ const confirmReset = async (
   code: string,
   new_pwd: string
 ): Promise<string> =>
-  await await new Promise(resolve => resolve(`${email}, ${code}, ${new_pwd}`)); // Auth.forgotPasswordSubmit(email, code, new_pwd)
+  await new Promise(resolve => resolve(`${email}, ${code}, ${new_pwd}`)); // Auth.forgotPasswordSubmit(email, code, new_pwd)
 
 export { confirmReset, forgotPassword };

@@ -11,8 +11,8 @@
     PasswordInput
   } from '$lib/components/molecules';
 
-  let email;
-  let pwd;
+  let email: EmailInput;
+  let pwd: PasswordInput;
   let signupError: string;
 
   const signin = async () => {

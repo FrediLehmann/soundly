@@ -4,6 +4,7 @@
 
 import '@testing-library/jest-dom';
 import { render } from '@testing-library/svelte';
+import { ButtonStyles } from '$lib/components/atoms';
 
 import Link from './Link.svelte';
 import { LinkStyles } from './LinkStyles.enum';
@@ -20,27 +21,27 @@ describe('Link component', () => {
   test('redners primary Link', () => {
     const { getByRole } = render(Link, {
       href: '/test',
-      style: LinkStyles.buttonPrimary
+      style: ButtonStyles.Primary
     });
 
-    expect(getByRole('link').className).toEqual(LinkStyles.buttonPrimary);
+    expect(getByRole('link').className).toEqual(ButtonStyles.Primary);
   });
 
   test('redners secondary Link', () => {
     const { getByRole } = render(Link, {
       href: '/test',
-      style: LinkStyles.buttonSecondary
+      style: ButtonStyles.Primary
     });
 
-    expect(getByRole('link').className).toEqual(LinkStyles.buttonSecondary);
+    expect(getByRole('link').className).toEqual(ButtonStyles.Secondary);
   });
 
   test('redners secondary Link', () => {
     const { getByRole } = render(Link, {
       href: '/test',
-      style: LinkStyles.buttonSecondary
+      style: ButtonStyles.Secondary
     });
 
-    expect(getByRole('link').className).toEqual(LinkStyles.buttonSecondary);
+    expect(getByRole('link').className).toEqual(ButtonStyles.Secondary);
   });
 });

@@ -40,7 +40,7 @@ describe('Button component', () => {
     component.$on('click', onClick);
 
     const button = container.querySelector('button');
-    await fireEvent.click(button as HTMLElement);
+    fireEvent.click(button as HTMLElement);
 
     expect(onClick.mock.calls.length).toEqual(1);
   });
