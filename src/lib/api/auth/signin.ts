@@ -1,12 +1,15 @@
+import { supabase } from '$lib/db';
+import type { ApiError, Provider, Session, User } from '@supabase/supabase-js';
+
 const signin = async (
   email: string,
   pwd: string
-): Promise<{ email: string }> => {
-  return await new Promise((resolve, reject) => resolve({ email }));
-
-  // const user = await Auth.signIn(email, pwd)
-
-  // return user
-};
+): Promise<{
+  session: Session;
+  user: User;
+  provider?: Provider;
+  url?: string;
+  error: ApiError;
+}> => supabase.auth.signIn({ email, password: pwd });
 
 export default signin;

@@ -1,3 +1,5 @@
+<script lang="ts"></script>
+
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -8,7 +10,7 @@
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
-  class={$$props.class}
+  {...$$restProps}
 >
   <line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" />
 </svg>

@@ -1,8 +1,10 @@
 <script type="ts">
+  import type { ButtonStyles } from '../Button';
+
   import { LinkStyles } from './LinkStyles.enum';
 
   export let href: string;
-  export let style: LinkStyles = LinkStyles.default;
+  export let style: LinkStyles | ButtonStyles = LinkStyles.default;
 </script>
 
 <a

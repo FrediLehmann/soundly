@@ -1,7 +1,7 @@
 <script type="ts">
-  import { ButtonTypes } from './ButtonTypes.enum';
+  import { ButtonStyles } from './ButtonStyles.enum';
 
-  export let btnType: ButtonTypes = ButtonTypes.Secondary;
+  export let btnType: ButtonStyles = ButtonStyles.Secondary;
 </script>
 
 <button

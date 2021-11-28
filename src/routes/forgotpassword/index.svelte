@@ -1,16 +1,24 @@
+<script type="ts" context="module">
+  export const prerender = true;
+</script>
+
 <script type="ts">
-  import { Button, ButtonTypes, Input } from '$lib/components/atoms';
+  import { Button, ButtonStyles, Input } from '$lib/components/atoms';
   import { ForgotPassword, ConfirmReset } from '$lib/api/auth';
-  import { EmailInput, PasswordInput } from '$lib/components/molecules';
+  import {
+    BackLink,
+    EmailInput,
+    PasswordInput
+  } from '$lib/components/molecules';
   import { goto } from '$app/navigation';
 
-  let email;
-  let pwd;
+  let email: EmailInput;
+  let pwd: PasswordInput;
 
   let code: string;
-  let inputCode: boolean = false;
-  let codeRequired: string = '';
-  let resetError: string = '';
+  let inputCode = false;
+  let codeRequired = '';
+  let resetError = '';
 
   const resetPassword = async () => {
     if (!email.validate()) return;
@@ -46,6 +54,7 @@
   <title>Reset Password</title>
 </svelte:head>
 
+<BackLink href="/login" class="mb-4">Back</BackLink>
 <div class="flex flex-col gap-3">
   <EmailInput bind:this={email} />
   {#if inputCode}
@@ -61,14 +70,14 @@
     {#if resetError}
       <span class="text-red-500 text-xs font-semibold">{resetError}</span>
     {/if}
-    <Button btnType={ButtonTypes.Primary} on:click={confirmReset}>
+    <Button btnType={ButtonStyles.Primary} on:click={confirmReset}>
       Confirm new password
     </Button>
   {:else}
     {#if resetError}
       <span class="text-red-500 text-xs font-semibold">{resetError}</span>
     {/if}
-    <Button btnType={ButtonTypes.Primary} on:click={resetPassword}>
+    <Button btnType={ButtonStyles.Primary} on:click={resetPassword}>
       Reset password
     </Button>
   {/if}

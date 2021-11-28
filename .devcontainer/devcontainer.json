@@ -19,7 +19,8 @@
     "tailwindCSS.classAttributes": ["class"],
     "tailwindCSS.includeLanguages": {
       "svelte": "html"
-    }
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
 
   // Add the IDs of extensions you want installed when the container is created.
