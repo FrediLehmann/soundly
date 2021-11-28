@@ -25,7 +25,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run scripts
         run: |
-          yarn lint,
-          yarn check,
-          yarn test,
+          yarn lint
+          yarn check
+          yarn test
           
