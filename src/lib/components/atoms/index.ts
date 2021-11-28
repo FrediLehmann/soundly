@@ -1,5 +1,5 @@
 export { Input } from './Input';
-export { Button, ButtonTypes } from './Button';
+export { Button, ButtonStyles } from './Button';
 export { Link, LinkStyles } from './Link';
 export { PageFrame, PageFrameTypes } from './PageFrame';
 

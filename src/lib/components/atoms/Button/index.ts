@@ -1,4 +1,4 @@
 import Button from './Button.svelte';
-import { ButtonTypes } from './ButtonTypes.enum';
+import { ButtonStyles } from './ButtonStyles.enum';
 
-export { Button, ButtonTypes };
+export { Button, ButtonStyles };

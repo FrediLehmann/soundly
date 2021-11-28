@@ -3,7 +3,7 @@
 </script>
 
 <script type="ts">
-  import { Button, ButtonTypes, Input } from '$lib/components/atoms';
+  import { Button, ButtonStyles, Input } from '$lib/components/atoms';
   import { ForgotPassword, ConfirmReset } from '$lib/api/auth';
   import {
     BackLink,
@@ -70,14 +70,14 @@
     {#if resetError}
       <span class="text-red-500 text-xs font-semibold">{resetError}</span>
     {/if}
-    <Button btnType={ButtonTypes.Primary} on:click={confirmReset}>
+    <Button btnType={ButtonStyles.Primary} on:click={confirmReset}>
       Confirm new password
     </Button>
   {:else}
     {#if resetError}
       <span class="text-red-500 text-xs font-semibold">{resetError}</span>
     {/if}
-    <Button btnType={ButtonTypes.Primary} on:click={resetPassword}>
+    <Button btnType={ButtonStyles.Primary} on:click={resetPassword}>
       Reset password
     </Button>
   {/if}
