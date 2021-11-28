@@ -40,4 +40,16 @@ describe('Input component', () => {
 
     expect(getByText('Error')).toBeInTheDocument();
   });
+
+  test('renders labelSrOnly correctly', () => {
+    const { getByRole, getByText } = render(Input, {
+      name: 'test',
+      label: 'Test',
+      value: 'Test',
+      labelSrOnly: true
+    });
+
+    expect(getByText('Test').className.includes('sr-only')).toBeTruthy();
+    expect(getByRole('textbox').className.includes('col-span-3')).toBeTruthy();
+  });
 });

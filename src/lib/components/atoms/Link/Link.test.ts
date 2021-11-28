@@ -10,7 +10,7 @@ import Link from './Link.svelte';
 import { LinkStyles } from './LinkStyles.enum';
 
 describe('Link component', () => {
-  test('redners default Link', () => {
+  test('render default Link', () => {
     const { getByRole } = render(Link, { href: '/test' });
 
     expect(getByRole('link')).toBeInTheDocument();
@@ -18,21 +18,32 @@ describe('Link component', () => {
     expect(getByRole('link').getAttribute('href')).toEqual('/test');
   });
 
-  test('redners primary Link', () => {
-    const { getByRole } = render(Link, {
-      href: '/test',
-      style: ButtonStyles.Primary
-    });
+  test('render correct styles', () => {
+    for (const style in ButtonStyles) {
+      const rendered = render(Link, {
+        href: '/test',
+        style: style
+      });
 
-    expect(getByRole('link').className).toEqual(ButtonStyles.Primary);
+      expect(rendered.getByRole('link').className).toEqual(style);
+      rendered.unmount();
+    }
+
+    for (const style in LinkStyles) {
+      const rendered = render(Link, {
+        href: '/test',
+        style: style
+      });
+
+      expect(rendered.getByRole('link').className).toEqual(style);
+      rendered.unmount();
+    }
   });
 
-  test('redners secondary Link', () => {
-    const { getByRole } = render(Link, {
-      href: '/test',
-      style: ButtonStyles.Secondary
-    });
-
-    expect(getByRole('link').className).toEqual(ButtonStyles.Secondary);
+  test('custom class', () => {
+    const { getByRole } = render(Link, { href: '/', class: 'added-class' });
+    expect(getByRole('link').className).toEqual(
+      `added-class ${LinkStyles.default}`
+    );
   });
 });

@@ -1,9 +1,9 @@
 <script lang="ts">
-  import { PageFrameTypes } from './PageFrameTypes.enum';
+  import { PageFrameStyles } from './PageFrameStyles.enum';
 
-  export let type: PageFrameTypes = PageFrameTypes.default;
+  export let style: PageFrameStyles = PageFrameStyles.default;
 </script>
 
-<main class={`${$$props.class ? `${$$props.class} ` : ''}${type}`}>
+<main class={`${$$props.class ? `${$$props.class} ` : ''}${style}`}>
   <slot />
 </main>
