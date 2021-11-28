@@ -9,7 +9,7 @@ import { render } from '@testing-library/svelte';
 import Button from './Button.svelte';
 import { ButtonStyles } from './ButtonStyles.enum';
 
-describe('Button component', () => {
+describe('<Button /> component', () => {
   test('renders default button', () => {
     const { getByRole } = render(Button);
     expect(getByRole('button')).toBeInTheDocument();

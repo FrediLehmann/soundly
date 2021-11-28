@@ -9,7 +9,7 @@ import { ButtonStyles } from '../Button';
 import Link from './Link.svelte';
 import { LinkStyles } from './LinkStyles.enum';
 
-describe('Link component', () => {
+describe('<Link /> component', () => {
   test('render default Link', () => {
     const { getByRole } = render(Link, { href: '/test' });
 

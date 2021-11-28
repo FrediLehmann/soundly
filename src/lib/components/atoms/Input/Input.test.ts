@@ -7,7 +7,7 @@ import { render } from '@testing-library/svelte';
 
 import Input from './Input.svelte';
 
-describe('Input component', () => {
+describe('<Input /> component', () => {
   test('renders default Input', () => {
     const { getByRole, getByText } = render(Input, {
       name: 'test',

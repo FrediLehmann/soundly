@@ -8,7 +8,7 @@ import { render } from '@testing-library/svelte';
 import PageFrame from './PageFrame.svelte';
 import { PageFrameStyles } from './PageFrameStyles.enum';
 
-describe('PageFrame component', () => {
+describe('<PageFrame /> component', () => {
   test('redners default PageFrame', () => {
     const { getByRole } = render(PageFrame);
     expect(getByRole('main')).toBeInTheDocument();
