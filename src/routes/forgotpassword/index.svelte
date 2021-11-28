@@ -5,7 +5,11 @@
 <script type="ts">
   import { Button, ButtonTypes, Input } from '$lib/components/atoms';
   import { ForgotPassword, ConfirmReset } from '$lib/api/auth';
-  import { EmailInput, PasswordInput } from '$lib/components/molecules';
+  import {
+    BackLink,
+    EmailInput,
+    PasswordInput
+  } from '$lib/components/molecules';
   import { goto } from '$app/navigation';
 
   let email;
@@ -50,6 +54,7 @@
   <title>Reset Password</title>
 </svelte:head>
 
+<BackLink href="/login" class="mb-4">Back</BackLink>
 <div class="flex flex-col gap-3">
   <EmailInput bind:this={email} />
   {#if inputCode}
