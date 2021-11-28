@@ -2,9 +2,9 @@
   //   import '$lib/api/auth/aws';
   import '../../app.css';
 
-  import { PageFrame, PageFrameTypes } from '$lib/components/atoms';
+  import { PageFrame, PageFrameStyles } from '$lib/components/atoms';
 </script>
 
-<PageFrame type={PageFrameTypes.small}>
+<PageFrame type={PageFrameStyles.small}>
   <slot />
 </PageFrame>
