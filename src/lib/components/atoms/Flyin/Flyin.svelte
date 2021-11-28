@@ -4,10 +4,11 @@
   import { Button, ButtonStyles } from '$lib/components/atoms';
   import { Cross } from '$lib/components/Icons';
 
-  let isVisible: boolean = false;
-  let message: string = 'Message';
+  let isVisible = false;
+  let message = 'Message';
 
   export const show = (config: FlyinConfig): void => {
+    console.log(config);
     isVisible = true;
   };
 

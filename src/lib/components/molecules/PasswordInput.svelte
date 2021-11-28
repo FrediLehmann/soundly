@@ -6,7 +6,7 @@
   let pwdRequired: string;
   let pwdErrors: string[] = [];
 
-  export let label: string = 'Password';
+  export let label = 'Password';
 
   export const validate = (): boolean => {
     if (!pwd) {

@@ -20,6 +20,7 @@
 
     try {
       const user = await Signin(email.get(), pwd.get());
+      console.log(user);
     } catch (e) {
       signupError = e.message;
     }
@@ -29,7 +30,7 @@
     if (!email.validate() || !pwd.validate()) return;
 
     try {
-      // await Signup(email.get(), pwd.get());
+      await Signup(email.get(), pwd.get());
     } catch (e) {
       signupError = e.message;
     }

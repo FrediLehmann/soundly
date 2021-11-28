@@ -1,13 +1,13 @@
 <script lang="ts">
   export let name: string;
   export let label: string;
-  export let value: any;
-  export let error: string = '';
-  export let required: boolean = false;
+  export let value: unknown;
+  export let error = '';
+  export let required = false;
 
   // Show label only to screen-readers
   // https://tailwindcss.com/docs/screen-readers
-  export let labelSrOnly: boolean = false;
+  export let labelSrOnly = false;
 </script>
 
 <div class="grid grid-cols-3 w-full">

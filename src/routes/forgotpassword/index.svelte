@@ -16,9 +16,9 @@
   let pwd;
 
   let code: string;
-  let inputCode: boolean = false;
-  let codeRequired: string = '';
-  let resetError: string = '';
+  let inputCode = false;
+  let codeRequired = '';
+  let resetError = '';
 
   const resetPassword = async () => {
     if (!email.validate()) return;
