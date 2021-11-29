@@ -5,12 +5,14 @@
 <script type="ts">
   import { Signup, Signin } from '$lib/api/auth';
   import { Button, ButtonStyles, Link, Flyin } from '$lib/components/atoms';
+  import { FlyinStyles } from '$lib/components/atoms/Flyin/FlyinStyles.enum';
   import {
     BackLink,
     EmailInput,
     PasswordInput
   } from '$lib/components/molecules';
 
+  let flyin: Flyin;
   let email: EmailInput;
   let pwd: PasswordInput;
   let signupError: string;
@@ -31,8 +33,12 @@
 
     try {
       await Signup(email.get(), pwd.get());
+      flyin.show({
+        message: 'Successfull signed up',
+        style: FlyinStyles.success
+      });
     } catch (e) {
-      signupError = e.message;
+      flyin.show({ message: e.message, style: FlyinStyles.error });
     }
   };
 </script>
@@ -58,4 +64,4 @@
   Forgot password
 </Link>
 
-<Flyin />
+<Flyin bind:this={flyin} />

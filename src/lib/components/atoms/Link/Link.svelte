@@ -1,5 +1,5 @@
 <script type="ts">
-  import type { ButtonStyles } from '../Button';
+  import type { ButtonStyles } from '$lib/components/atoms';
 
   import { LinkStyles } from './LinkStyles.enum';
 

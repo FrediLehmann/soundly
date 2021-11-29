@@ -5,6 +5,6 @@
   import { PageFrame, PageFrameStyles } from '$lib/components/atoms';
 </script>
 
-<PageFrame type={PageFrameStyles.small}>
+<PageFrame style={PageFrameStyles.small}>
   <slot />
 </PageFrame>
