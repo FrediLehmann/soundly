@@ -54,7 +54,7 @@
   <title>Reset Password</title>
 </svelte:head>
 
-<BackLink href="/login" class="mb-4">Back</BackLink>
+<BackLink href="/signup" class="mb-4">Back</BackLink>
 <div class="flex flex-col gap-3">
   <EmailInput bind:this={email} />
   {#if inputCode}
