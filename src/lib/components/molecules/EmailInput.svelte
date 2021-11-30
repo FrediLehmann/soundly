@@ -30,4 +30,5 @@
   label="Email"
   error={emailError}
   bind:value={email}
+  {...$$restProps}
 />
