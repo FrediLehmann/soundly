@@ -1,11 +1,11 @@
-const forgotPassword = async (email: string): Promise<unknown> =>
-  await new Promise(resolve => resolve({ email })); // Auth.forgotPassword(email)
+import { supabase } from '$lib/db';
+import type { ApiError } from '@supabase/supabase-js';
 
-const confirmReset = async (
-  email: string,
-  code: string,
-  new_pwd: string
-): Promise<string> =>
-  await new Promise(resolve => resolve(`${email}, ${code}, ${new_pwd}`)); // Auth.forgotPasswordSubmit(email, code, new_pwd)
+const forgotPassword = async (
+  email: string
+): Promise<{
+  data: unknown;
+  error: ApiError;
+}> => await supabase.auth.api.resetPasswordForEmail(email);
 
-export { confirmReset, forgotPassword };
+export default forgotPassword;
