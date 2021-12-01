@@ -54,7 +54,7 @@
       <Button
         class="flex items-center ml-auto font-bold"
         on:click={onClose}
-        btnType={ButtonStyles.Ghost}
+        btnType={ButtonStyles.Link}
       >
         Close
         <Cross class="w-5 h-5" stroke-width="3" />
