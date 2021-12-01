@@ -3,7 +3,7 @@
 </script>
 
 <script type="ts">
-  import { Signin } from '$lib/api/auth';
+  import { Signup } from '$lib/api/auth';
   import {
     Button,
     ButtonStyles,
@@ -14,22 +14,27 @@
   import {
     BackLink,
     EmailInput,
-    PasswordInput
+    PasswordInput,
+    UserNameInput
   } from '$lib/components/molecules';
 
   let flyin: Flyin;
   let email: EmailInput;
+  let username: UserNameInput;
   let pwd: PasswordInput;
   let submitting = false;
 
-  const signin = async () => {
+  const signup = async () => {
     submitting = true;
-    if (!email.validate() || !pwd.validate(false)) return;
+    if (!email.validate() || !pwd.validate(true) || !username.validate())
+      return;
 
     try {
-      const { user, session, error } = await Signin(email.get(), pwd.get());
-      if (error) throw error;
-      console.log(user, session);
+      await Signup(email.get(), pwd.get(), { username: username.get() });
+      flyin.show({
+        message: 'Successfull signed up',
+        style: FlyinStyles.success
+      });
     } catch (e) {
       flyin.show({ message: e.message, style: FlyinStyles.error });
     } finally {
@@ -39,19 +44,20 @@
 </script>
 
 <svelte:head>
-  <title>Sign in</title>
+  <title>Sign up</title>
 </svelte:head>
 
 <BackLink href="/" class="mb-2">Home</BackLink>
 <section class="flex mb-6 items-baseline">
-  <h1 class="text-3xl mr-2">Sign in</h1>
+  <h1 class="text-3xl mr-2">Sign up</h1>
   <span class="mr-1">/</span>
-  <Link href="/signup" sveltekit:prefetch class="min-w-16 text-center">
-    Sign up
+  <Link href="/signin" sveltekit:prefetch class="min-w-16 text-center">
+    Sign in
   </Link>
 </section>
-<form on:submit|preventDefault={signin} class="flex flex-col gap-3">
+<form on:submit|preventDefault={signup} class="flex flex-col gap-3">
   <EmailInput disabled={submitting} bind:this={email} />
+  <UserNameInput disabled={submitting} bind:this={username} />
   <PasswordInput disabled={submitting} bind:this={pwd} />
   <Button
     disabled={submitting}
@@ -59,7 +65,7 @@
     btnType={ButtonStyles.Primary}
     class="mt-2"
   >
-    Sign in
+    Sign up
   </Button>
 </form>
 <Link href="/forgotpassword" sveltekit:prefetch class="text-sm mt-2">
