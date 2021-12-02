@@ -64,8 +64,7 @@
       name="code"
       label="Reset code"
       error={codeRequired}
-      bind:value={code}
-    />
+      bind:value={code} />
     <PasswordInput bind:this={pwd} label="New Password" />
     {#if resetError}
       <span class="text-red-500 text-xs font-semibold">{resetError}</span>
