@@ -10,8 +10,7 @@
     value=""
     labelSrOnly={true}
     placeholder="Search"
-    class="w-full py-0"
-  />
+    class="w-full py-0" />
   <Button class="px-2">
     <Search />
   </Button>

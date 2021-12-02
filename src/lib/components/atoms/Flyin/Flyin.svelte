@@ -24,8 +24,7 @@
       <Button
         class="flex items-center ml-auto"
         on:click={onClose}
-        btnType={ButtonStyles.Ghost}
-      >
+        btnType={ButtonStyles.Ghost}>
         Close
         <Cross class="w-5 h-5" />
       </Button>
