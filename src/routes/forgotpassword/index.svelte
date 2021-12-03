@@ -46,8 +46,7 @@
     disabled={submitting}
     btnType={ButtonStyles.Primary}
     type="submit"
-    class="mt-2"
-  >
+    class="mt-2">
     Reset password
   </Button>
 </form>

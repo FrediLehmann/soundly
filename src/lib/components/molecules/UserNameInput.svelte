@@ -25,5 +25,4 @@
   label="Username"
   {error}
   bind:value={username}
-  {...$$restProps}
-/>
+  {...$$restProps} />

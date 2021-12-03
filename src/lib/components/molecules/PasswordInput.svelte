@@ -38,8 +38,7 @@
   name="password"
   error={pwdRequired}
   bind:value={pwd}
-  {...$$restProps}
-/>
+  {...$$restProps} />
 {#if pwdErrors.length > 0}
   <ul class="list-inside mt-4 list-disc text-red-500 text-xs font-semibold">
     {#each pwdErrors as e}

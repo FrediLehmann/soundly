@@ -40,8 +40,7 @@
     class:bg-red-400={flyinStyle === FlyinStyles.error}
     class:bg-green-400={flyinStyle === FlyinStyles.success}
     class:bg-yellow-400={flyinStyle === FlyinStyles.info}
-    transition:fly={{ y: -100, duration: 300 }}
-  >
+    transition:fly={{ y: -100, duration: 300 }}>
     <div class="max-w-4xl mx-auto flex py-4 px-4 sm:px-8 lg:px-10">
       {#if flyinStyle === FlyinStyles.info}
         <AlertTriangle class="w-6 h-6 mr-4" stroke-width="3" />
@@ -54,8 +53,7 @@
       <Button
         class="flex items-center ml-auto font-bold"
         on:click={onClose}
-        btnType={ButtonStyles.Link}
-      >
+        btnType={ButtonStyles.Link}>
         Close
         <Cross class="w-5 h-5" stroke-width="3" />
       </Button>

@@ -63,8 +63,7 @@
     disabled={submitting}
     type="submit"
     btnType={ButtonStyles.Primary}
-    class="mt-2"
-  >
+    class="mt-2">
     Sign up
   </Button>
 </form>

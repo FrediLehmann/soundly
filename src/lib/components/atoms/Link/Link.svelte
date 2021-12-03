@@ -10,7 +10,6 @@
 <a
   {href}
   {...$$restProps}
-  class={`${$$props.class ? `${$$props.class} ` : ''}${style}`}
->
+  class={`${$$props.class ? `${$$props.class} ` : ''}${style}`}>
   <slot />
 </a>
