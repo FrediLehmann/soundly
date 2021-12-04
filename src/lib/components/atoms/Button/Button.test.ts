@@ -13,7 +13,7 @@ describe('<Button /> component', () => {
   test('renders default button', () => {
     const { getByRole } = render(Button);
     expect(getByRole('button')).toBeInTheDocument();
-    expect(getByRole('button').className).toEqual(ButtonStyles.Secondary);
+    expect(getByRole('button').className).toEqual(ButtonStyles.secondary);
   });
 
   test('renders styles correct', () => {
@@ -30,7 +30,7 @@ describe('<Button /> component', () => {
   test('custom class', () => {
     const { getByRole } = render(Button, { class: 'added-class' });
     expect(getByRole('button').className).toEqual(
-      `added-class ${ButtonStyles.Secondary}`
+      `added-class ${ButtonStyles.secondary}`
     );
   });
 

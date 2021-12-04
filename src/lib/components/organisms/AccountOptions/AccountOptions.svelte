@@ -30,7 +30,7 @@
     href="/signin"
     class="hidden sm:flex px-4 py-0"
     sveltekit:prefetch
-    style={ButtonStyles.Secondary}>
+    style={ButtonStyles.secondary}>
     Login
   </Link>
 </div>

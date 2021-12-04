@@ -56,7 +56,7 @@
   <Button
     disabled={submitting}
     type="submit"
-    btnType={ButtonStyles.Primary}
+    btnType={ButtonStyles.primary}
     class="mt-2">
     Sign in
   </Button>

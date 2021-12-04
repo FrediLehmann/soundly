@@ -44,7 +44,7 @@
   <EmailInput disabled={submitting} bind:this={email} />
   <Button
     disabled={submitting}
-    btnType={ButtonStyles.Primary}
+    btnType={ButtonStyles.primary}
     type="submit"
     class="mt-2">
     Reset password
