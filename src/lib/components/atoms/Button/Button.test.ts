@@ -13,7 +13,7 @@ describe('<Button /> component', () => {
   test('renders default button', () => {
     const { getByRole } = render(Button);
     expect(getByRole('button')).toBeInTheDocument();
-    expect(getByRole('button').className).toEqual(ButtonStyles.secondary);
+    expect(getByRole('button').dataset['type']).toEqual('secondary');
   });
 
   test('renders styles correct', () => {
@@ -22,16 +22,14 @@ describe('<Button /> component', () => {
         btnType: style
       });
 
-      expect(rendered.getByRole('button').className).toEqual(style);
+      expect(rendered.getByRole('button').dataset['type']).toEqual(style);
       rendered.unmount();
     }
   });
 
   test('custom class', () => {
     const { getByRole } = render(Button, { class: 'added-class' });
-    expect(getByRole('button').className).toEqual(
-      `added-class ${ButtonStyles.secondary}`
-    );
+    expect(getByRole('button').className).toEqual(`added-class`);
   });
 
   test('type override', () => {
