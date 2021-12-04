@@ -1,13 +1,13 @@
 <script lang="ts">
   import type { FlyinConfig } from './FlyinConfig.interface';
-  import { FlyinStyles } from './FlyinStyles.enum';
+  import type { FlyinStyles } from './FlyinStyles.enum';
 
   import { fly } from 'svelte/transition';
   import { Icon, CloseButton } from './components';
 
-  let isVisible = true;
-  let flyinMessage: string = 'test';
-  let flyinStyle: FlyinStyles = FlyinStyles.error;
+  let isVisible = false;
+  let flyinMessage: string;
+  let flyinStyle: FlyinStyles;
   let flyinTimeout: number;
 
   export const show = ({
