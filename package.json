@@ -14,7 +14,7 @@
     "test:watch": "npm run test -- --watch"
   },
   "dependencies": {
-    "@supabase/supabase-js": "^1.28.4",
+    "@supabase/supabase-js": "^1.28.5",
     "axios": "^0.24.0"
   },
   "devDependencies": {
