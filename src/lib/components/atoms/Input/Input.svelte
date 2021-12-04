@@ -10,25 +10,31 @@
   export let labelSrOnly = false;
 </script>
 
-<div class="grid grid-cols-3 w-full">
+<div class="container">
   <label for={name} class="self-center" class:sr-only={labelSrOnly}>
     {label}
     {#if required}
       <span class="ordinal">*</span>
     {/if}
   </label>
-  <input
-    id={name}
-    {...$$restProps}
-    bind:value
-    class={`${
-      $$props.class ? `${$$props.class} ` : ''
-    }bg-gray-100 px-3 py-1 focus:outline-none focus:ring focus:border-blue-300 col-span-2 disabled:text-gray-500`}
-    class:col-span-3={labelSrOnly} />
+  <input id={name} {...$$restProps} bind:value class:col-span-3={labelSrOnly} />
   {#if error}
-    <span
-      class="text-red-500 mt-1 text-xs font-semibold col-start-2 col-span-2">
+    <span class="error">
       {error}
     </span>
   {/if}
 </div>
+
+<style>
+  .container {
+    @apply grid grid-cols-3 w-full;
+  }
+
+  input {
+    @apply bg-gray-100 px-3 py-1 focus:outline-none focus:ring focus:border-blue-300 col-span-2 disabled:text-gray-500;
+  }
+
+  .error {
+    @apply text-red-500 mt-1 text-xs font-semibold col-start-2 col-span-2;
+  }
+</style>
