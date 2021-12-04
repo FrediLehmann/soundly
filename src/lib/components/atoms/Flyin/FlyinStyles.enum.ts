@@ -1,5 +1,5 @@
 export enum FlyinStyles {
-  info,
-  error,
-  success
+  info = 'info',
+  error = 'error',
+  success = 'success'
 }
