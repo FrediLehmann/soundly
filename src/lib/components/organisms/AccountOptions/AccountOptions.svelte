@@ -22,7 +22,8 @@
   <Button
     on:click={toggleNav}
     class="px-2 bg-gray-400 hover:bg-gray-500"
-    btnType={ButtonStyles.none}>
+    btnType={ButtonStyles.none}
+    aria-label="Account">
     <Account />
   </Button>
   <Link
