@@ -8,7 +8,7 @@
   type="button"
   on:click
   data-type={btnType}
-  class="button"
-  {...$$restProps}>
+  {...$$restProps}
+  class={`${$$props.class ? `${$$props.class} ` : ''}button`}>
   <slot />
 </button>

@@ -7,6 +7,10 @@
   export let style: LinkStyles | ButtonStyles = LinkStyles.default;
 </script>
 
-<a {href} data-type={style} class="link" {...$$restProps}>
+<a
+  {href}
+  data-type={style}
+  {...$$restProps}
+  class={`${$$props.class ? `${$$props.class} ` : ''}link`}>
   <slot />
 </a>
