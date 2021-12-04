@@ -40,25 +40,3 @@
     </div>
   </div>
 {/if}
-
-<style>
-  .flyinContainer {
-    @apply absolute top-0 left-0 w-full text-white font-bold;
-  }
-
-  .flyinContainer[data-type='info'] {
-    @apply bg-yellow-400;
-  }
-
-  .flyinContainer[data-type='success'] {
-    @apply bg-green-400;
-  }
-
-  .flyinContainer[data-type='error'] {
-    @apply bg-red-400;
-  }
-
-  .flyinContent {
-    @apply max-w-4xl mx-auto flex py-4 px-4 sm:px-8 lg:px-10;
-  }
-</style>

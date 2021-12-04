@@ -10,7 +10,7 @@
   export let labelSrOnly = false;
 </script>
 
-<div class="container">
+<div class="grid grid-cols-3 w-full">
   <label for={name} class="self-center" class:sr-only={labelSrOnly}>
     {label}
     {#if required}
@@ -19,22 +19,9 @@
   </label>
   <input id={name} {...$$restProps} bind:value class:col-span-3={labelSrOnly} />
   {#if error}
-    <span class="error">
+    <span
+      class="text-red-500 mt-1 text-xs font-semibold col-start-2 col-span-2">
       {error}
     </span>
   {/if}
 </div>
-
-<style>
-  .container {
-    @apply grid grid-cols-3 w-full;
-  }
-
-  input {
-    @apply bg-gray-100 px-3 py-1 focus:outline-none focus:ring focus:border-blue-300 col-span-2 disabled:text-gray-500;
-  }
-
-  .error {
-    @apply text-red-500 mt-1 text-xs font-semibold col-start-2 col-span-2;
-  }
-</style>
