@@ -3,6 +3,8 @@
 </script>
 
 <script type="ts">
+  import { goto } from '$app/navigation';
+
   import { Signin } from '$lib/api/auth';
   import {
     Button,
@@ -16,6 +18,8 @@
     EmailInput,
     PasswordInput
   } from '$lib/components/molecules';
+  import { userStore } from '$lib/store/user';
+  import { onMount } from 'svelte';
 
   let flyin: Flyin;
   let email: EmailInput;
@@ -29,13 +33,19 @@
     try {
       const { user, session, error } = await Signin(email.get(), pwd.get());
       if (error) throw error;
-      console.log(user, session);
+      userStore.set({ isSignedIn: true, user, session });
+      goto('/profile');
     } catch (e) {
       flyin.show({ message: e.message, style: FlyinStyles.error });
     } finally {
       submitting = false;
     }
   };
+
+  let user;
+  userStore.subscribe(u => (user = u));
+
+  onMount(() => user.isSignedIn && goto('/profile'));
 </script>
 
 <svelte:head>

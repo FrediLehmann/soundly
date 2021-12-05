@@ -11,6 +11,9 @@
   } from '$lib/components/atoms';
   import { ForgotPassword } from '$lib/api/auth';
   import { BackLink, EmailInput } from '$lib/components/molecules';
+  import { userStore } from '$lib/store/user';
+  import { onMount } from 'svelte';
+  import { goto } from '$app/navigation';
 
   let flyin: Flyin;
   let email: EmailInput;
@@ -33,6 +36,11 @@
       submitting = false;
     }
   };
+
+  let user;
+  userStore.subscribe(u => (user = u));
+
+  onMount(() => user.isSignedIn && goto('/profile'));
 </script>
 
 <svelte:head>

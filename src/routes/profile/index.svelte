@@ -1,5 +1,14 @@
 <script lang="ts">
+  import { goto } from '$app/navigation';
+
   import { BackLink } from '$lib/components/molecules';
+  import { userStore } from '$lib/store/user';
+  import { onMount } from 'svelte';
+
+  let user;
+  userStore.subscribe(u => (user = u));
+
+  onMount(() => !user.isSignedIn && goto('/signin'));
 </script>
 
 <BackLink href="/" class="mb-2 pt-4">Home</BackLink>

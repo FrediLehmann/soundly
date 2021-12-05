@@ -3,6 +3,8 @@
 </script>
 
 <script type="ts">
+  import { goto } from '$app/navigation';
+
   import { Signup } from '$lib/api/auth';
   import {
     Button,
@@ -17,6 +19,8 @@
     PasswordInput,
     UserNameInput
   } from '$lib/components/molecules';
+  import { userStore } from '$lib/store/user';
+  import { onMount } from 'svelte';
 
   let flyin: Flyin;
   let email: EmailInput;
@@ -41,6 +45,11 @@
       submitting = false;
     }
   };
+
+  let user;
+  userStore.subscribe(u => (user = u));
+
+  onMount(() => user.isSignedIn && goto('/profile'));
 </script>
 
 <svelte:head>
