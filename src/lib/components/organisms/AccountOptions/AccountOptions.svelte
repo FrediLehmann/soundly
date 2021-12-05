@@ -21,7 +21,7 @@
     }
   };
 
-  let isSignedIn;
+  let isSignedIn: boolean;
   userStore.subscribe(u => (isSignedIn = u.isSignedIn));
 
   const signout = async () => {

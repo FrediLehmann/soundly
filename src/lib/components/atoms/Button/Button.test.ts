@@ -29,7 +29,7 @@ describe('<Button /> component', () => {
 
   test('custom class', () => {
     const { getByRole } = render(Button, { class: 'added-class' });
-    expect(getByRole('button').className).toEqual(`added-class`);
+    expect(getByRole('button').className).toEqual(`added-class button`);
   });
 
   test('type override', () => {

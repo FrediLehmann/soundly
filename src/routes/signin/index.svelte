@@ -19,6 +19,7 @@
     PasswordInput
   } from '$lib/components/molecules';
   import { userStore } from '$lib/store/user';
+  import type { User, Session } from '@supabase/supabase-js';
   import { onMount } from 'svelte';
 
   let flyin: Flyin;
@@ -42,7 +43,7 @@
     }
   };
 
-  let user;
+  let user: { isSignedIn: boolean; user?: User; session?: Session };
   userStore.subscribe(u => (user = u));
 
   onMount(() => user.isSignedIn && goto('/profile'));
