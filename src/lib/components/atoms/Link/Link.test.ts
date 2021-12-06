@@ -4,35 +4,33 @@
 
 import '@testing-library/jest-dom';
 import { render } from '@testing-library/svelte';
-import { ButtonStyles } from '../Button';
 
 import Link from './Link.svelte';
 import { LinkStyles } from './LinkStyles.enum';
 
-describe('Link component', () => {
-  test('redners default Link', () => {
+describe('<Link /> component', () => {
+  test('render default Link', () => {
     const { getByRole } = render(Link, { href: '/test' });
 
     expect(getByRole('link')).toBeInTheDocument();
-    expect(getByRole('link').className).toEqual(LinkStyles.default);
+    expect(getByRole('link').dataset['type']).toEqual(LinkStyles.default);
     expect(getByRole('link').getAttribute('href')).toEqual('/test');
   });
 
-  test('redners primary Link', () => {
-    const { getByRole } = render(Link, {
-      href: '/test',
-      style: ButtonStyles.Primary
-    });
+  test('render correct styles', () => {
+    for (const style in LinkStyles) {
+      const rendered = render(Link, {
+        href: '/test',
+        style: style
+      });
 
-    expect(getByRole('link').className).toEqual(ButtonStyles.Primary);
+      expect(rendered.getByRole('link').dataset['type']).toEqual(style);
+      rendered.unmount();
+    }
   });
 
-  test('redners secondary Link', () => {
-    const { getByRole } = render(Link, {
-      href: '/test',
-      style: ButtonStyles.Secondary
-    });
-
-    expect(getByRole('link').className).toEqual(ButtonStyles.Secondary);
+  test('custom class', () => {
+    const { getByRole } = render(Link, { href: '/', class: 'added-class' });
+    expect(getByRole('link').className).toEqual(`added-class link`);
   });
 });

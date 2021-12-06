@@ -1,3 +1,8 @@
 export enum LinkStyles {
-  default = 'block text-blue-700 hover:underline'
+  none = '',
+  default = 'default',
+  primary = 'primary',
+  secondary = 'secondary',
+  ghost = 'ghost',
+  link = 'link'
 }

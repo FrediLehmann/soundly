@@ -1,33 +1,42 @@
 <script lang="ts">
   import type { FlyinConfig } from './FlyinConfig.interface';
+  import type { FlyinStyles } from './FlyinStyles.enum';
 
-  import { Button, ButtonStyles } from '$lib/components/atoms';
-  import { Cross } from '$lib/components/Icons';
+  import { fly } from 'svelte/transition';
+  import { Icon, CloseButton } from './components';
 
   let isVisible = false;
-  let message = 'Message';
+  let flyinMessage: string;
+  let flyinStyle: FlyinStyles;
+  let flyinTimeout: number;
 
-  export const show = (config: FlyinConfig): void => {
-    console.log(config);
+  export const show = ({
+    message,
+    timeout = 5000,
+    style
+  }: FlyinConfig): void => {
+    flyinMessage = message;
+    flyinStyle = style;
     isVisible = true;
+
+    flyinTimeout = window.setTimeout(() => (isVisible = false), timeout);
   };
 
-  export const onClose = (): void => {
+  const onClose = (): void => {
+    window.clearTimeout(flyinTimeout);
     isVisible = false;
   };
 </script>
 
 {#if isVisible}
-  <div class="absolute top-0 left-0 w-full">
-    <div class="max-w-4xl mx-auto flex py-4 px-4 sm:px-8 lg:px-10">
-      <span>{message}</span>
-      <Button
-        class="flex items-center ml-auto"
-        on:click={onClose}
-        btnType={ButtonStyles.Ghost}>
-        Close
-        <Cross class="w-5 h-5" />
-      </Button>
+  <div
+    class="flyinContainer"
+    data-type={flyinStyle}
+    transition:fly={{ y: -100, duration: 300 }}>
+    <div class="flyinContent">
+      <Icon {flyinStyle} />
+      <span>{flyinMessage}</span>
+      <CloseButton on:click={onClose} />
     </div>
   </div>
 {/if}

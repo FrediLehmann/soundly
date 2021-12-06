@@ -3,81 +3,61 @@
 </script>
 
 <script type="ts">
-  import { Button, ButtonStyles, Input } from '$lib/components/atoms';
-  import { ForgotPassword, ConfirmReset } from '$lib/api/auth';
   import {
-    BackLink,
-    EmailInput,
-    PasswordInput
-  } from '$lib/components/molecules';
+    Button,
+    ButtonStyles,
+    Flyin,
+    FlyinStyles
+  } from '$lib/components/atoms';
+  import { ForgotPassword } from '$lib/api/auth';
+  import { BackLink, EmailInput } from '$lib/components/molecules';
+  import { userStore } from '$lib/store/user';
+  import { onMount } from 'svelte';
   import { goto } from '$app/navigation';
+  import type { User, Session } from '@supabase/supabase-js';
 
+  let flyin: Flyin;
   let email: EmailInput;
-  let pwd: PasswordInput;
-
-  let code: string;
-  let inputCode = false;
-  let codeRequired = '';
-  let resetError = '';
+  let submitting = false;
 
   const resetPassword = async () => {
+    submitting = true;
     if (!email.validate()) return;
 
     try {
-      await ForgotPassword(email.get());
-      inputCode = true;
+      let { error } = await ForgotPassword(email.get());
+      if (error) throw error;
+      flyin.show({
+        message: 'A reset link has been sent to your email!',
+        style: FlyinStyles.info
+      });
     } catch (e) {
-      resetError = e.message;
+      flyin.show({ message: e.message, style: FlyinStyles.error });
+    } finally {
+      submitting = false;
     }
   };
 
-  const confirmReset = async () => {
-    if (!code) {
-      codeRequired = 'Provide reset code';
-      return;
-    }
+  let user: { isSignedIn: boolean; user?: User; session?: Session };
+  userStore.subscribe(u => (user = u));
 
-    codeRequired = '';
-
-    if (!pwd.validate()) return;
-
-    try {
-      await ConfirmReset(email.get(), code, pwd.get());
-      goto('/');
-    } catch (e) {
-      resetError = e.message;
-    }
-  };
+  onMount(() => user.isSignedIn && goto('/profile'));
 </script>
 
 <svelte:head>
   <title>Reset Password</title>
 </svelte:head>
 
-<BackLink href="/login" class="mb-4">Back</BackLink>
-<div class="flex flex-col gap-3">
-  <EmailInput bind:this={email} />
-  {#if inputCode}
-    <Input
-      required
-      type="text"
-      name="code"
-      label="Reset code"
-      error={codeRequired}
-      bind:value={code} />
-    <PasswordInput bind:this={pwd} label="New Password" />
-    {#if resetError}
-      <span class="text-red-500 text-xs font-semibold">{resetError}</span>
-    {/if}
-    <Button btnType={ButtonStyles.Primary} on:click={confirmReset}>
-      Confirm new password
-    </Button>
-  {:else}
-    {#if resetError}
-      <span class="text-red-500 text-xs font-semibold">{resetError}</span>
-    {/if}
-    <Button btnType={ButtonStyles.Primary} on:click={resetPassword}>
-      Reset password
-    </Button>
-  {/if}
-</div>
+<BackLink href="/signin" class="mb-4">Back</BackLink>
+<form on:submit|preventDefault={resetPassword} class="flex flex-col gap-3">
+  <EmailInput disabled={submitting} bind:this={email} />
+  <Button
+    disabled={submitting}
+    btnType={ButtonStyles.primary}
+    type="submit"
+    class="mt-2">
+    Reset password
+  </Button>
+</form>
+
+<Flyin bind:this={flyin} />

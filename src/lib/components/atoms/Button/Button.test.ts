@@ -9,28 +9,36 @@ import { render } from '@testing-library/svelte';
 import Button from './Button.svelte';
 import { ButtonStyles } from './ButtonStyles.enum';
 
-describe('Button component', () => {
-  test('redners default button', () => {
+describe('<Button /> component', () => {
+  test('renders default button', () => {
     const { getByRole } = render(Button);
     expect(getByRole('button')).toBeInTheDocument();
-    expect(getByRole('button').className).toEqual(ButtonStyles.Secondary);
+    expect(getByRole('button').dataset['type']).toEqual('secondary');
   });
 
-  test('renders primary button', () => {
-    const { getByRole } = render(Button, { btnType: ButtonStyles.Primary });
-    expect(getByRole('button').className).toEqual(ButtonStyles.Primary);
-  });
+  test('renders styles correct', () => {
+    for (const style in ButtonStyles) {
+      const rendered = render(Button, {
+        btnType: style
+      });
 
-  test('renders ghost button', () => {
-    const { getByRole } = render(Button, { btnType: ButtonStyles.Ghost });
-    expect(getByRole('button').className).toEqual(ButtonStyles.Ghost);
+      expect(rendered.getByRole('button').dataset['type']).toEqual(style);
+      rendered.unmount();
+    }
   });
 
   test('custom class', () => {
     const { getByRole } = render(Button, { class: 'added-class' });
-    expect(getByRole('button').className).toEqual(
-      `added-class ${ButtonStyles.Secondary}`
-    );
+    expect(getByRole('button').className).toEqual(`added-class button`);
+  });
+
+  test('type override', () => {
+    let rendered = render(Button);
+    expect(rendered.getByRole('button').getAttribute('type')).toEqual('button');
+    rendered.unmount();
+
+    rendered = render(Button, { type: 'submit' });
+    expect(rendered.getByRole('button').getAttribute('type')).toEqual('submit');
   });
 
   test('click', async () => {

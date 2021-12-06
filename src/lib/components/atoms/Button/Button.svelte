@@ -1,13 +1,14 @@
 <script type="ts">
   import { ButtonStyles } from './ButtonStyles.enum';
 
-  export let btnType: ButtonStyles = ButtonStyles.Secondary;
+  export let btnType: ButtonStyles = ButtonStyles.secondary;
 </script>
 
 <button
   type="button"
-  {...$$restProps}
   on:click
-  class={`${$$props.class ? `${$$props.class} ` : ''}${btnType}`}>
+  data-type={btnType}
+  {...$$restProps}
+  class={`${$$props.class ? `${$$props.class} ` : ''}button`}>
   <slot />
 </button>

@@ -29,4 +29,5 @@
   name="email"
   label="Email"
   error={emailError}
-  bind:value={email} />
+  bind:value={email}
+  {...$$restProps} />

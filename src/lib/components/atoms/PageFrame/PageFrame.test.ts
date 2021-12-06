@@ -6,17 +6,30 @@ import '@testing-library/jest-dom';
 import { render } from '@testing-library/svelte';
 
 import PageFrame from './PageFrame.svelte';
-import { PageFrameTypes } from './PageFrameTypes.enum';
+import { PageFrameStyles } from './PageFrameStyles.enum';
 
-describe('PageFrame component', () => {
+describe('<PageFrame /> component', () => {
   test('redners default PageFrame', () => {
     const { getByRole } = render(PageFrame);
     expect(getByRole('main')).toBeInTheDocument();
-    expect(getByRole('main').className).toEqual(PageFrameTypes.default);
+    expect(getByRole('main').className).toEqual(PageFrameStyles.default);
   });
 
-  test('redners small PageFrame', () => {
-    const { getByRole } = render(PageFrame, { type: PageFrameTypes.small });
-    expect(getByRole('main').className).toEqual(PageFrameTypes.small);
+  test('render correct styles', () => {
+    for (const style in PageFrameStyles) {
+      const rendered = render(PageFrame, {
+        style
+      });
+
+      expect(rendered.getByRole('main').className).toEqual(style);
+      rendered.unmount();
+    }
+  });
+
+  test('custom class', () => {
+    const { getByRole } = render(PageFrame, { class: 'added-class' });
+    expect(getByRole('main').className).toEqual(
+      `added-class ${PageFrameStyles.default}`
+    );
   });
 });

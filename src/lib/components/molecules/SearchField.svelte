@@ -11,7 +11,7 @@
     labelSrOnly={true}
     placeholder="Search"
     class="w-full py-0" />
-  <Button class="px-2">
+  <Button class="px-2" aria-label="Search">
     <Search />
   </Button>
 </div>

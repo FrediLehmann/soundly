@@ -2,3 +2,66 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.button[data-type='none'] {
+}
+
+.button[data-type='primary'] {
+  @apply my-auto px-5 py-2 h-full bg-blue-600 text-white hover:bg-blue-800 disabled:bg-blue-800 disabled:cursor-default;
+}
+
+.button[data-type='secondary'] {
+  @apply my-auto px-5 py-2 h-full bg-gray-300 hover:bg-gray-400 disabled:bg-gray-400 disabled:cursor-default;
+}
+
+.button[data-type='ghost'] {
+  @apply py-1 px-2 rounded-sm border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white disabled:text-blue-500 disabled:bg-transparent disabled:cursor-default;
+}
+
+.button[data-type='link'] {
+  @apply hover:underline;
+}
+
+.flyinContainer {
+  @apply absolute top-0 left-0 w-full text-white font-bold;
+}
+
+.flyinContainer[data-type='info'] {
+  @apply bg-yellow-400;
+}
+
+.flyinContainer[data-type='success'] {
+  @apply bg-green-400;
+}
+
+.flyinContainer[data-type='error'] {
+  @apply bg-red-400;
+}
+
+.flyinContent {
+  @apply max-w-4xl mx-auto flex py-4 px-4 sm:px-8 lg:px-10;
+}
+
+.input {
+  @apply bg-gray-100 px-3 py-1 focus:outline-none focus:ring focus:border-blue-300 disabled:text-gray-500;
+}
+
+.link[data-type='default'] {
+  @apply block text-blue-700 hover:underline;
+}
+
+.link[data-type='primary'] {
+  @apply my-auto px-5 py-2 h-full bg-blue-600 text-white hover:bg-blue-800 disabled:bg-blue-800 disabled:cursor-default;
+}
+
+.link[data-type='secondary'] {
+  @apply my-auto px-5 py-2 h-full bg-gray-300 hover:bg-gray-400 disabled:bg-gray-400 disabled:cursor-default;
+}
+
+.link[data-type='ghost'] {
+  @apply py-1 px-2 rounded-sm border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white disabled:text-blue-500 disabled:bg-transparent disabled:cursor-default;
+}
+
+.link[data-type='link'] {
+  @apply hover:underline;
+}

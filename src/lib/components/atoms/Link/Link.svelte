@@ -1,5 +1,5 @@
 <script type="ts">
-  import type { ButtonStyles } from '../Button';
+  import type { ButtonStyles } from '$lib/components/atoms';
 
   import { LinkStyles } from './LinkStyles.enum';
 
@@ -9,7 +9,8 @@
 
 <a
   {href}
+  data-type={style}
   {...$$restProps}
-  class={`${$$props.class ? `${$$props.class} ` : ''}${style}`}>
+  class={`${$$props.class ? `${$$props.class} ` : ''}link`}>
   <slot />
 </a>
