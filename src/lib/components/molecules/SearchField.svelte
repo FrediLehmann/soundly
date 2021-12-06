@@ -1,4 +1,4 @@
-<script type="ts">
+<script type="ts" context="module">
   import { Search } from '$lib/components/Icons';
   import { Button, Input } from '$lib/components/atoms';
 </script>

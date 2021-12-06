@@ -1,8 +1,4 @@
 <script type="ts" context="module">
-  export const prerender = true;
-</script>
-
-<script type="ts">
   import { goto } from '$app/navigation';
 
   import { Signup } from '$lib/api/auth';
@@ -22,7 +18,9 @@
   import { userStore } from '$lib/store/user';
   import type { User, Session } from '@supabase/supabase-js';
   import { onMount } from 'svelte';
+</script>
 
+<script type="ts">
   let flyin: Flyin;
   let email: EmailInput;
   let username: UserNameInput;

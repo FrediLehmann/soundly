@@ -1,7 +1,9 @@
-<script lang="ts">
+<script lang="ts" context="module">
   import { validatePassword } from '$lib/helpers';
   import { Input } from '$lib/components/atoms';
+</script>
 
+<script lang="ts">
   let pwd: string;
   let pwdRequired: string;
   let pwdErrors: string[] = [];

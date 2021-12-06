@@ -1,8 +1,4 @@
 <script type="ts" context="module">
-  export const prerender = true;
-</script>
-
-<script type="ts">
   import {
     Button,
     ButtonStyles,
@@ -15,7 +11,9 @@
   import { onMount } from 'svelte';
   import { goto } from '$app/navigation';
   import type { User, Session } from '@supabase/supabase-js';
+</script>
 
+<script type="ts">
   let flyin: Flyin;
   let email: EmailInput;
   let submitting = false;

@@ -1,4 +1,4 @@
-<script lang="ts">
+<script lang="ts" context="module">
   import { Button, ButtonStyles } from '$lib/components/atoms';
   import { Cross } from '$lib/components/Icons';
 </script>

@@ -1,6 +1,8 @@
-<script lang="ts">
+<script lang="ts" context="module">
   import { Input } from '$lib/components/atoms';
+</script>
 
+<script lang="ts">
   let username = '';
   let error = '';
 

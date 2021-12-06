@@ -1,11 +1,13 @@
-<script lang="ts">
+<script lang="ts" context="module">
   import { goto } from '$app/navigation';
 
   import { BackLink } from '$lib/components/molecules';
   import { userStore } from '$lib/store/user';
   import type { User, Session } from '@supabase/supabase-js';
   import { onMount } from 'svelte';
+</script>
 
+<script lang="ts">
   let user: { isSignedIn: boolean; user?: User; session?: Session };
   userStore.subscribe(u => (user = u));
 

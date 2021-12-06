@@ -1,10 +1,12 @@
-<script lang="ts">
+<script lang="ts" context="module">
   import type { FlyinConfig } from './FlyinConfig.interface';
   import type { FlyinStyles } from './FlyinStyles.enum';
 
   import { fly } from 'svelte/transition';
   import { Icon, CloseButton } from './components';
+</script>
 
+<script lang="ts">
   let isVisible = false;
   let flyinMessage: string;
   let flyinStyle: FlyinStyles;

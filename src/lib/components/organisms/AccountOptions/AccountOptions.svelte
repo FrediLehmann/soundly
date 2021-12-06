@@ -1,4 +1,4 @@
-<script type="ts">
+<script type="ts" context="module">
   import { goto } from '$app/navigation';
   import { Signout } from '$lib/api/auth';
 
@@ -11,13 +11,15 @@
   import { Account } from '$lib/components/Icons';
   import { userStore } from '$lib/store/user';
   import { Navigation } from './components';
+</script>
 
+<script type="ts">
   let navOpen = false;
   const toggleNav = () => {
     if (isSignedIn) {
       navOpen = !navOpen;
     } else {
-      goto('/login');
+      goto('/signin');
     }
   };
 
