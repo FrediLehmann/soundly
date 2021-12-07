@@ -7,7 +7,7 @@
   export let onClose: (
     //<reference types="svelte" />
     e: MouseEvent
-  ) => any;
+  ) => unknown;
 </script>
 
 <Button
