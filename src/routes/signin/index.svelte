@@ -26,8 +26,8 @@
   let submitting = false;
 
   const signin = async () => {
-    submitting = true;
     if (!email.validate() || !pwd.validate(false)) return;
+    submitting = true;
 
     try {
       const { user, session, error } = await Signin(email.get(), pwd.get());
@@ -44,7 +44,10 @@
   let user: { isSignedIn: boolean; user?: User; session?: Session };
   userStore.subscribe(u => (user = u));
 
-  onMount(() => user.isSignedIn && goto('/profile'));
+  onMount(() => {
+    user.isSignedIn && goto('/profile');
+    flyin.show({ message: 'Test', style: FlyinStyles.error });
+  });
 </script>
 
 <svelte:head>

@@ -19,8 +19,8 @@
   let submitting = false;
 
   const resetPassword = async () => {
-    submitting = true;
     if (!email.validate()) return;
+    submitting = true;
 
     try {
       let { error } = await ForgotPassword(email.get());

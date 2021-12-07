@@ -28,9 +28,9 @@
   let submitting = false;
 
   const signup = async () => {
-    submitting = true;
     if (!email.validate() || !pwd.validate(true) || !username.validate())
       return;
+    submitting = true;
 
     try {
       await Signup(email.get(), pwd.get(), { username: username.get() });
