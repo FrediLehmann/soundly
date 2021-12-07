@@ -38,7 +38,7 @@
     <div class="flyinContent">
       <Icon {flyinStyle} />
       <span>{flyinMessage}</span>
-      <CloseButton on:click={onClose} />
+      <CloseButton {onClose} />
     </div>
   </div>
 {/if}

@@ -46,7 +46,6 @@
 
   onMount(() => {
     user.isSignedIn && goto('/profile');
-    flyin.show({ message: 'Test', style: FlyinStyles.error });
   });
 </script>
 

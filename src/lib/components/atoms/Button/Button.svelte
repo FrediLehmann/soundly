@@ -7,9 +7,9 @@
 </script>
 
 <button
+  on:click
   type="button"
   data-type={btnType}
-  {...$$restProps}
   class={`${$$props.class ? `${$$props.class} ` : ''}button`}>
   <slot />
 </button>
