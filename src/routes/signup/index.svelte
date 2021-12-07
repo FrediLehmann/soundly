@@ -1,8 +1,4 @@
 <script type="ts" context="module">
-  export const prerender = true;
-</script>
-
-<script type="ts">
   import { goto } from '$app/navigation';
 
   import { Signup } from '$lib/api/auth';
@@ -20,9 +16,10 @@
     UserNameInput
   } from '$lib/components/molecules';
   import { userStore } from '$lib/store/user';
-  import type { User, Session } from '@supabase/supabase-js';
   import { onMount } from 'svelte';
+</script>
 
+<script type="ts">
   let flyin: Flyin;
   let email: EmailInput;
   let username: UserNameInput;
@@ -30,9 +27,9 @@
   let submitting = false;
 
   const signup = async () => {
-    submitting = true;
     if (!email.validate() || !pwd.validate(true) || !username.validate())
       return;
+    submitting = true;
 
     try {
       await Signup(email.get(), pwd.get(), { username: username.get() });
@@ -47,10 +44,7 @@
     }
   };
 
-  let user: { isSignedIn: boolean; user?: User; session?: Session };
-  userStore.subscribe(u => (user = u));
-
-  onMount(() => user.isSignedIn && goto('/profile'));
+  onMount(() => $userStore.isSignedIn && goto('/profile'));
 </script>
 
 <svelte:head>

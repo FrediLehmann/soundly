@@ -1,6 +1,8 @@
-<script lang="ts">
+<script lang="ts" context="module">
   import { PageFrameStyles } from './PageFrameStyles.enum';
+</script>
 
+<script lang="ts">
   export let style: PageFrameStyles = PageFrameStyles.default;
 </script>
 

@@ -1,4 +1,4 @@
-<script lang="ts">
+<script lang="ts" context="module">
   import { Settings, Upload } from '$lib/components/Icons';
 
   import NavLink from './NavLink.svelte';

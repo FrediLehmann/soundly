@@ -1,4 +1,4 @@
-<script>
+<script type="ts" context="module">
   import { IconSection } from './components';
   import { SearchField } from '$lib/components/molecules';
   import { AccountOptions } from '$lib/components/organisms';

@@ -1,7 +1,9 @@
-<script lang="ts">
+<script lang="ts" context="module">
   import { FlyinStyles } from '../FlyinStyles.enum';
   import { CircleCheck, AlertTriangle, XCircle } from '$lib/components/Icons';
+</script>
 
+<script lang="ts">
   export let flyinStyle: FlyinStyles;
 </script>
 

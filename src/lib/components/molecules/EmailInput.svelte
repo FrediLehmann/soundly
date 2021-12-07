@@ -1,7 +1,9 @@
-<script lang="ts">
+<script lang="ts" context="module">
   import { validateEmail } from '$lib/helpers';
   import { Input } from '$lib/components/atoms';
+</script>
 
+<script lang="ts">
   let email: string;
   let emailError: string;
 

@@ -1,8 +1,4 @@
 <script type="ts" context="module">
-  export const prerender = true;
-</script>
-
-<script type="ts">
   import {
     Button,
     ButtonStyles,
@@ -14,15 +10,16 @@
   import { userStore } from '$lib/store/user';
   import { onMount } from 'svelte';
   import { goto } from '$app/navigation';
-  import type { User, Session } from '@supabase/supabase-js';
+</script>
 
+<script type="ts">
   let flyin: Flyin;
   let email: EmailInput;
   let submitting = false;
 
   const resetPassword = async () => {
-    submitting = true;
     if (!email.validate()) return;
+    submitting = true;
 
     try {
       let { error } = await ForgotPassword(email.get());
@@ -38,10 +35,7 @@
     }
   };
 
-  let user: { isSignedIn: boolean; user?: User; session?: Session };
-  userStore.subscribe(u => (user = u));
-
-  onMount(() => user.isSignedIn && goto('/profile'));
+  onMount(() => $userStore.isSignedIn && goto('/profile'));
 </script>
 
 <svelte:head>

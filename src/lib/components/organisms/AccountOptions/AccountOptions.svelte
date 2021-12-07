@@ -1,4 +1,4 @@
-<script type="ts">
+<script type="ts" context="module">
   import { goto } from '$app/navigation';
   import { Signout } from '$lib/api/auth';
 
@@ -11,18 +11,17 @@
   import { Account } from '$lib/components/Icons';
   import { userStore } from '$lib/store/user';
   import { Navigation } from './components';
+</script>
 
+<script type="ts">
   let navOpen = false;
   const toggleNav = () => {
-    if (isSignedIn) {
+    if ($userStore.isSignedIn) {
       navOpen = !navOpen;
     } else {
-      goto('/login');
+      goto('/signin');
     }
   };
-
-  let isSignedIn: boolean;
-  userStore.subscribe(u => (isSignedIn = u.isSignedIn));
 
   const signout = async () => {
     const { error } = await Signout();
@@ -49,7 +48,7 @@
     aria-label="Account menu">
     <Account />
   </Button>
-  {#if !isSignedIn}
+  {#if !$userStore.isSignedIn}
     <Link
       href="/signin"
       class="hidden whitespace-nowrap sm:flex px-4 py-0"
@@ -58,7 +57,7 @@
       Sign in
     </Link>
   {/if}
-  {#if isSignedIn}
+  {#if $userStore.isSignedIn}
     <Button
       class="hidden whitespace-nowrap sm:flex px-4 py-0"
       on:click={signout}
