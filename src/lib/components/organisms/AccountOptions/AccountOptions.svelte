@@ -16,15 +16,12 @@
 <script type="ts">
   let navOpen = false;
   const toggleNav = () => {
-    if (isSignedIn) {
+    if ($userStore.isSignedIn) {
       navOpen = !navOpen;
     } else {
       goto('/signin');
     }
   };
-
-  let isSignedIn: boolean;
-  userStore.subscribe(u => (isSignedIn = u.isSignedIn));
 
   const signout = async () => {
     const { error } = await Signout();
@@ -51,7 +48,7 @@
     aria-label="Account menu">
     <Account />
   </Button>
-  {#if !isSignedIn}
+  {#if !$userStore.isSignedIn}
     <Link
       href="/signin"
       class="hidden whitespace-nowrap sm:flex px-4 py-0"
@@ -60,7 +57,7 @@
       Sign in
     </Link>
   {/if}
-  {#if isSignedIn}
+  {#if $userStore.isSignedIn}
     <Button
       class="hidden whitespace-nowrap sm:flex px-4 py-0"
       on:click={signout}
