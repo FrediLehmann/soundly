@@ -44,7 +44,9 @@
     <Button {...args} type={args.type}>Button</Button>
   </div>
   <div class="box">
-    <Button {...args} type={args.type}><Settings /></Button>
+    <Button {...args} type={args.type} aria-label="settings">
+      <Settings />
+    </Button>
   </div>
   <div class="box">
     <Button {...args} type={args.type}><span>Button</span><Settings /></Button>
