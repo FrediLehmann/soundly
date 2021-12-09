@@ -39,7 +39,6 @@
   <Button
     on:click={toggleNav}
     class="px-2 bg-gray-400 hover:bg-gray-500"
-    style="none"
     aria-label="Account menu">
     <Account />
   </Button>

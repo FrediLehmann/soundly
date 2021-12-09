@@ -16,6 +16,7 @@
     --gray-400: 0, 0%, 85%;
 
     display: flex;
+    justify-content: center;
     gap: 0.5rem;
 
     cursor: pointer;
