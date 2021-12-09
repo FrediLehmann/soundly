@@ -2,13 +2,7 @@
   import { goto } from '$app/navigation';
 
   import { Signup } from '$lib/api/auth';
-  import {
-    Button,
-    ButtonStyles,
-    Link,
-    Flyin,
-    FlyinStyles
-  } from '$lib/components/atoms';
+  import { Button, Link, Flyin, FlyinStyles } from '$lib/components/atoms';
   import {
     BackLink,
     EmailInput,
@@ -63,11 +57,7 @@
   <EmailInput disabled={submitting} bind:this={email} />
   <UserNameInput disabled={submitting} bind:this={username} />
   <PasswordInput disabled={submitting} bind:this={pwd} />
-  <Button
-    disabled={submitting}
-    type="submit"
-    btnType={ButtonStyles.primary}
-    class="mt-2">
+  <Button disabled={submitting} type="submit" style="primary" class="mt-2">
     Sign up
   </Button>
 </form>

@@ -2,12 +2,7 @@
   import { goto } from '$app/navigation';
   import { Signout } from '$lib/api/auth';
 
-  import {
-    Button,
-    ButtonStyles,
-    Link,
-    LinkStyles
-  } from '$lib/components/atoms';
+  import { Button, Link, LinkStyles } from '$lib/components/atoms';
   import { Account } from '$lib/components/Icons';
   import { userStore } from '$lib/store/user';
   import { Navigation } from './components';
@@ -44,7 +39,7 @@
   <Button
     on:click={toggleNav}
     class="px-2 bg-gray-400 hover:bg-gray-500"
-    btnType={ButtonStyles.none}
+    style="none"
     aria-label="Account menu">
     <Account />
   </Button>
@@ -61,7 +56,7 @@
     <Button
       class="hidden whitespace-nowrap sm:flex px-4 py-0"
       on:click={signout}
-      style={ButtonStyles.secondary}>
+      style="secondary">
       Sign out
     </Button>
   {/if}
