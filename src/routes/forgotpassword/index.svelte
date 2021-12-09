@@ -1,10 +1,5 @@
 <script type="ts" context="module">
-  import {
-    Button,
-    ButtonStyles,
-    Flyin,
-    FlyinStyles
-  } from '$lib/components/atoms';
+  import { Button, Flyin, FlyinStyles } from '$lib/components/atoms';
   import { ForgotPassword } from '$lib/api/auth';
   import { BackLink, EmailInput } from '$lib/components/molecules';
   import { userStore } from '$lib/store/user';
@@ -45,11 +40,7 @@
 <BackLink href="/signin" class="mb-4">Back</BackLink>
 <form on:submit|preventDefault={resetPassword} class="flex flex-col gap-3">
   <EmailInput disabled={submitting} bind:this={email} />
-  <Button
-    disabled={submitting}
-    btnType={ButtonStyles.primary}
-    type="submit"
-    class="mt-2">
+  <Button disabled={submitting} style="primary" type="submit" class="mt-2">
     Reset password
   </Button>
 </form>

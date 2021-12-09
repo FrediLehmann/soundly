@@ -2,13 +2,7 @@
   import { goto } from '$app/navigation';
 
   import { Signin } from '$lib/api/auth';
-  import {
-    Button,
-    ButtonStyles,
-    Link,
-    Flyin,
-    FlyinStyles
-  } from '$lib/components/atoms';
+  import { Button, Link, Flyin, FlyinStyles } from '$lib/components/atoms';
   import {
     BackLink,
     EmailInput,
@@ -60,11 +54,7 @@
 <form on:submit|preventDefault={signin} class="flex flex-col gap-3">
   <EmailInput disabled={submitting} bind:this={email} />
   <PasswordInput disabled={submitting} bind:this={pwd} />
-  <Button
-    disabled={submitting}
-    type="submit"
-    btnType={ButtonStyles.primary}
-    class="mt-2">
+  <Button disabled={submitting} type="submit" style="primary" class="mt-2">
     Sign in
   </Button>
 </form>
