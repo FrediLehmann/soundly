@@ -11,11 +11,31 @@
   argTypes={{
     type: {
       control: { type: 'select' },
-      options: ['button', 'submit', 'reset']
+      options: ['button', 'submit', 'reset'],
+      table: {
+        defaultValue: {
+          summary: 'button'
+        },
+        type: {
+          summary: 'HTML button type.',
+          detail:
+            'Defines the HTML button type. This will change the behavior of the button. For forms use the submit type.'
+        }
+      }
     },
     style: {
       control: { type: 'select' },
-      options: ['primary', 'secondary', 'ghost', 'link']
+      options: ['primary', 'secondary', 'ghost', 'link'],
+      table: {
+        defaultValue: {
+          summary: 'secondary'
+        },
+        type: {
+          summary: 'Decides how the button will be rendered.',
+          detail:
+            'There are different button style to render. Choose the correct styling based on your needs.'
+        }
+      }
     }
   }} />
 
