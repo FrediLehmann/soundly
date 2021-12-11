@@ -18,7 +18,8 @@ module.exports = {
     '@storybook/addon-links',
     '@storybook/addon-essentials',
     '@storybook/addon-svelte-csf',
-    '@storybook/addon-a11y'
+    '@storybook/addon-a11y',
+    '@storybook/addon-interactions'
   ],
   framework: '@storybook/svelte',
   svelteOptions: {
