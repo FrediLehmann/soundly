@@ -11,14 +11,14 @@
 
   /**
    * Open the flyin component with the settings provided.
-   * @param {string} flyinMessage the message to show in the flyin.
-   * @param {'info' | 'error' | 'success'} flyinStyle style of the flyin.
-   * @param {number} [showFor=5000] - time in ms until the flyin automatically closes.
+   * @param flyinMessage the message to show in the flyin.
+   * @param flyinStyle style of the flyin.
+   * @param [showFor=5000] - time in ms until the flyin automatically closes.
    */
   export const show = (
     flyinMessage: string,
     flyinStyle: 'info' | 'error' | 'success',
-    showFor: number = 5000
+    showFor = 5000
   ): void => {
     message = flyinMessage;
     style = flyinStyle;
