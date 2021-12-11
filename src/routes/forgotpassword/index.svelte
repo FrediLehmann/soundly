@@ -1,5 +1,5 @@
 <script type="ts" context="module">
-  import { Button, Flyin, FlyinStyles } from '$lib/components/atoms';
+  import { Button, Flyin } from '$lib/components/atoms';
   import { ForgotPassword } from '$lib/api/auth';
   import { BackLink, EmailInput } from '$lib/components/molecules';
   import { userStore } from '$lib/store/user';
@@ -19,12 +19,9 @@
     try {
       let { error } = await ForgotPassword(email.get());
       if (error) throw error;
-      flyin.show({
-        message: 'A reset link has been sent to your email!',
-        style: FlyinStyles.info
-      });
+      flyin.show('A reset link has been sent to your email!', 'info');
     } catch (e) {
-      flyin.show({ message: e.message, style: FlyinStyles.error });
+      flyin.show(e.message, 'error');
     } finally {
       submitting = false;
     }
