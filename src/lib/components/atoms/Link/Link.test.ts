@@ -31,6 +31,8 @@ describe('<Link /> component', () => {
 
   test('custom class', () => {
     const { getByRole } = render(Link, { href: '/', class: 'added-class' });
-    expect(getByRole('link').className).toEqual(`added-class link`);
+    expect(
+      getByRole('link').className.indexOf('added-class') > -1
+    ).toBeTruthy();
   });
 });

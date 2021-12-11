@@ -1,5 +1,4 @@
 <script lang="ts" context="module">
-  import { Button } from '$lib/components/atoms';
   import { Cross } from '$lib/components/Icons';
 </script>
 
@@ -10,10 +9,10 @@
   ) => unknown;
 </script>
 
-<Button
+<button
   on:click={onClose}
-  class="flex items-center ml-auto font-bold"
+  class="flex ml-auto items-center font-semibold text-white hover:underline"
   style="link">
   Close
   <Cross class="w-5 h-5" stroke-width="3" />
-</Button>
+</button>

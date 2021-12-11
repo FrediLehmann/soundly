@@ -2,7 +2,7 @@
   import { goto } from '$app/navigation';
 
   import { Signup } from '$lib/api/auth';
-  import { Button, Link, Flyin, FlyinStyles } from '$lib/components/atoms';
+  import { Button, Link, Flyin } from '$lib/components/atoms';
   import {
     BackLink,
     EmailInput,
@@ -27,12 +27,9 @@
 
     try {
       await Signup(email.get(), pwd.get(), { username: username.get() });
-      flyin.show({
-        message: 'Successfull signed up',
-        style: FlyinStyles.success
-      });
+      flyin.show('Successfull signed up', 'success');
     } catch (e) {
-      flyin.show({ message: e.message, style: FlyinStyles.error });
+      flyin.show(e.message, 'error');
     } finally {
       submitting = false;
     }

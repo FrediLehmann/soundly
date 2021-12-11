@@ -2,7 +2,7 @@
   import { goto } from '$app/navigation';
 
   import { Signin } from '$lib/api/auth';
-  import { Button, Link, Flyin, FlyinStyles } from '$lib/components/atoms';
+  import { Button, Link, Flyin } from '$lib/components/atoms';
   import {
     BackLink,
     EmailInput,
@@ -28,7 +28,7 @@
       $userStore = { isSignedIn: true, user, session };
       goto('/profile');
     } catch (e) {
-      flyin.show({ message: e.message, style: FlyinStyles.error });
+      flyin.show(e.message, 'error');
     } finally {
       submitting = false;
     }
