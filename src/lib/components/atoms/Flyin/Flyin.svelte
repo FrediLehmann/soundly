@@ -40,7 +40,7 @@
     transition:fly={{ y: -100, duration: 300 }}>
     <div class="content">
       <Icon {style} />
-      <span>{message}</span>
+      <span class="text">{message}</span>
       <CloseButton {onClose} />
     </div>
   </div>
@@ -48,11 +48,6 @@
 
 <style>
   .flyin {
-    --white: 0, 0%, 100%;
-    --yellow: 54, 100%, 70%;
-    --red: 0, 80%, 61%;
-    --green: 125, 90%, 41%;
-
     position: absolute;
     top: 0;
     left: 0;
@@ -83,5 +78,10 @@
 
     color: hsla(var(--white));
     font-weight: 600;
+  }
+
+  .text {
+    align-self: center;
+    margin-inline-start: 1rem;
   }
 </style>
