@@ -1,5 +1,9 @@
+const path = require('path');
+
 module.exports = {
   webpackFinal: async config => {
+    config.resolve.alias['$lib'] = path.resolve(__dirname, '../src/lib');
+
     const svelteLoader = config.module.rules.find(
       r => r.loader && r.loader.includes('svelte-loader')
     );
