@@ -1,5 +1,6 @@
 <script>
   import { Meta, Story, Template } from '@storybook/addon-svelte-csf';
+  import { fireEvent, within } from '@storybook/testing-library';
 
   import Button from './Button.svelte';
   import { Settings } from '../../Icons';
@@ -59,13 +60,57 @@
   </div>
 </Template>
 
-<Story name="Primary" args={{ style: 'primary' }} />
+<Story
+  name="Primary"
+  args={{ style: 'primary' }}
+  play={async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const buttons = canvas.getAllByRole('button');
 
-<Story name="Secondary" args={{ style: 'secondary' }} />
+    buttons.forEach(async button => {
+      await fireEvent.mouseOver(button);
+      button.focus();
+    });
+  }} />
 
-<Story name="Ghost" args={{ style: 'ghost' }} />
+<Story
+  name="Secondary"
+  args={{ style: 'secondary' }}
+  play={async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const buttons = canvas.getAllByRole('button');
 
-<Story name="Link" args={{ style: 'link' }} />
+    buttons.forEach(async button => {
+      await fireEvent.mouseOver(button);
+      button.focus();
+    });
+  }} />
+
+<Story
+  name="Ghost"
+  args={{ style: 'ghost' }}
+  play={async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const buttons = canvas.getAllByRole('button');
+
+    buttons.forEach(async button => {
+      await fireEvent.mouseOver(button);
+      button.focus();
+    });
+  }} />
+
+<Story
+  name="Link"
+  args={{ style: 'link' }}
+  play={async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const buttons = canvas.getAllByRole('button');
+
+    buttons.forEach(async button => {
+      await fireEvent.mouseOver(button);
+      button.focus();
+    });
+  }} />
 
 <style>
   .box {
