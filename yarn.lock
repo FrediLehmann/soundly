@@ -1740,6 +1740,24 @@
     regenerator-runtime "^0.13.7"
     ts-dedent "^2.0.0"
 
+"@storybook/addon-interactions@^6.4.9":
+  version "6.4.9"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-interactions/-/addon-interactions-6.4.9.tgz#17ebe1e400262c8ea76cb1ab18096d907fe31e31"
+  integrity sha512-J4Q8kHF58UJ3P7JLYBRFMmqKzTRCt6dlml3sOKrrUpmuwFrl+VYtV4Vk2tZKUkvj0iT+tc/8gIGMwquvWGCtTw==
+  dependencies:
+    "@storybook/addons" "6.4.9"
+    "@storybook/api" "6.4.9"
+    "@storybook/components" "6.4.9"
+    "@storybook/core-common" "6.4.9"
+    "@storybook/core-events" "6.4.9"
+    "@storybook/csf" "0.0.2--canary.87bc651.0"
+    "@storybook/instrumenter" "6.4.9"
+    "@storybook/theming" "6.4.9"
+    global "^4.4.0"
+    jest-mock "^27.0.6"
+    polished "^4.0.5"
+    ts-dedent "^2.2.0"
+
 "@storybook/addon-links@^6.4.9":
   version "6.4.9"
   resolved "https://registry.yarnpkg.com/@storybook/addon-links/-/addon-links-6.4.9.tgz#2d0a7f813dcef160feb357f6548bb1a7ba425d7d"
@@ -2282,6 +2300,11 @@
   dependencies:
     lodash "^4.17.15"
 
+"@storybook/expect@storybook-jest":
+  version "27.4.2"
+  resolved "https://registry.yarnpkg.com/@storybook/expect/-/expect-27.4.2.tgz#cb2b79879482493e5be73ff72b845e46b76a7ca6"
+  integrity sha512-x6osV4KOdMZn8nBwHdxKJ6ayEoCfCA3+v9gH5ZJmozoTHA5mTcwGjDlWb8hldIyveuOWkifT6ybIR3pUuYysLw==
+
 "@storybook/instrumenter@6.4.0-rc.5":
   version "6.4.0-rc.5"
   resolved "https://registry.yarnpkg.com/@storybook/instrumenter/-/instrumenter-6.4.0-rc.5.tgz#eef42e84b441f0df21bdf3fd67b26059b1c0a61f"
@@ -2291,6 +2314,25 @@
     "@storybook/client-logger" "6.4.0-rc.5"
     "@storybook/core-events" "6.4.0-rc.5"
     global "^4.4.0"
+
+"@storybook/instrumenter@6.4.9":
+  version "6.4.9"
+  resolved "https://registry.yarnpkg.com/@storybook/instrumenter/-/instrumenter-6.4.9.tgz#fde8e6ad54e357e718936ed28ad2b09b7e821afd"
+  integrity sha512-mz56gJSgyjdxgLHkE7aFeWpPL7m81VPgIAmv0nLt2VEYTJRiUg2aIbCF7xLt3feYbpHe0RSqQiCjFuYW4omhrw==
+  dependencies:
+    "@storybook/addons" "6.4.9"
+    "@storybook/client-logger" "6.4.9"
+    "@storybook/core-events" "6.4.9"
+    global "^4.4.0"
+
+"@storybook/jest@^0.0.5":
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/@storybook/jest/-/jest-0.0.5.tgz#b7513dc23d65a76c88b336f440b4d32e4fc9635e"
+  integrity sha512-aWpzNlmA80s4WqJBYi6zngba+IinUiePAhs5AomHPOyfu5tQXD/x+UMpjuKSrIsxsyftn1snBn7D7ZfZwrUbjw==
+  dependencies:
+    "@storybook/expect" storybook-jest
+    "@storybook/instrumenter" "6.4.0-rc.5"
+    jest-mock "^27.3.0"
 
 "@storybook/manager-webpack4@6.4.9":
   version "6.4.9"
@@ -7909,7 +7951,7 @@ jest-message-util@^27.4.2:
     slash "^3.0.0"
     stack-utils "^2.0.3"
 
-jest-mock@^27.4.2:
+jest-mock@^27.0.6, jest-mock@^27.3.0, jest-mock@^27.4.2:
   version "27.4.2"
   resolved "https://registry.yarnpkg.com/jest-mock/-/jest-mock-27.4.2.tgz#184ff197a25491bfe4570c286daa5d62eb760b88"
   integrity sha512-PDDPuyhoukk20JrQKeofK12hqtSka7mWH0QQuxSNgrdiPsrnYYLS6wbzu/HDlxZRzji5ylLRULeuI/vmZZDrYA==
