@@ -25,7 +25,7 @@
     background-color: transparent;
     border: none;
 
-    color: hsla(var(--white));
+    color: inherit;
     font-weight: 600;
   }
 

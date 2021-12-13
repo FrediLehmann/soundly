@@ -4,13 +4,14 @@
 
 :root {
   --white: 0, 0%, 100%;
-  --black: 224, 100%, 11%;
+  --black: 224, 100%, 10%;
   --transparent: 0, 0, 0;
+  --gray-800: 224, 10%, 35%;
   --blue-500: 204, 88%, 40%;
   --gray-400: 0, 0%, 85%;
-  --yellow: 54, 100%, 70%;
-  --red: 0, 80%, 61%;
-  --green: 125, 90%, 41%;
+  --yellow: 60, 80%, 50%;
+  --red: 0, 60%, 50%;
+  --green: 125, 40%, 37%;
 
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
     'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,

@@ -1,6 +1,13 @@
 <script>
   import { Meta, Story, Template } from '@storybook/addon-svelte-csf';
 
+  import { expect } from '@storybook/jest';
+  import {
+    within,
+    fireEvent,
+    waitForElementToBeRemoved
+  } from '@storybook/testing-library';
+
   import Flyin from './Flyin.svelte';
 
   let flyin;
@@ -44,14 +51,83 @@
 <Template let:args>
   <Flyin bind:this={flyin} />
   <button
-    on:click={() => flyin.show(args.message, args.style, 5000)}
-    class="bg-black">
+    class="btn"
+    on:click={() => flyin.show(args.message, args.style, 5000)}>
     Show flyin
   </button>
 </Template>
 
-<Story name="Success" args={{ style: 'success' }} />
+<Story
+  name="Success"
+  args={{ style: 'success' }}
+  play={async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
 
-<Story name="Error" args={{ style: 'error' }} />
+    await fireEvent.click(canvas.getByRole('button'));
+    expect(canvas.getByText('Information for the user.')).toBeTruthy();
 
-<Story name="Info" args={{ style: 'info' }} />
+    await fireEvent.click(canvas.getByText('Close'));
+    expect(
+      waitForElementToBeRemoved(canvas.getByText('Information for the user.'))
+    ).resolves;
+
+    await fireEvent.click(canvas.getByText('Show flyin'));
+    expect(canvas.getByText('Information for the user.')).toBeTruthy();
+
+    expect(
+      waitForElementToBeRemoved(canvas.getByText('Information for the user.'))
+    ).resolves;
+  }} />
+
+<Story
+  name="Error"
+  args={{ style: 'error' }}
+  play={async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    await fireEvent.click(canvas.getByRole('button'));
+    expect(canvas.getByText('Information for the user.')).toBeTruthy();
+
+    await fireEvent.click(canvas.getByText('Close'));
+    expect(
+      waitForElementToBeRemoved(canvas.getByText('Information for the user.'))
+    ).resolves;
+
+    await fireEvent.click(canvas.getByText('Show flyin'));
+    expect(canvas.getByText('Information for the user.')).toBeTruthy();
+
+    expect(
+      waitForElementToBeRemoved(canvas.getByText('Information for the user.'))
+    ).resolves;
+  }} />
+
+<Story
+  name="Info"
+  args={{ style: 'info' }}
+  play={async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    await fireEvent.click(canvas.getByRole('button'));
+    expect(canvas.getByText('Information for the user.')).toBeTruthy();
+
+    await fireEvent.click(canvas.getByText('Close'));
+    expect(
+      waitForElementToBeRemoved(canvas.getByText('Information for the user.'))
+    ).resolves;
+
+    await fireEvent.click(canvas.getByText('Show flyin'));
+    expect(canvas.getByText('Information for the user.')).toBeTruthy();
+
+    expect(
+      waitForElementToBeRemoved(canvas.getByText('Information for the user.'))
+    ).resolves;
+  }} />
+
+<style>
+  .btn {
+    margin-top: 100px;
+    border: 1px solid black;
+    background-color: transparent;
+    color: black;
+  }
+</style>

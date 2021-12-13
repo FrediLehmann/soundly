@@ -48,6 +48,7 @@
 
 <style>
   .flyin {
+    color: hsla(var(--white));
     position: absolute;
     top: 0;
     left: 0;
@@ -56,6 +57,7 @@
   }
 
   .flyin[data-type='info'] {
+    color: hsla(var(--gray-500));
     background-color: hsla(var(--yellow));
   }
 
@@ -76,7 +78,6 @@
     padding-block: 1rem;
     padding-inline: 2rem;
 
-    color: hsla(var(--white));
     font-weight: 600;
   }
 
