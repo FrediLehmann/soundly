@@ -32,6 +32,7 @@
 
 <style>
   .content {
+    color: white;
     background-color: green;
     width: 100%;
     height: 100%;

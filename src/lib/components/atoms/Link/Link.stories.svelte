@@ -3,6 +3,7 @@
   import { userEvent, within } from '@storybook/testing-library';
 
   import Link from './Link.svelte';
+  import { Settings } from '../../Icons';
 </script>
 
 <Meta
@@ -33,6 +34,31 @@
 
 <Template let:args>
   <Link {...args} on:click={e => e.preventDefault()} href="#">Link</Link>
+
+  <div class="box">
+    <Link {...args} on:click={e => e.preventDefault()} href="#">Link</Link>
+  </div>
+  <div class="box">
+    <Link
+      {...args}
+      on:click={e => e.preventDefault()}
+      href="#"
+      aria-label="settings">
+      <Settings />
+    </Link>
+  </div>
+  <div class="box">
+    <Link {...args} on:click={e => e.preventDefault()} href="#"
+      >Button<Settings /></Link>
+  </div>
+  <div class="box">
+    <Link {...args} on:click={e => e.preventDefault()} href="#"
+      ><Settings />Button</Link>
+  </div>
+  <div class="box">
+    <Link {...args} on:click={e => e.preventDefault()} href="#" disabled
+      >Button</Link>
+  </div>
 </Template>
 
 <Story
@@ -40,12 +66,14 @@
   args={{ style: 'none' }}
   play={async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    const link = canvas.getByRole('link');
+    const links = canvas.getAllByRole('link');
 
-    userEvent.hover(link);
-    userEvent.unhover(link);
-    link.focus();
-    link.blur();
+    links.forEach(link => {
+      userEvent.hover(link);
+      userEvent.unhover(link);
+      link.focus();
+      link.blur();
+    });
   }} />
 
 <Story
@@ -53,12 +81,14 @@
   args={{ style: 'default' }}
   play={async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    const link = canvas.getByRole('link');
+    const links = canvas.getAllByRole('link');
 
-    userEvent.hover(link);
-    userEvent.unhover(link);
-    link.focus();
-    link.blur();
+    links.forEach(link => {
+      userEvent.hover(link);
+      userEvent.unhover(link);
+      link.focus();
+      link.blur();
+    });
   }} />
 
 <Story
@@ -66,12 +96,14 @@
   args={{ style: 'primary' }}
   play={async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    const link = canvas.getByRole('link');
+    const links = canvas.getAllByRole('link');
 
-    userEvent.hover(link);
-    userEvent.unhover(link);
-    link.focus();
-    link.blur();
+    links.forEach(link => {
+      userEvent.hover(link);
+      userEvent.unhover(link);
+      link.focus();
+      link.blur();
+    });
   }} />
 
 <Story
@@ -79,12 +111,14 @@
   args={{ style: 'secondary' }}
   play={async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    const link = canvas.getByRole('link');
+    const links = canvas.getAllByRole('link');
 
-    userEvent.hover(link);
-    userEvent.unhover(link);
-    link.focus();
-    link.blur();
+    links.forEach(link => {
+      userEvent.hover(link);
+      userEvent.unhover(link);
+      link.focus();
+      link.blur();
+    });
   }} />
 
 <Story
@@ -92,12 +126,14 @@
   args={{ style: 'ghost' }}
   play={async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    const link = canvas.getByRole('link');
+    const links = canvas.getAllByRole('link');
 
-    userEvent.hover(link);
-    userEvent.unhover(link);
-    link.focus();
-    link.blur();
+    links.forEach(link => {
+      userEvent.hover(link);
+      userEvent.unhover(link);
+      link.focus();
+      link.blur();
+    });
   }} />
 
 <Story
@@ -105,10 +141,18 @@
   args={{ style: 'link' }}
   play={async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    const link = canvas.getByRole('link');
+    const links = canvas.getAllByRole('link');
 
-    userEvent.hover(link);
-    userEvent.unhover(link);
-    link.focus();
-    link.blur();
+    links.forEach(link => {
+      userEvent.hover(link);
+      userEvent.unhover(link);
+      link.focus();
+      link.blur();
+    });
   }} />
+
+<style>
+  .box {
+    margin: 12px;
+  }
+</style>

@@ -50,10 +50,10 @@
     </Button>
   </div>
   <div class="box">
-    <Button {...args} type={args.type}><span>Button</span><Settings /></Button>
+    <Button {...args} type={args.type}>Button<Settings /></Button>
   </div>
   <div class="box">
-    <Button {...args} type={args.type}><Settings /><span>Button</span></Button>
+    <Button {...args} type={args.type}><Settings />Button</Button>
   </div>
   <div class="box">
     <Button {...args} type={args.type} disabled>Button</Button>

@@ -15,7 +15,6 @@
 
 <style>
   a[data-type='default'] {
-    display: block;
     color: rgba(29, 78, 216, 1);
   }
   a[data-type='default']:hover {
@@ -23,12 +22,6 @@
   }
 
   a {
-    --white: 0, 0%, 100%;
-    --black: 224, 100%, 11%;
-    --transparent: 0, 0, 0;
-    --blue-500: 204, 88%, 40%;
-    --gray-400: 0, 0%, 85%;
-
     display: flex;
     justify-content: center;
     gap: 0.5rem;
@@ -42,6 +35,8 @@
     border-radius: 0.125rem;
 
     font-weight: 600;
+
+    align-items: center;
   }
 
   a:disabled {
