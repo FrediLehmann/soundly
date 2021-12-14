@@ -69,7 +69,9 @@
 
     buttons.forEach(async button => {
       await userEvent.hover(button);
-      await userEvent.click(button);
+      await userEvent.unhover(button);
+      button.focus();
+      button.blur();
     });
   }} />
 
@@ -82,7 +84,9 @@
 
     buttons.forEach(async button => {
       await userEvent.hover(button);
-      await userEvent.click(button);
+      await userEvent.unhover(button);
+      button.focus();
+      button.blur();
     });
   }} />
 
@@ -95,7 +99,9 @@
 
     buttons.forEach(async button => {
       await userEvent.hover(button);
-      await userEvent.click(button);
+      await userEvent.unhover(button);
+      button.focus();
+      button.blur();
     });
   }} />
 
@@ -108,7 +114,9 @@
 
     buttons.forEach(async button => {
       await userEvent.hover(button);
-      await userEvent.click(button);
+      await userEvent.unhover(button);
+      button.focus();
+      button.blur();
     });
   }} />
 
