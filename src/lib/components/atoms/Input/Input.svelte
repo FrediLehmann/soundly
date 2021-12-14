@@ -67,7 +67,7 @@
   }
 
   .error {
-    margin-top: 0.25rem;
+    margin-box-start: 0.25rem;
     grid-column-start: 2;
     column-span: 2;
 
