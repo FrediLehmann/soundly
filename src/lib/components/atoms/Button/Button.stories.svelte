@@ -1,6 +1,6 @@
 <script>
   import { Meta, Story, Template } from '@storybook/addon-svelte-csf';
-  import { fireEvent, within } from '@storybook/testing-library';
+  import { userEvent, within } from '@storybook/testing-library';
 
   import Button from './Button.svelte';
   import { Settings } from '../../Icons';
@@ -68,8 +68,8 @@
     const buttons = canvas.getAllByRole('button');
 
     buttons.forEach(async button => {
-      await fireEvent.mouseOver(button);
-      button.focus();
+      await userEvent.hover(button);
+      await userEvent.click(button);
     });
   }} />
 
@@ -81,8 +81,8 @@
     const buttons = canvas.getAllByRole('button');
 
     buttons.forEach(async button => {
-      await fireEvent.mouseOver(button);
-      button.focus();
+      await userEvent.hover(button);
+      await userEvent.click(button);
     });
   }} />
 
@@ -94,8 +94,8 @@
     const buttons = canvas.getAllByRole('button');
 
     buttons.forEach(async button => {
-      await fireEvent.mouseOver(button);
-      button.focus();
+      await userEvent.hover(button);
+      await userEvent.click(button);
     });
   }} />
 
@@ -107,8 +107,8 @@
     const buttons = canvas.getAllByRole('button');
 
     buttons.forEach(async button => {
-      await fireEvent.mouseOver(button);
-      button.focus();
+      await userEvent.hover(button);
+      await userEvent.click(button);
     });
   }} />
 

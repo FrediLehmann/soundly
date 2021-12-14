@@ -4,7 +4,7 @@
   import { expect } from '@storybook/jest';
   import {
     within,
-    fireEvent,
+    userEvent,
     waitForElementToBeRemoved
   } from '@storybook/testing-library';
 
@@ -63,20 +63,16 @@
   play={async ({ canvasElement }) => {
     const canvas = within(canvasElement);
 
-    await fireEvent.click(canvas.getByRole('button'));
+    await userEvent.click(canvas.getByRole('button'));
     expect(canvas.getByText('Information for the user.')).toBeTruthy();
 
-    await fireEvent.click(canvas.getByText('Close'));
+    await userEvent.click(canvas.getByText('Close'));
     expect(
       waitForElementToBeRemoved(canvas.getByText('Information for the user.'))
     ).resolves;
 
-    await fireEvent.click(canvas.getByText('Show flyin'));
+    await userEvent.click(canvas.getByText('Show flyin'));
     expect(canvas.getByText('Information for the user.')).toBeTruthy();
-
-    expect(
-      waitForElementToBeRemoved(canvas.getByText('Information for the user.'))
-    ).resolves;
   }} />
 
 <Story
@@ -85,20 +81,16 @@
   play={async ({ canvasElement }) => {
     const canvas = within(canvasElement);
 
-    await fireEvent.click(canvas.getByRole('button'));
+    await userEvent.click(canvas.getByRole('button'));
     expect(canvas.getByText('Information for the user.')).toBeTruthy();
 
-    await fireEvent.click(canvas.getByText('Close'));
+    await userEvent.click(canvas.getByText('Close'));
     expect(
       waitForElementToBeRemoved(canvas.getByText('Information for the user.'))
     ).resolves;
 
-    await fireEvent.click(canvas.getByText('Show flyin'));
+    await userEvent.click(canvas.getByText('Show flyin'));
     expect(canvas.getByText('Information for the user.')).toBeTruthy();
-
-    expect(
-      waitForElementToBeRemoved(canvas.getByText('Information for the user.'))
-    ).resolves;
   }} />
 
 <Story
@@ -107,20 +99,16 @@
   play={async ({ canvasElement }) => {
     const canvas = within(canvasElement);
 
-    await fireEvent.click(canvas.getByRole('button'));
+    await userEvent.click(canvas.getByRole('button'));
     expect(canvas.getByText('Information for the user.')).toBeTruthy();
 
-    await fireEvent.click(canvas.getByText('Close'));
+    await userEvent.click(canvas.getByText('Close'));
     expect(
       waitForElementToBeRemoved(canvas.getByText('Information for the user.'))
     ).resolves;
 
-    await fireEvent.click(canvas.getByText('Show flyin'));
+    await userEvent.click(canvas.getByText('Show flyin'));
     expect(canvas.getByText('Information for the user.')).toBeTruthy();
-
-    expect(
-      waitForElementToBeRemoved(canvas.getByText('Information for the user.'))
-    ).resolves;
   }} />
 
 <style>
