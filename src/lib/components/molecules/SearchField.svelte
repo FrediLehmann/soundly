@@ -3,15 +3,21 @@
   import { Button, Input } from '$lib/components/atoms';
 </script>
 
-<div class="flex w-full">
+<div>
   <Input
     name="Search"
     label="Search"
     value=""
     labelSrOnly={true}
-    placeholder="Search"
-    class="w-full py-0" />
-  <Button class="px-2" aria-label="Search">
+    placeholder="Search" />
+  <Button aria-label="Search">
     <Search />
   </Button>
 </div>
+
+<style>
+  div {
+    dispaly: flex;
+    width: 100%;
+  }
+</style>

@@ -38,13 +38,6 @@
   required
   type="password"
   name="password"
-  error={pwdRequired}
+  error={pwdRequired || pwdErrors.join(' | ')}
   bind:value={pwd}
   {...$$restProps} />
-{#if pwdErrors.length > 0}
-  <ul class="list-inside mt-4 list-disc text-red-500 text-xs font-semibold">
-    {#each pwdErrors as e}
-      <li>{e}</li>
-    {/each}
-  </ul>
-{/if}
