@@ -63,15 +63,15 @@
   play={async ({ canvasElement }) => {
     const canvas = within(canvasElement);
 
-    await userEvent.click(canvas.getByRole('button'));
+    userEvent.click(canvas.getByRole('button'));
     expect(canvas.getByText('Information for the user.')).toBeTruthy();
 
-    await userEvent.click(canvas.getByText('Close'));
+    userEvent.click(canvas.getByText('Close'));
     expect(
       waitForElementToBeRemoved(canvas.getByText('Information for the user.'))
     ).resolves;
 
-    await userEvent.click(canvas.getByText('Show flyin'));
+    userEvent.click(canvas.getByText('Show flyin'));
     expect(canvas.getByText('Information for the user.')).toBeTruthy();
   }} />
 
@@ -81,15 +81,15 @@
   play={async ({ canvasElement }) => {
     const canvas = within(canvasElement);
 
-    await userEvent.click(canvas.getByRole('button'));
+    userEvent.click(canvas.getByRole('button'));
     expect(canvas.getByText('Information for the user.')).toBeTruthy();
 
-    await userEvent.click(canvas.getByText('Close'));
+    userEvent.click(canvas.getByText('Close'));
     expect(
       waitForElementToBeRemoved(canvas.getByText('Information for the user.'))
     ).resolves;
 
-    await userEvent.click(canvas.getByText('Show flyin'));
+    userEvent.click(canvas.getByText('Show flyin'));
     expect(canvas.getByText('Information for the user.')).toBeTruthy();
   }} />
 
@@ -99,15 +99,15 @@
   play={async ({ canvasElement }) => {
     const canvas = within(canvasElement);
 
-    await userEvent.click(canvas.getByRole('button'));
+    userEvent.click(canvas.getByRole('button'));
     expect(canvas.getByText('Information for the user.')).toBeTruthy();
 
-    await userEvent.click(canvas.getByText('Close'));
+    userEvent.click(canvas.getByText('Close'));
     expect(
       waitForElementToBeRemoved(canvas.getByText('Information for the user.'))
     ).resolves;
 
-    await userEvent.click(canvas.getByText('Show flyin'));
+    userEvent.click(canvas.getByText('Show flyin'));
     expect(canvas.getByText('Information for the user.')).toBeTruthy();
   }} />
 

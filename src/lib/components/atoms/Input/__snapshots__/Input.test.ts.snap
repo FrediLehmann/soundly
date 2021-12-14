@@ -16,13 +16,6 @@ Input {
       true,
       false,
       Object {},
-      Object {
-        "error": "Test",
-        "label": "Test",
-        "name": "test",
-        "required": true,
-        "value": "Test",
-      },
       [Function],
     ],
     "dirty": Array [
@@ -53,28 +46,29 @@ Input {
     },
     "root": <div>
       <div
-        class="grid grid-cols-3 w-full"
+        class="container svelte-cyqc55"
+        data-sr-only="false"
       >
         <label
-          class="self-center"
+          class="svelte-cyqc55"
           for="test"
         >
           Test
            
           <span
-            class="ordinal"
+            class="required svelte-cyqc55"
           >
             *
           </span>
         </label>
          
         <input
-          class="input col-span-2"
+          class="svelte-cyqc55"
           id="test"
         />
          
         <span
-          class="text-red-500 mt-1 text-xs font-semibold col-start-2 col-span-2"
+          class="error svelte-cyqc55"
         >
           Test
         </span>
@@ -105,14 +99,6 @@ Input {
       true,
       true,
       Object {},
-      Object {
-        "error": "Test",
-        "label": "Test",
-        "labelSrOnly": true,
-        "name": "test",
-        "required": true,
-        "value": "Test",
-      },
       [Function],
     ],
     "dirty": Array [
@@ -143,28 +129,29 @@ Input {
     },
     "root": <div>
       <div
-        class="grid grid-cols-3 w-full"
+        class="container svelte-cyqc55"
+        data-sr-only="true"
       >
         <label
-          class="self-center sr-only"
+          class="svelte-cyqc55"
           for="test"
         >
           Test
            
           <span
-            class="ordinal"
+            class="required svelte-cyqc55"
           >
             *
           </span>
         </label>
          
         <input
-          class="input col-span-3"
+          class="svelte-cyqc55"
           id="test"
         />
          
         <span
-          class="text-red-500 mt-1 text-xs font-semibold col-start-2 col-span-2"
+          class="error svelte-cyqc55"
         >
           Test
         </span>

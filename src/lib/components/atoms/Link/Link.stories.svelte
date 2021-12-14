@@ -42,8 +42,8 @@
     const canvas = within(canvasElement);
     const link = canvas.getByRole('link');
 
-    await userEvent.hover(link);
-    await userEvent.unhover(link);
+    userEvent.hover(link);
+    userEvent.unhover(link);
     link.focus();
     link.blur();
   }} />
@@ -55,8 +55,8 @@
     const canvas = within(canvasElement);
     const link = canvas.getByRole('link');
 
-    await userEvent.hover(link);
-    await userEvent.unhover(link);
+    userEvent.hover(link);
+    userEvent.unhover(link);
     link.focus();
     link.blur();
   }} />
@@ -68,8 +68,8 @@
     const canvas = within(canvasElement);
     const link = canvas.getByRole('link');
 
-    await userEvent.hover(link);
-    await userEvent.unhover(link);
+    userEvent.hover(link);
+    userEvent.unhover(link);
     link.focus();
     link.blur();
   }} />
@@ -81,8 +81,8 @@
     const canvas = within(canvasElement);
     const link = canvas.getByRole('link');
 
-    await userEvent.hover(link);
-    await userEvent.unhover(link);
+    userEvent.hover(link);
+    userEvent.unhover(link);
     link.focus();
     link.blur();
   }} />
@@ -94,8 +94,8 @@
     const canvas = within(canvasElement);
     const link = canvas.getByRole('link');
 
-    await userEvent.hover(link);
-    await userEvent.unhover(link);
+    userEvent.hover(link);
+    userEvent.unhover(link);
     link.focus();
     link.blur();
   }} />
@@ -107,8 +107,8 @@
     const canvas = within(canvasElement);
     const link = canvas.getByRole('link');
 
-    await userEvent.hover(link);
-    await userEvent.unhover(link);
+    userEvent.hover(link);
+    userEvent.unhover(link);
     link.focus();
     link.blur();
   }} />

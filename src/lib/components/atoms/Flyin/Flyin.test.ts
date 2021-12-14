@@ -11,7 +11,7 @@ import Component from './__test__/Component.svelte';
 describe('<Flyin /> component', () => {
   test('component not in DOM on default', async () => {
     const { component, getByRole } = render(Component);
-    await fireEvent.click(getByRole('button'));
+    fireEvent.click(getByRole('button'));
     expect(component).toMatchSnapshot();
   });
 });

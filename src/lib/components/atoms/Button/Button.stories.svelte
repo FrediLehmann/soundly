@@ -68,8 +68,8 @@
     const buttons = canvas.getAllByRole('button');
 
     buttons.forEach(async button => {
-      await userEvent.hover(button);
-      await userEvent.unhover(button);
+      userEvent.hover(button);
+      userEvent.unhover(button);
       button.focus();
       button.blur();
     });
@@ -83,8 +83,8 @@
     const buttons = canvas.getAllByRole('button');
 
     buttons.forEach(async button => {
-      await userEvent.hover(button);
-      await userEvent.unhover(button);
+      userEvent.hover(button);
+      userEvent.unhover(button);
       button.focus();
       button.blur();
     });
@@ -98,8 +98,8 @@
     const buttons = canvas.getAllByRole('button');
 
     buttons.forEach(async button => {
-      await userEvent.hover(button);
-      await userEvent.unhover(button);
+      userEvent.hover(button);
+      userEvent.unhover(button);
       button.focus();
       button.blur();
     });
@@ -113,8 +113,8 @@
     const buttons = canvas.getAllByRole('button');
 
     buttons.forEach(async button => {
-      await userEvent.hover(button);
-      await userEvent.unhover(button);
+      userEvent.hover(button);
+      userEvent.unhover(button);
       button.focus();
       button.blur();
     });
