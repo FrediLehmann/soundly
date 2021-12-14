@@ -1,0 +1,180 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Input /> component renders correctly 1`] = `
+Input {
+  "$$": Object {
+    "after_update": Array [],
+    "before_update": Array [],
+    "bound": Object {},
+    "callbacks": Object {},
+    "context": Map {},
+    "ctx": Array [
+      "Test",
+      "test",
+      "Test",
+      "Test",
+      true,
+      false,
+      Object {},
+      Object {
+        "error": "Test",
+        "label": "Test",
+        "name": "test",
+        "required": true,
+        "value": "Test",
+      },
+      [Function],
+    ],
+    "dirty": Array [
+      -1,
+    ],
+    "fragment": Object {
+      "c": [Function],
+      "d": [Function],
+      "i": [Function],
+      "l": [Function],
+      "m": [Function],
+      "o": [Function],
+      "p": [Function],
+    },
+    "not_equal": [Function],
+    "on_destroy": Array [
+      [Function],
+    ],
+    "on_disconnect": Array [],
+    "on_mount": Array [],
+    "props": Object {
+      "error": 3,
+      "label": 2,
+      "labelSrOnly": 5,
+      "name": 1,
+      "required": 4,
+      "value": 0,
+    },
+    "root": <div>
+      <div
+        class="grid grid-cols-3 w-full"
+      >
+        <label
+          class="self-center"
+          for="test"
+        >
+          Test
+           
+          <span
+            class="ordinal"
+          >
+            *
+          </span>
+        </label>
+         
+        <input
+          class="input col-span-2"
+          id="test"
+        />
+         
+        <span
+          class="text-red-500 mt-1 text-xs font-semibold col-start-2 col-span-2"
+        >
+          Test
+        </span>
+      </div>
+    </div>,
+    "skip_bound": false,
+    "update": [Function],
+  },
+  "$$set": [Function],
+  "$capture_state": [Function],
+  "$inject_state": [Function],
+}
+`;
+
+exports[`<Input /> component renders correctly 2`] = `
+Input {
+  "$$": Object {
+    "after_update": Array [],
+    "before_update": Array [],
+    "bound": Object {},
+    "callbacks": Object {},
+    "context": Map {},
+    "ctx": Array [
+      "Test",
+      "test",
+      "Test",
+      "Test",
+      true,
+      true,
+      Object {},
+      Object {
+        "error": "Test",
+        "label": "Test",
+        "labelSrOnly": true,
+        "name": "test",
+        "required": true,
+        "value": "Test",
+      },
+      [Function],
+    ],
+    "dirty": Array [
+      -1,
+    ],
+    "fragment": Object {
+      "c": [Function],
+      "d": [Function],
+      "i": [Function],
+      "l": [Function],
+      "m": [Function],
+      "o": [Function],
+      "p": [Function],
+    },
+    "not_equal": [Function],
+    "on_destroy": Array [
+      [Function],
+    ],
+    "on_disconnect": Array [],
+    "on_mount": Array [],
+    "props": Object {
+      "error": 3,
+      "label": 2,
+      "labelSrOnly": 5,
+      "name": 1,
+      "required": 4,
+      "value": 0,
+    },
+    "root": <div>
+      <div
+        class="grid grid-cols-3 w-full"
+      >
+        <label
+          class="self-center sr-only"
+          for="test"
+        >
+          Test
+           
+          <span
+            class="ordinal"
+          >
+            *
+          </span>
+        </label>
+         
+        <input
+          class="input col-span-3"
+          id="test"
+        />
+         
+        <span
+          class="text-red-500 mt-1 text-xs font-semibold col-start-2 col-span-2"
+        >
+          Test
+        </span>
+      </div>
+    </div>,
+    "skip_bound": false,
+    "update": [Function],
+  },
+  "$$set": [Function],
+  "$capture_state": [Function],
+  "$inject_state": [Function],
+}
+`;
