@@ -1,13 +1,10 @@
 <script type="ts" context="module">
   import { goto } from '$app/navigation';
 
+  import { ArrowLeft } from '$lib/components/Icons';
   import { Signin } from '$lib/api/auth';
   import { Button, Link, Flyin } from '$lib/components/atoms';
-  import {
-    BackLink,
-    EmailInput,
-    PasswordInput
-  } from '$lib/components/molecules';
+  import { EmailInput, PasswordInput } from '$lib/components/molecules';
   import { userStore } from '$lib/store/user';
   import { onMount } from 'svelte';
 </script>
@@ -43,7 +40,10 @@
   <title>Sign in</title>
 </svelte:head>
 
-<BackLink href="/" class="mb-2">Home</BackLink>
+<Link href="/" class="mb-2">
+  <ArrowLeft width="1.25rem" height="1.25rem" />
+  Home
+</Link>
 <section class="flex mb-6 items-baseline">
   <h1 class="text-3xl mr-2">Sign in</h1>
   <span class="mr-1">/</span>

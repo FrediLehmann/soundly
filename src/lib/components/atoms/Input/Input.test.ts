@@ -8,48 +8,25 @@ import { render } from '@testing-library/svelte';
 import Input from './Input.svelte';
 
 describe('<Input /> component', () => {
-  test('renders default Input', () => {
-    const { getByRole, getByText } = render(Input, {
-      name: 'test',
-      label: 'Test',
-      value: 'Test'
-    });
-
-    expect(getByText('Test')).toBeInTheDocument();
-    expect(getByRole('textbox')).toBeInTheDocument();
-  });
-
-  test('renders required', () => {
-    const { getByText } = render(Input, {
+  test('renders correctly', () => {
+    let res = render(Input, {
       name: 'test',
       label: 'Test',
       value: 'Test',
+      error: 'Test',
       required: true
     });
 
-    expect(getByText('*')).toBeInTheDocument();
-  });
+    expect(res.component).toMatchSnapshot();
 
-  test('renders error', () => {
-    const { getByText } = render(Input, {
+    res = render(Input, {
       name: 'test',
       label: 'Test',
       value: 'Test',
-      error: 'Error'
-    });
-
-    expect(getByText('Error')).toBeInTheDocument();
-  });
-
-  test('renders labelSrOnly correctly', () => {
-    const { getByRole, getByText } = render(Input, {
-      name: 'test',
-      label: 'Test',
-      value: 'Test',
+      error: 'Test',
+      required: true,
       labelSrOnly: true
     });
-
-    expect(getByText('Test').className.includes('sr-only')).toBeTruthy();
-    expect(getByRole('textbox').className.includes('col-span-3')).toBeTruthy();
+    expect(res.component).toMatchSnapshot();
   });
 });

@@ -7,9 +7,9 @@
 </script>
 
 {#if style === 'info'}
-  <AlertTriangle class="w-6 h-6 mr-4" stroke-width="3" />
+  <AlertTriangle width="1.5rem" height="1.5rem" stroke-width="3" />
 {:else if style === 'error'}
-  <XCircle class="w-6 h-6 mr-4" stroke-width="3" />
+  <XCircle width="1.5rem" height="1.5rem" stroke-width="3" />
 {:else if style === 'success'}
-  <CircleCheck class="w-6 h-6 mr-4" stroke-width="3" />
+  <CircleCheck width="1.5rem" height="1.5rem" stroke-width="3" />
 {/if}

@@ -1,5 +1,6 @@
 <script>
   import { Meta, Story, Template } from '@storybook/addon-svelte-csf';
+  import { userEvent, within } from '@storybook/testing-library';
 
   import Button from './Button.svelte';
   import { Settings } from '../../Icons';
@@ -49,23 +50,75 @@
     </Button>
   </div>
   <div class="box">
-    <Button {...args} type={args.type}><span>Button</span><Settings /></Button>
+    <Button {...args} type={args.type}>Button<Settings /></Button>
   </div>
   <div class="box">
-    <Button {...args} type={args.type}><Settings /><span>Button</span></Button>
+    <Button {...args} type={args.type}><Settings />Button</Button>
   </div>
   <div class="box">
     <Button {...args} type={args.type} disabled>Button</Button>
   </div>
 </Template>
 
-<Story name="Primary" args={{ style: 'primary' }} />
+<Story
+  name="Primary"
+  args={{ style: 'primary' }}
+  play={async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const buttons = canvas.getAllByRole('button');
 
-<Story name="Secondary" args={{ style: 'secondary' }} />
+    buttons.forEach(async button => {
+      userEvent.hover(button);
+      userEvent.unhover(button);
+      button.focus();
+      button.blur();
+    });
+  }} />
 
-<Story name="Ghost" args={{ style: 'ghost' }} />
+<Story
+  name="Secondary"
+  args={{ style: 'secondary' }}
+  play={async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const buttons = canvas.getAllByRole('button');
 
-<Story name="Link" args={{ style: 'link' }} />
+    buttons.forEach(async button => {
+      userEvent.hover(button);
+      userEvent.unhover(button);
+      button.focus();
+      button.blur();
+    });
+  }} />
+
+<Story
+  name="Ghost"
+  args={{ style: 'ghost' }}
+  play={async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const buttons = canvas.getAllByRole('button');
+
+    buttons.forEach(async button => {
+      userEvent.hover(button);
+      userEvent.unhover(button);
+      button.focus();
+      button.blur();
+    });
+  }} />
+
+<Story
+  name="Link"
+  args={{ style: 'link' }}
+  play={async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const buttons = canvas.getAllByRole('button');
+
+    buttons.forEach(async button => {
+      userEvent.hover(button);
+      userEvent.unhover(button);
+      button.focus();
+      button.blur();
+    });
+  }} />
 
 <style>
   .box {

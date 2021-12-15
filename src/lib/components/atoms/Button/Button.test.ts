@@ -13,14 +13,4 @@ describe('<Button /> component', () => {
     const { component } = render(Slot, { props: { Component: Button } });
     expect(component).toMatchSnapshot();
   });
-
-  test('renders type correctly', () => {
-    const { getByRole } = render(Button, { type: 'submit' });
-    expect(getByRole('button').getAttribute('type')).toEqual('submit');
-  });
-
-  test('renders style correctly', () => {
-    const { getByRole } = render(Button, { style: 'ghost' });
-    expect(getByRole('button').getAttribute('data-type')).toEqual('ghost');
-  });
 });

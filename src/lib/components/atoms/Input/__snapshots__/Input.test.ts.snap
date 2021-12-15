@@ -1,0 +1,167 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Input /> component renders correctly 1`] = `
+Input {
+  "$$": Object {
+    "after_update": Array [],
+    "before_update": Array [],
+    "bound": Object {},
+    "callbacks": Object {},
+    "context": Map {},
+    "ctx": Array [
+      "Test",
+      "test",
+      "Test",
+      "Test",
+      true,
+      false,
+      Object {},
+      [Function],
+    ],
+    "dirty": Array [
+      -1,
+    ],
+    "fragment": Object {
+      "c": [Function],
+      "d": [Function],
+      "i": [Function],
+      "l": [Function],
+      "m": [Function],
+      "o": [Function],
+      "p": [Function],
+    },
+    "not_equal": [Function],
+    "on_destroy": Array [
+      [Function],
+    ],
+    "on_disconnect": Array [],
+    "on_mount": Array [],
+    "props": Object {
+      "error": 3,
+      "label": 2,
+      "labelSrOnly": 5,
+      "name": 1,
+      "required": 4,
+      "value": 0,
+    },
+    "root": <div>
+      <div
+        class="container svelte-1sazzds"
+        data-sr-only="false"
+      >
+        <label
+          class="svelte-1sazzds"
+          for="test"
+        >
+          Test
+           
+          <span
+            class="required svelte-1sazzds"
+          >
+            *
+          </span>
+        </label>
+         
+        <input
+          class="svelte-1sazzds"
+          id="test"
+        />
+         
+        <span
+          class="error svelte-1sazzds"
+        >
+          Test
+        </span>
+      </div>
+    </div>,
+    "skip_bound": false,
+    "update": [Function],
+  },
+  "$$set": [Function],
+  "$capture_state": [Function],
+  "$inject_state": [Function],
+}
+`;
+
+exports[`<Input /> component renders correctly 2`] = `
+Input {
+  "$$": Object {
+    "after_update": Array [],
+    "before_update": Array [],
+    "bound": Object {},
+    "callbacks": Object {},
+    "context": Map {},
+    "ctx": Array [
+      "Test",
+      "test",
+      "Test",
+      "Test",
+      true,
+      true,
+      Object {},
+      [Function],
+    ],
+    "dirty": Array [
+      -1,
+    ],
+    "fragment": Object {
+      "c": [Function],
+      "d": [Function],
+      "i": [Function],
+      "l": [Function],
+      "m": [Function],
+      "o": [Function],
+      "p": [Function],
+    },
+    "not_equal": [Function],
+    "on_destroy": Array [
+      [Function],
+    ],
+    "on_disconnect": Array [],
+    "on_mount": Array [],
+    "props": Object {
+      "error": 3,
+      "label": 2,
+      "labelSrOnly": 5,
+      "name": 1,
+      "required": 4,
+      "value": 0,
+    },
+    "root": <div>
+      <div
+        class="container svelte-1sazzds"
+        data-sr-only="true"
+      >
+        <label
+          class="svelte-1sazzds"
+          for="test"
+        >
+          Test
+           
+          <span
+            class="required svelte-1sazzds"
+          >
+            *
+          </span>
+        </label>
+         
+        <input
+          class="svelte-1sazzds"
+          id="test"
+        />
+         
+        <span
+          class="error svelte-1sazzds"
+        >
+          Test
+        </span>
+      </div>
+    </div>,
+    "skip_bound": false,
+    "update": [Function],
+  },
+  "$$set": [Function],
+  "$capture_state": [Function],
+  "$inject_state": [Function],
+}
+`;

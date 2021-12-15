@@ -9,10 +9,28 @@
   ) => unknown;
 </script>
 
-<button
-  on:click={onClose}
-  class="flex ml-auto items-center font-semibold text-white hover:underline"
-  style="link">
+<button on:click={onClose}>
   Close
-  <Cross class="w-5 h-5" stroke-width="3" />
+  <Cross width="1.25rem" height="1.25rem" stroke-width="3" />
 </button>
+
+<style>
+  button {
+    display: flex;
+    gap: 0.25rem;
+
+    margin-inline-start: auto;
+    align-items: center;
+
+    background-color: transparent;
+    border: none;
+
+    color: inherit;
+    font-weight: 600;
+  }
+
+  button:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+</style>

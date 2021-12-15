@@ -9,12 +9,6 @@
 
 <style>
   button {
-    --white: 0, 0%, 100%;
-    --black: 224, 100%, 11%;
-    --transparent: 0, 0, 0;
-    --blue-500: 204, 88%, 40%;
-    --gray-400: 0, 0%, 85%;
-
     box-sizing: border-box;
 
     display: flex;

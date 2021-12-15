@@ -2,7 +2,7 @@
   import { goto } from '$app/navigation';
   import { Signout } from '$lib/api/auth';
 
-  import { Button, Link, LinkStyles } from '$lib/components/atoms';
+  import { Button, Link } from '$lib/components/atoms';
   import { Account } from '$lib/components/Icons';
   import { userStore } from '$lib/store/user';
   import { Navigation } from './components';
@@ -47,7 +47,7 @@
       href="/signin"
       class="hidden whitespace-nowrap sm:flex px-4 py-0"
       sveltekit:prefetch
-      style={LinkStyles.secondary}>
+      style="secondary">
       Sign in
     </Link>
   {/if}

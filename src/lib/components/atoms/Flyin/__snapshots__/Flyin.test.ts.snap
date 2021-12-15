@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Flyin /> component component not in DOM on default 1`] = `
+Component {
+  "$$": Object {
+    "after_update": Array [],
+    "before_update": Array [],
+    "bound": Object {},
+    "callbacks": Object {},
+    "context": Map {},
+    "ctx": Array [
+      Flyin {
+        "$$": Object {
+          "after_update": Array [],
+          "before_update": Array [],
+          "bound": Object {},
+          "callbacks": Object {},
+          "context": Map {},
+          "ctx": Array [
+            true,
+            "Test",
+            "info",
+            [Function],
+            [Function],
+          ],
+          "dirty": Array [
+            7,
+          ],
+          "fragment": Object {
+            "c": [Function],
+            "d": [Function],
+            "i": [Function],
+            "l": [Function],
+            "m": [Function],
+            "o": [Function],
+            "p": [Function],
+          },
+          "not_equal": [Function],
+          "on_destroy": Array [],
+          "on_disconnect": Array [],
+          "on_mount": Array [],
+          "props": Object {
+            "show": 4,
+          },
+          "root": <div>
+            
+             
+            <button>
+              Open
+            </button>
+          </div>,
+          "skip_bound": false,
+          "update": [Function],
+        },
+        "$capture_state": [Function],
+        "$inject_state": [Function],
+      },
+      [Function],
+      [Function],
+    ],
+    "dirty": Array [
+      -1,
+    ],
+    "fragment": Object {
+      "c": [Function],
+      "d": [Function],
+      "i": [Function],
+      "l": [Function],
+      "m": [Function],
+      "o": [Function],
+      "p": [Function],
+    },
+    "not_equal": [Function],
+    "on_destroy": Array [
+      [Function],
+    ],
+    "on_disconnect": Array [],
+    "on_mount": Array [],
+    "props": Object {},
+    "root": <div>
+      
+       
+      <button>
+        Open
+      </button>
+    </div>,
+    "skip_bound": false,
+    "update": [Function],
+  },
+  "$capture_state": [Function],
+  "$inject_state": [Function],
+}
+`;

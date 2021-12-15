@@ -1,5 +1,5 @@
 <script lang="ts" context="module">
-  import { Link, LinkStyles } from '$lib/components/atoms';
+  import { Link } from '$lib/components/atoms';
 </script>
 
 <script lang="ts">
@@ -10,6 +10,6 @@
   {href}
   class="px-12 py-3 flex gap-5 items-center hover:bg-gray-200"
   sveltekit:prefetch
-  style={LinkStyles.none}>
+  style="none">
   <slot />
 </Link>

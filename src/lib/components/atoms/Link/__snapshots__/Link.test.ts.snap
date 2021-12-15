@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Button /> component renders correctly 1`] = `
-Slot {
+exports[`<Link /> component render Link 1`] = `
+Link {
   "$$": Object {
     "after_update": Array [],
     "before_update": Array [],
@@ -9,7 +9,11 @@ Slot {
     "callbacks": Object {},
     "context": Map {},
     "ctx": Array [
-      [Function],
+      "/test",
+      "default",
+      Object {},
+      undefined,
+      Object {},
     ],
     "dirty": Array [
       -1,
@@ -30,17 +34,15 @@ Slot {
     "on_disconnect": Array [],
     "on_mount": Array [],
     "props": Object {
-      "Component": 0,
+      "href": 0,
+      "style": 1,
     },
     "root": <div>
-      <button
-        class="svelte-vzh2df"
-        data-type="secondary"
-        type="button"
-      >
-        Button
-      </button>
-      
+      <a
+        class="svelte-13nwva6"
+        data-type="default"
+        href="/test"
+      />
     </div>,
     "skip_bound": false,
     "update": [Function],
