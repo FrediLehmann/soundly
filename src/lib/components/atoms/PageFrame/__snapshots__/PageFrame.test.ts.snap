@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Link /> component render Link 1`] = `
-Link {
+exports[`<PageFrame /> component redners PageFrame 1`] = `
+PageFrame {
   "$$": Object {
     "after_update": Array [],
     "before_update": Array [],
@@ -9,7 +9,6 @@ Link {
     "callbacks": Object {},
     "context": Map {},
     "ctx": Array [
-      "/test",
       "default",
       Object {},
       undefined,
@@ -34,14 +33,12 @@ Link {
     "on_disconnect": Array [],
     "on_mount": Array [],
     "props": Object {
-      "href": 0,
-      "style": 1,
+      "style": 0,
     },
     "root": <div>
-      <a
-        class="svelte-13nwva6"
-        data-type="default"
-        href="/test"
+      <main
+        class="svelte-ap4rvk"
+        data-style="default"
       />
     </div>,
     "skip_bound": false,

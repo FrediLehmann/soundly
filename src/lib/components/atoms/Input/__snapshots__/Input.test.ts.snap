@@ -46,29 +46,29 @@ Input {
     },
     "root": <div>
       <div
-        class="container svelte-cyqc55"
+        class="container svelte-1sazzds"
         data-sr-only="false"
       >
         <label
-          class="svelte-cyqc55"
+          class="svelte-1sazzds"
           for="test"
         >
           Test
            
           <span
-            class="required svelte-cyqc55"
+            class="required svelte-1sazzds"
           >
             *
           </span>
         </label>
          
         <input
-          class="svelte-cyqc55"
+          class="svelte-1sazzds"
           id="test"
         />
          
         <span
-          class="error svelte-cyqc55"
+          class="error svelte-1sazzds"
         >
           Test
         </span>
@@ -129,29 +129,29 @@ Input {
     },
     "root": <div>
       <div
-        class="container svelte-cyqc55"
+        class="container svelte-1sazzds"
         data-sr-only="true"
       >
         <label
-          class="svelte-cyqc55"
+          class="svelte-1sazzds"
           for="test"
         >
           Test
            
           <span
-            class="required svelte-cyqc55"
+            class="required svelte-1sazzds"
           >
             *
           </span>
         </label>
          
         <input
-          class="svelte-cyqc55"
+          class="svelte-1sazzds"
           id="test"
         />
          
         <span
-          class="error svelte-cyqc55"
+          class="error svelte-1sazzds"
         >
           Test
         </span>
