@@ -10,7 +10,7 @@
   main[data-style='default'] {
     max-width: 56rem;
     margin-inline: auto;
-    padding-box-start: 1rem;
+    padding-block-start: 1rem;
     padding-inline: 1rem;
     /* default = '  sm:px-8 lg:px-10',*/
   }
