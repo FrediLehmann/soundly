@@ -1,5 +1,5 @@
 <script>
-    import FullIcon from '$lib/components/assets/logo_full_primary.png'
+  import FullIcon from '$lib/assets/logo_full_primary.png';
 </script>
 
 <div class="flex flex-shrink-0 items-center gap-2 sm:gap-3 lg:gap-4">
