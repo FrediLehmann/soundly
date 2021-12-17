@@ -1,5 +1,5 @@
 <script lang="ts" context="module">
-  import { CircleCheck, AlertTriangle, XCircle } from '$lib/components/Icons';
+  import { CircleCheck, AlertTriangle, XCircle } from '$lib/Icons';
 </script>
 
 <script lang="ts">

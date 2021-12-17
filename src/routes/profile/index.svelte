@@ -1,7 +1,7 @@
 <script lang="ts" context="module">
   import { goto } from '$app/navigation';
 
-  import { ArrowLeft } from '$lib/components/Icons';
+  import { ArrowLeft } from '$lib/Icons';
   import { Link } from '$lib/components/atoms';
   import { userStore } from '$lib/store/user';
   import { onMount } from 'svelte';

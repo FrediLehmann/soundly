@@ -3,7 +3,7 @@
   import { userEvent, within } from '@storybook/testing-library';
 
   import Link from './Link.svelte';
-  import { Settings } from '../../Icons';
+  import { Settings } from '../../../Icons';
 </script>
 
 <Meta
