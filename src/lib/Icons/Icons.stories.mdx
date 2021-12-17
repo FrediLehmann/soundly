@@ -1,0 +1,17 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs';
+
+import AllIcons from './index';
+
+# Icons
+
+Icons are taken from [feather icons](https://feathericons.com/) and are pure svg components without additional functionality.
+
+<Meta title="Styleguide/Icons" />
+
+<Canvas>
+    <Story>
+    {#each AllIcons as I}
+        <I/>
+    {/each}
+    </Story>
+</Canvas>
