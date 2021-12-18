@@ -35,55 +35,55 @@
   }
 
   button[data-type='primary'] {
-    color: hsla(var(--white));
-    background-color: hsla(var(--blue-500));
+    color: hsla(var(--neutral-900));
+    background-color: hsla(var(--primary));
   }
 
   button[data-type='primary']:hover:not(:disabled) {
-    box-shadow: 0 0 0 2px hsla(var(--blue-500), 50%);
+    box-shadow: 0 0 0 2px hsla(var(--primary-400));
   }
 
   button[data-type='primary']:focus:not(:disabled),
   button[data-type='primary']:active:not(:disabled) {
-    box-shadow: 0 0 0 1px hsla(var(--white), 50%),
-      0 0 0 3px hsla(var(--blue-500), 50%), 0 0 #0000;
+    box-shadow: 0 0 0 1px hsla(var(--neutral-000), 50%),
+      0 0 0 3px hsla(var(--primary-400)), 0 0 #0000;
   }
 
   button[data-type='secondary'] {
-    color: hsla(var(--black), 100%);
-    background-color: hsla(var(--gray-400));
+    color: hsla(var(--neutral-900), 100%);
+    background-color: hsla(var(--neutral-400));
   }
 
   button[data-type='secondary']:hover:not(:disabled) {
-    box-shadow: 0 0 0 2px hsla(var(--gray-400), 50%);
+    box-shadow: 0 0 0 2px hsla(var(--neutral-200));
   }
 
   button[data-type='secondary']:focus:not(:disabled),
   button[data-type='secondary']:active:not(:disabled) {
-    box-shadow: 0 0 0 1px hsla(var(--white)),
-      0 0 0 3px hsla(var(--gray-400), 50%), 0 0 #0000;
+    box-shadow: 0 0 0 1px hsla(var(--neutral-000)),
+      0 0 0 3px hsla(var(--neutral-200)), 0 0 #0000;
   }
 
   button[data-type='ghost'] {
     background-color: hsla(var(--transparent), 0);
-    color: hsla(var(--blue-500));
-    border: 1px solid hsla(var(--blue-500));
+    color: hsla(var(--primary-700));
+    border: 1px solid hsla(var(--primary-700));
   }
 
   button[data-type='ghost']:hover:not(:disabled) {
-    background-color: hsla(var(--blue-500));
-    color: hsla(var(--white));
+    background-color: hsla(var(--primary-700));
+    color: hsla(var(--neutral-000));
   }
 
   button[data-type='ghost']:focus:not(:disabled),
   button[data-type='ghost']:active:not(:disabled) {
-    box-shadow: 0 0 0 1px hsla(var(--white)),
-      0 0 0 3px hsla(var(--blue-500), 50%), 0 0 #0000;
+    box-shadow: 0 0 0 1px hsla(var(--neutral-000)),
+      0 0 0 3px hsla(var(--primary-600)), 0 0 #0000;
   }
 
   button[data-type='link'] {
     background-color: hsla(var(--transparent));
-    color: hsla(var(--blue-500));
+    color: hsla(var(--primary-700));
   }
   button[data-type='link']:hover:not(:disabled) {
     text-decoration: underline;
@@ -91,6 +91,6 @@
 
   button[data-type='link']:focus:not(:disabled),
   button[data-type='link']:active:not(:disabled) {
-    background-color: hsla(var(--blue-500), 10%);
+    background-color: hsla(var(--primary-700), 10%);
   }
 </style>

@@ -11,6 +11,8 @@
 }
 
 :root {
+  --transparent: 0, 0, 0;
+
   --primary: 147, 69%, 55%;
   --primary-000: 154, 64%, 98%;
   --primary-100: 147, 69%, 95%;
