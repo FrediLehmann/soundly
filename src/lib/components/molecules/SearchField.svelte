@@ -1,5 +1,5 @@
 <script type="ts" context="module">
-  import { Search } from '$lib/components/Icons';
+  import { Search } from '$lib/Icons';
   import { Button, Input } from '$lib/components/atoms';
 </script>
 

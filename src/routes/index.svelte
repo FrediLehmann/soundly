@@ -1,5 +1,5 @@
 <svelte:head>
-  <title>Welcome to Soundly</title>
+  <title>Noiceless</title>
 </svelte:head>
 
-<h1 class="text-2xl">Welcome to Soundly</h1>
+<h1 class="text-2xl">Welcome to Noiceless</h1>

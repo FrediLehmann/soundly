@@ -1,6 +1,6 @@
 <script type="ts" context="module">
   import { Button, Flyin, Link } from '$lib/components/atoms';
-  import { ArrowLeft } from '$lib/components/Icons';
+  import { ArrowLeft } from '$lib/Icons';
   import { ForgotPassword } from '$lib/api/auth';
   import { EmailInput } from '$lib/components/molecules';
   import { userStore } from '$lib/store/user';

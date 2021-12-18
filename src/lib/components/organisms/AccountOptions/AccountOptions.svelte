@@ -3,7 +3,7 @@
   import { Signout } from '$lib/api/auth';
 
   import { Button, Link } from '$lib/components/atoms';
-  import { Account } from '$lib/components/Icons';
+  import { Account } from '$lib/Icons';
   import { userStore } from '$lib/store/user';
   import { Navigation } from './components';
 </script>

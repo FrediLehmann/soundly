@@ -1,5 +1,5 @@
 <script lang="ts" context="module">
-  import { Cross } from '$lib/components/Icons';
+  import { Cross } from '$lib/Icons';
 </script>
 
 <script lang="ts">

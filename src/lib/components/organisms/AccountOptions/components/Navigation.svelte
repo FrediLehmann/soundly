@@ -1,5 +1,5 @@
 <script lang="ts" context="module">
-  import { Settings, Upload } from '$lib/components/Icons';
+  import { Settings, Upload } from '$lib/Icons';
 
   import NavLink from './NavLink.svelte';
 </script>

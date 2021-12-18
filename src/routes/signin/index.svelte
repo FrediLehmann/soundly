@@ -1,7 +1,7 @@
 <script type="ts" context="module">
   import { goto } from '$app/navigation';
 
-  import { ArrowLeft } from '$lib/components/Icons';
+  import { ArrowLeft } from '$lib/Icons';
   import { Signin } from '$lib/api/auth';
   import { Button, Link, Flyin } from '$lib/components/atoms';
   import { EmailInput, PasswordInput } from '$lib/components/molecules';
