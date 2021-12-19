@@ -1,6 +1,5 @@
 <script>
   import { Meta, Story, Template } from '@storybook/addon-svelte-csf';
-  import { userEvent, within } from '@storybook/testing-library';
 
   import Link from './Link.svelte';
   import { Settings } from '../../../Icons';
@@ -33,126 +32,34 @@
   }} />
 
 <Template let:args>
-  <Link {...args} on:click={e => e.preventDefault()} href="#">Link</Link>
-
   <div class="box">
-    <Link {...args} on:click={e => e.preventDefault()} href="#">Link</Link>
-  </div>
-  <div class="box">
+    <Link {...args} on:click={e => e.preventDefault()}>Link</Link>
     <Link
       {...args}
       on:click={e => e.preventDefault()}
-      href="#"
-      aria-label="settings">
+      href="https://storybook.js.org/">
+      Visited Link
+    </Link>
+    <Link {...args} on:click={e => e.preventDefault()} aria-label="settings">
       <Settings />
     </Link>
-  </div>
-  <div class="box">
-    <Link {...args} on:click={e => e.preventDefault()} href="#"
-      >Button<Settings /></Link>
-  </div>
-  <div class="box">
-    <Link {...args} on:click={e => e.preventDefault()} href="#"
-      ><Settings />Button</Link>
-  </div>
-  <div class="box">
-    <Link {...args} on:click={e => e.preventDefault()} href="#" disabled
-      >Button</Link>
+    <Link {...args} on:click={e => e.preventDefault()}>
+      Button
+      <Settings />
+    </Link>
+    <Link {...args} on:click={e => e.preventDefault()}>
+      <Settings />
+      Button
+    </Link>
   </div>
 </Template>
 
-<Story
-  name="No style"
-  args={{ style: 'none' }}
-  play={async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-    const links = canvas.getAllByRole('link');
-
-    links.forEach(link => {
-      userEvent.hover(link);
-      userEvent.unhover(link);
-      link.focus();
-      link.blur();
-    });
-  }} />
-
-<Story
-  name="Default style"
-  args={{ style: 'default' }}
-  play={async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-    const links = canvas.getAllByRole('link');
-
-    links.forEach(link => {
-      userEvent.hover(link);
-      userEvent.unhover(link);
-      link.focus();
-      link.blur();
-    });
-  }} />
-
-<Story
-  name="Primary style"
-  args={{ style: 'primary' }}
-  play={async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-    const links = canvas.getAllByRole('link');
-
-    links.forEach(link => {
-      userEvent.hover(link);
-      userEvent.unhover(link);
-      link.focus();
-      link.blur();
-    });
-  }} />
-
-<Story
-  name="Secondary style"
-  args={{ style: 'secondary' }}
-  play={async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-    const links = canvas.getAllByRole('link');
-
-    links.forEach(link => {
-      userEvent.hover(link);
-      userEvent.unhover(link);
-      link.focus();
-      link.blur();
-    });
-  }} />
-
-<Story
-  name="Ghost style"
-  args={{ style: 'ghost' }}
-  play={async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-    const links = canvas.getAllByRole('link');
-
-    links.forEach(link => {
-      userEvent.hover(link);
-      userEvent.unhover(link);
-      link.focus();
-      link.blur();
-    });
-  }} />
-
-<Story
-  name="Link style"
-  args={{ style: 'link' }}
-  play={async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-    const links = canvas.getAllByRole('link');
-
-    links.forEach(link => {
-      userEvent.hover(link);
-      userEvent.unhover(link);
-      link.focus();
-      link.blur();
-    });
-  }} />
+<Story name="Default" args={{ style: 'default' }} />
 
 <style>
   .box {
-    margin: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
   }
 </style>

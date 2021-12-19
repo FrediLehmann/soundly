@@ -10,7 +10,6 @@ Link {
     "context": Map {},
     "ctx": Array [
       "/test",
-      "default",
       Object {},
       undefined,
       Object {},
@@ -35,12 +34,10 @@ Link {
     "on_mount": Array [],
     "props": Object {
       "href": 0,
-      "style": 1,
     },
     "root": <div>
       <a
-        class="svelte-13nwva6"
-        data-type="default"
+        class="svelte-1vx948e"
         href="/test"
       />
     </div>,
