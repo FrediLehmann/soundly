@@ -47,8 +47,11 @@
 {/if}
 
 <style>
+  :root {
+    --yellow: 60, 80%, 48%;
+  }
   .flyin {
-    color: hsla(var(--white));
+    color: hsla(var(--neutral-900));
     position: absolute;
     top: 0;
     left: 0;
@@ -57,16 +60,15 @@
   }
 
   .flyin[data-type='info'] {
-    color: hsla(var(--gray-500));
     background-color: hsla(var(--yellow));
   }
 
   .flyin[data-type='success'] {
-    background-color: hsla(var(--green));
+    background-color: hsla(var(--primary-500));
   }
 
   .flyin[data-type='error'] {
-    background-color: hsla(var(--red));
+    background-color: hsla(var(--secondary-400));
   }
 
   .content {
@@ -78,7 +80,7 @@
     padding-block: 1rem;
     padding-inline: 2rem;
 
-    font-weight: 600;
+    font-weight: 500;
   }
 
   .text {

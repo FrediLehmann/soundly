@@ -11,7 +11,7 @@
 
 <button on:click={onClose}>
   Close
-  <Cross width="1.25rem" height="1.25rem" stroke-width="3" />
+  <Cross width="1.25rem" height="1.25rem" />
 </button>
 
 <style>
@@ -26,7 +26,7 @@
     border: none;
 
     color: inherit;
-    font-weight: 600;
+    font-weight: 500;
   }
 
   button:hover {
