@@ -23,12 +23,12 @@
   }} />
 
 <Template let:args>
-  <PageFrame {...args}><div class="content">Content</div></PageFrame>
+  <PageFrame {...args}><div class="content">{args.text}</div></PageFrame>
 </Template>
 
-<Story name="Default" args={{ style: 'default' }} />
+<Story name="Default" args={{ style: 'default', text: 'max width 56rem' }} />
 
-<Story name="Small" args={{ style: 'small' }} />
+<Story name="Small" args={{ style: 'small', text: 'max width 32rem' }} />
 
 <style>
   .content {
@@ -37,5 +37,6 @@
     width: 100%;
     height: 100%;
     padding: 12px;
+    text-align: center;
   }
 </style>
