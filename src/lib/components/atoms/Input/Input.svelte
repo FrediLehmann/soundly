@@ -10,12 +10,9 @@
   export let labelSrOnly = false;
 </script>
 
-<div class="container" data-sr-only={labelSrOnly}>
+<div class="container" data-sr-only={labelSrOnly} data-required={required}>
   <label for={name}>
     {label}
-    {#if required}
-      <span class="required">*</span>
-    {/if}
   </label>
   <input id={name} {...$$restProps} bind:value />
   {#if error}
@@ -27,12 +24,8 @@
 
 <style>
   .container {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  label {
-    align-self: center;
+    display: flex;
+    flex-direction: column;
   }
 
   .container[data-sr-only='true'] > label {
@@ -47,33 +40,37 @@
     border-width: 0;
   }
 
-  .required {
-    font-variant-numeric: ordinal;
+  .container[data-required='true'] > label::after {
+    content: '*';
+    margin-inline-start: 0.25rem;
+  }
+
+  label {
+    margin-block-end: 0.5rem;
   }
 
   input {
-    padding: 0.25rem 0.75rem;
-    background-color: hsla(var(--gray-100));
-    border: 1px solid hsla(var(--gray-400));
-    border-radius: 0.125rem;
+    outline: none;
+
+    padding: 0.5rem 0.75rem;
+    border: 1px solid hsla(var(--neutral-300));
+    border-radius: 0.25rem;
+
+    background-color: hsla(var(--neutral-100));
     color: hsla(var(--gray-900));
   }
 
-  .container[data-sr-only='true'] > input {
-    column-span: 3;
-  }
-  .container[data-sr-only='false'] > input {
-    column-span: 2;
+  input:focus,
+  input:active {
+    box-shadow: 0 0 0 1px hsla(var(--primary-400));
   }
 
   .error {
     margin-block-start: 0.25rem;
-    grid-column-start: 2;
-    column-span: 2;
 
     font-size: 0.75rem;
     line-height: 1rem;
     font-weight: 600;
-    color: hsl(0, 72%, 50%);
+    color: hsl(var(--secondary-500));
   }
 </style>
