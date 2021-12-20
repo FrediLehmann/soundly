@@ -1,8 +1,12 @@
 <script lang="ts">
   export let style: 'default' | 'small' = 'default';
+  export let marginTop = '0';
 </script>
 
-<main data-style={style} {...$$restProps}>
+<main
+  data-style={style}
+  style={`margin-block-start: ${marginTop};`}
+  {...$$restProps}>
   <slot />
 </main>
 

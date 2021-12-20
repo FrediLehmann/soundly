@@ -34,12 +34,6 @@
 <Template let:args>
   <div class="box">
     <Link {...args} on:click={e => e.preventDefault()}>Link</Link>
-    <Link
-      {...args}
-      on:click={e => e.preventDefault()}
-      href="https://storybook.js.org/">
-      Visited Link
-    </Link>
     <Link {...args} on:click={e => e.preventDefault()} aria-label="settings">
       <Settings />
     </Link>

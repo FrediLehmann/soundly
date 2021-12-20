@@ -24,5 +24,6 @@ module.exports = {
   framework: '@storybook/svelte',
   svelteOptions: {
     preprocess: import('../svelte.config.js').preprocess
-  }
+  },
+  staticDirs: ['../static']
 };

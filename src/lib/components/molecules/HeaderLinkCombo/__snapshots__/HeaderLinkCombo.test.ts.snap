@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Link /> component render Link 1`] = `
-Link {
+exports[`<HeaderLinkCombo /> component renders correctly 1`] = `
+Slot {
   "$$": Object {
     "after_update": Array [],
     "before_update": Array [],
@@ -9,10 +9,10 @@ Link {
     "callbacks": Object {},
     "context": Map {},
     "ctx": Array [
+      [Function],
+      "Test Heading",
+      "Link Text",
       "/test",
-      Object {},
-      undefined,
-      Object {},
     ],
     "dirty": Array [
       -1,
@@ -33,13 +33,36 @@ Link {
     "on_disconnect": Array [],
     "on_mount": Array [],
     "props": Object {
-      "href": 0,
+      "Component": 0,
+      "HeadingText": 1,
+      "LinkText": 2,
+      "href": 3,
     },
     "root": <div>
-      <a
-        class="svelte-1u7l9fe"
-        href="/test"
-      />
+      <section
+        class="svelte-1z0tcs5"
+      >
+        <h1
+          class="svelte-1z0tcs5"
+        >
+          Test Heading
+        </h1>
+         
+        <span
+          class="svelte-1z0tcs5"
+        >
+          /
+        </span>
+         
+        <a
+          class="svelte-1u7l9fe"
+          href="/test"
+          sveltekit:prefetch="true"
+        >
+          Link Text
+        </a>
+      </section>
+      
     </div>,
     "skip_bound": false,
     "update": [Function],

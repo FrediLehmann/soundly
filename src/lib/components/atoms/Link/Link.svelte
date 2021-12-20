@@ -14,6 +14,8 @@
     align-items: center;
 
     color: hsla(var(--primary-700));
+
+    text-decoration: none;
   }
 
   a:hover,
@@ -23,7 +25,8 @@
     text-decoration: underline;
   }
 
-  a:visited {
+  a:focus,
+  a:active {
     color: hsla(var(--secondary-600));
   }
 </style>
