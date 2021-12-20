@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> component renders correctly 1`] = `
+Slot {
+  "$$": Object {
+    "after_update": Array [],
+    "before_update": Array [],
+    "bound": Object {},
+    "callbacks": Object {},
+    "context": Map {},
+    "ctx": Array [
+      [Function],
+      "Test Heading",
+      "Link Text",
+      "/test",
+    ],
+    "dirty": Array [
+      -1,
+    ],
+    "fragment": Object {
+      "c": [Function],
+      "d": [Function],
+      "i": [Function],
+      "l": [Function],
+      "m": [Function],
+      "o": [Function],
+      "p": [Function],
+    },
+    "not_equal": [Function],
+    "on_destroy": Array [
+      [Function],
+    ],
+    "on_disconnect": Array [],
+    "on_mount": Array [],
+    "props": Object {
+      "Component": 0,
+      "HeadingText": 1,
+      "LinkText": 2,
+      "href": 3,
+    },
+    "root": <div>
+      <section
+        class="svelte-1z0tcs5"
+      >
+        <h1
+          class="svelte-1z0tcs5"
+        >
+          Test Heading
+        </h1>
+         
+        <span
+          class="svelte-1z0tcs5"
+        >
+          /
+        </span>
+         
+        <a
+          class="svelte-1vx948e"
+          href="/test"
+          sveltekit:prefetch="true"
+        >
+          Link Text
+        </a>
+      </section>
+      
+    </div>,
+    "skip_bound": false,
+    "update": [Function],
+  },
+  "$$set": [Function],
+  "$capture_state": [Function],
+  "$inject_state": [Function],
+}
+`;

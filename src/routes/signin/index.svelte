@@ -4,7 +4,11 @@
   import { ArrowLeft } from '$lib/Icons';
   import { Signin } from '$lib/api/auth';
   import { Button, Link, Flyin } from '$lib/components/atoms';
-  import { EmailInput, PasswordInput } from '$lib/components/molecules';
+  import {
+    EmailInput,
+    PasswordInput,
+    HeaderLinkCombo
+  } from '$lib/components/molecules';
   import { userStore } from '$lib/store/user';
   import { onMount } from 'svelte';
 </script>
@@ -44,13 +48,10 @@
   <ArrowLeft width="1.25rem" height="1.25rem" />
   Home
 </Link>
-<section class="flex mb-6 items-baseline">
-  <h1 class="text-3xl mr-2">Sign in</h1>
-  <span class="mr-1">/</span>
-  <Link href="/signup" sveltekit:prefetch class="min-w-16 text-center">
-    Sign up
-  </Link>
-</section>
+<HeaderLinkCombo href="/signup">
+  <svelte:fragment slot="headingText">Sign in</svelte:fragment>
+  <svelte:fragment slot="linkText">Sign up</svelte:fragment>
+</HeaderLinkCombo>
 <form on:submit|preventDefault={signin} class="flex flex-col gap-3">
   <EmailInput disabled={submitting} bind:this={email} />
   <PasswordInput disabled={submitting} bind:this={pwd} />
