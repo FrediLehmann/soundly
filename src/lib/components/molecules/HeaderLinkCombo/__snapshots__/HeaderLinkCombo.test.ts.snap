@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Button /> component renders correctly 1`] = `
+exports[`<HeaderLinkCombo /> component renders correctly 1`] = `
 Slot {
   "$$": Object {
     "after_update": Array [],
