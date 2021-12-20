@@ -24,4 +24,9 @@
     cursor: pointer;
     text-decoration: underline;
   }
+
+  a:focus,
+  a:active {
+    color: hsla(var(--secondary-600));
+  }
 </style>
