@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HomeLink /> component renders correctly 1`] = `
+HomeLink {
+  "$$": Object {
+    "after_update": Array [],
+    "before_update": Array [],
+    "bound": Object {},
+    "callbacks": Object {},
+    "context": Map {},
+    "ctx": Array [],
+    "dirty": Array [
+      -1,
+    ],
+    "fragment": Object {
+      "c": [Function],
+      "d": [Function],
+      "i": [Function],
+      "l": [Function],
+      "m": [Function],
+      "o": [Function],
+      "p": [Function],
+    },
+    "not_equal": [Function],
+    "on_destroy": Array [
+      [Function],
+    ],
+    "on_disconnect": Array [],
+    "on_mount": Array [],
+    "props": Object {},
+    "root": <div>
+      <a
+        class="mb-2 svelte-1u7l9fe"
+        href="/"
+      >
+        <svg
+          fill="none"
+          height="1.25rem"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="1.25rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <line
+            x1="19"
+            x2="5"
+            y1="12"
+            y2="12"
+          />
+          <polyline
+            points="12 19 5 12 12 5"
+          />
+        </svg>
+        
+  Home
+      </a>
+    </div>,
+    "skip_bound": false,
+    "update": [Function],
+  },
+  "$capture_state": [Function],
+}
+`;
