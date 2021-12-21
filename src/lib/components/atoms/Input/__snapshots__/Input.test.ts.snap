@@ -46,24 +46,25 @@ Input {
     },
     "root": <div>
       <div
-        class="container svelte-gtcaeh"
+        class="container svelte-1ulq3bj"
         data-required="true"
         data-sr-only="false"
       >
         <label
-          class="svelte-gtcaeh"
+          class="svelte-1ulq3bj"
           for="test"
         >
           Test
         </label>
          
         <input
-          class="svelte-gtcaeh"
+          class="svelte-1ulq3bj"
           id="test"
+          required=""
         />
          
         <span
-          class="error svelte-gtcaeh"
+          class="error svelte-1ulq3bj"
         >
           Test
         </span>
@@ -124,24 +125,25 @@ Input {
     },
     "root": <div>
       <div
-        class="container svelte-gtcaeh"
+        class="container svelte-1ulq3bj"
         data-required="true"
         data-sr-only="true"
       >
         <label
-          class="svelte-gtcaeh"
+          class="svelte-1ulq3bj"
           for="test"
         >
           Test
         </label>
          
         <input
-          class="svelte-gtcaeh"
+          class="svelte-1ulq3bj"
           id="test"
+          required=""
         />
          
         <span
-          class="error svelte-gtcaeh"
+          class="error svelte-1ulq3bj"
         >
           Test
         </span>

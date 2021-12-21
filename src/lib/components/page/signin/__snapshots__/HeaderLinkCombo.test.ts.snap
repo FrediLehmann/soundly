@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HeaderLinkCombo /> component renders correctly 1`] = `
+HeaderLinkCombo_1 {
+  "$$": Object {
+    "after_update": Array [],
+    "before_update": Array [],
+    "bound": Object {},
+    "callbacks": Object {},
+    "context": Map {},
+    "ctx": Array [],
+    "dirty": Array [
+      -1,
+    ],
+    "fragment": Object {
+      "c": [Function],
+      "d": [Function],
+      "i": [Function],
+      "l": [Function],
+      "m": [Function],
+      "o": [Function],
+      "p": [Function],
+    },
+    "not_equal": [Function],
+    "on_destroy": Array [
+      [Function],
+    ],
+    "on_disconnect": Array [],
+    "on_mount": Array [],
+    "props": Object {},
+    "root": <div>
+      <section
+        class="svelte-1z0tcs5"
+      >
+        <h1
+          class="svelte-1z0tcs5"
+        >
+          Sign in
+        </h1>
+         
+        <span
+          class="svelte-1z0tcs5"
+        >
+          /
+        </span>
+         
+        <a
+          class="svelte-1u7l9fe"
+          href="/signup"
+          sveltekit:prefetch="true"
+        >
+          Sign up
+        </a>
+      </section>
+    </div>,
+    "skip_bound": false,
+    "update": [Function],
+  },
+  "$capture_state": [Function],
+}
+`;

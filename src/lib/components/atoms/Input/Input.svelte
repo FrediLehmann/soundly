@@ -1,7 +1,7 @@
 <script lang="ts">
   export let name: string;
   export let label: string;
-  export let value: string | number | string[];
+  export let value: string | number | string[] = '';
   export let error = '';
   export let required = false;
 
@@ -14,7 +14,7 @@
   <label for={name}>
     {label}
   </label>
-  <input id={name} {...$$restProps} bind:value />
+  <input id={name} {...$$restProps} {required} bind:value />
   {#if error}
     <span class="error">
       {error}
@@ -57,11 +57,16 @@
     border-radius: 0.25rem;
 
     background-color: hsla(var(--neutral-100));
-    color: hsla(var(--gray-900));
   }
 
-  input:focus,
-  input:active {
+  input:disabled {
+    color: hsla(var(--neutral-700));
+    background-color: hsla(var(--neutral-300));
+    border: 1px solid hsla(var(--neutral-500));
+  }
+
+  input:focus:not(:disabled),
+  input:active:not(:disabled) {
     box-shadow: 0 0 0 1px hsla(var(--primary-400));
   }
 
