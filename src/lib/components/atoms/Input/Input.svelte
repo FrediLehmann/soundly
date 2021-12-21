@@ -1,6 +1,7 @@
 <script lang="ts">
   export let name: string;
   export let label: string;
+  export let value: string | number | string[];
   export let error = '';
   export let required = false;
 
@@ -13,7 +14,7 @@
   <label for={name}>
     {label}
   </label>
-  <input id={name} {...$$restProps} />
+  <input id={name} {...$$restProps} {required} bind:value />
   {#if error}
     <span class="error">
       {error}
