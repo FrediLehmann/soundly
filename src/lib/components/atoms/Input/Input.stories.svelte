@@ -75,6 +75,16 @@
   }} />
 
 <Story
+  name="Disabled"
+  args={{ name: 'Test', label: 'This Input', disabled: true }}
+  play={async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    const input = canvas.getByRole('textbox');
+    userEvent.type(input, 'Inputting a text, here.');
+  }} />
+
+<Story
   name="With error"
   args={{ name: 'Test', label: 'This Input', error: 'There is an error' }}
   play={async ({ canvasElement }) => {
