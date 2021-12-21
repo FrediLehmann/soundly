@@ -10,204 +10,8 @@ SigninForm {
     "context": Map {},
     "ctx": Array [
       false,
-      EmailInput {
-        "$$": Object {
-          "after_update": Array [],
-          "before_update": Array [],
-          "bound": Object {},
-          "callbacks": Object {},
-          "context": Map {},
-          "ctx": Array [
-            undefined,
-            undefined,
-            Object {
-              "disabled": false,
-            },
-            [Function],
-            [Function],
-            [Function],
-          ],
-          "dirty": Array [
-            -1,
-          ],
-          "fragment": Object {
-            "c": [Function],
-            "d": [Function],
-            "i": [Function],
-            "l": [Function],
-            "m": [Function],
-            "o": [Function],
-            "p": [Function],
-          },
-          "not_equal": [Function],
-          "on_destroy": Array [],
-          "on_disconnect": Array [],
-          "on_mount": Array [],
-          "props": Object {
-            "get": 4,
-            "validate": 3,
-          },
-          "root": <div>
-            <form
-              class="svelte-1i4vv2l"
-            >
-              <div
-                class="container svelte-1ulq3bj"
-                data-required="true"
-                data-sr-only="false"
-              >
-                <label
-                  class="svelte-1ulq3bj"
-                  for="email"
-                >
-                  Email
-                </label>
-                 
-                <input
-                  class="svelte-1ulq3bj"
-                  id="email"
-                  type="email"
-                />
-                 
-              </div>
-               
-              <div
-                class="container svelte-1ulq3bj"
-                data-required="true"
-                data-sr-only="false"
-              >
-                <label
-                  class="svelte-1ulq3bj"
-                  for="password"
-                >
-                  Password
-                </label>
-                 
-                <input
-                  class="svelte-1ulq3bj"
-                  id="password"
-                  type="password"
-                />
-                 
-              </div>
-               
-              <button
-                class="mbs-2 svelte-1n3dce0"
-                data-type="primary"
-                type="submit"
-              >
-                Sign in
-              </button>
-            </form>
-          </div>,
-          "skip_bound": false,
-          "update": [Function],
-        },
-        "$$set": [Function],
-        "$capture_state": [Function],
-        "$inject_state": [Function],
-      },
-      PasswordInput {
-        "$$": Object {
-          "after_update": Array [],
-          "before_update": Array [],
-          "bound": Object {},
-          "callbacks": Object {},
-          "context": Map {},
-          "ctx": Array [
-            "Password",
-            undefined,
-            undefined,
-            Array [],
-            Object {
-              "disabled": false,
-            },
-            [Function],
-            [Function],
-            [Function],
-          ],
-          "dirty": Array [
-            -1,
-          ],
-          "fragment": Object {
-            "c": [Function],
-            "d": [Function],
-            "i": [Function],
-            "l": [Function],
-            "m": [Function],
-            "o": [Function],
-            "p": [Function],
-          },
-          "not_equal": [Function],
-          "on_destroy": Array [],
-          "on_disconnect": Array [],
-          "on_mount": Array [],
-          "props": Object {
-            "get": 6,
-            "label": 0,
-            "validate": 5,
-          },
-          "root": <div>
-            <form
-              class="svelte-1i4vv2l"
-            >
-              <div
-                class="container svelte-1ulq3bj"
-                data-required="true"
-                data-sr-only="false"
-              >
-                <label
-                  class="svelte-1ulq3bj"
-                  for="email"
-                >
-                  Email
-                </label>
-                 
-                <input
-                  class="svelte-1ulq3bj"
-                  id="email"
-                  type="email"
-                />
-                 
-              </div>
-               
-              <div
-                class="container svelte-1ulq3bj"
-                data-required="true"
-                data-sr-only="false"
-              >
-                <label
-                  class="svelte-1ulq3bj"
-                  for="password"
-                >
-                  Password
-                </label>
-                 
-                <input
-                  class="svelte-1ulq3bj"
-                  id="password"
-                  type="password"
-                />
-                 
-              </div>
-               
-              <button
-                class="mbs-2 svelte-1n3dce0"
-                data-type="primary"
-                type="submit"
-              >
-                Sign in
-              </button>
-            </form>
-          </div>,
-          "skip_bound": false,
-          "update": [Function],
-        },
-        "$$set": [Function],
-        "$capture_state": [Function],
-        "$inject_state": [Function],
-      },
-      [Function],
+      "",
+      "",
       [Function],
       [Function],
       [Function],
@@ -231,12 +35,14 @@ SigninForm {
     "on_disconnect": Array [],
     "on_mount": Array [],
     "props": Object {
-      "signin": 4,
+      "signin": 5,
       "submitting": 0,
     },
     "root": <div>
       <form
+        autocomplete="on"
         class="svelte-1i4vv2l"
+        name="Signin"
       >
         <div
           class="container svelte-1ulq3bj"
@@ -253,6 +59,8 @@ SigninForm {
           <input
             class="svelte-1ulq3bj"
             id="email"
+            required=""
+            title="Please enter your email."
             type="email"
           />
            
@@ -273,6 +81,8 @@ SigninForm {
           <input
             class="svelte-1ulq3bj"
             id="password"
+            required=""
+            title="Please enter your password."
             type="password"
           />
            
@@ -281,10 +91,16 @@ SigninForm {
         <button
           class="mbs-2 svelte-1n3dce0"
           data-type="primary"
-          type="submit"
+          type="button"
         >
           Sign in
         </button>
+         
+        <input
+          hidden=""
+          id="Signin_submit"
+          type="submit"
+        />
       </form>
     </div>,
     "skip_bound": false,

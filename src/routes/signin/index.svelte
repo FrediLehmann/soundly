@@ -17,11 +17,11 @@
   let flyin: Flyin;
   let submitting = false;
 
-  const signin = async ({ email, pwd }) => {
+  const signin = async (email: string, pwd: string): Promise<void> => {
     submitting = true;
 
     try {
-      const { user, session, error } = await Signin(email.get(), pwd.get());
+      const { user, session, error } = await Signin(email, pwd);
       if (error) throw error;
       $userStore = { isSignedIn: true, user, session };
       goto('/profile');

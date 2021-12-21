@@ -9,14 +9,14 @@ Input {
     "callbacks": Object {},
     "context": Map {},
     "ctx": Array [
+      "Test",
       "test",
       "Test",
       "Test",
       true,
       false,
-      Object {
-        "value": "Test",
-      },
+      Object {},
+      [Function],
     ],
     "dirty": Array [
       -1,
@@ -37,11 +37,12 @@ Input {
     "on_disconnect": Array [],
     "on_mount": Array [],
     "props": Object {
-      "error": 2,
-      "label": 1,
-      "labelSrOnly": 4,
-      "name": 0,
-      "required": 3,
+      "error": 3,
+      "label": 2,
+      "labelSrOnly": 5,
+      "name": 1,
+      "required": 4,
+      "value": 0,
     },
     "root": <div>
       <div
@@ -59,6 +60,7 @@ Input {
         <input
           class="svelte-1ulq3bj"
           id="test"
+          required=""
         />
          
         <span
@@ -86,14 +88,14 @@ Input {
     "callbacks": Object {},
     "context": Map {},
     "ctx": Array [
+      "Test",
       "test",
       "Test",
       "Test",
       true,
       true,
-      Object {
-        "value": "Test",
-      },
+      Object {},
+      [Function],
     ],
     "dirty": Array [
       -1,
@@ -114,11 +116,12 @@ Input {
     "on_disconnect": Array [],
     "on_mount": Array [],
     "props": Object {
-      "error": 2,
-      "label": 1,
-      "labelSrOnly": 4,
-      "name": 0,
-      "required": 3,
+      "error": 3,
+      "label": 2,
+      "labelSrOnly": 5,
+      "name": 1,
+      "required": 4,
+      "value": 0,
     },
     "root": <div>
       <div
@@ -136,6 +139,7 @@ Input {
         <input
           class="svelte-1ulq3bj"
           id="test"
+          required=""
         />
          
         <span
