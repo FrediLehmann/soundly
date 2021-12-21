@@ -1,7 +1,7 @@
 <script lang="ts">
   export let name: string;
   export let label: string;
-  export let value: string | number | string[];
+  export let value: string | number | string[] = '';
   export let error = '';
   export let required = false;
 
