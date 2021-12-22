@@ -1,0 +1,134 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SignupForm /> component renders correctly 1`] = `
+SignupForm {
+  "$$": Object {
+    "after_update": Array [],
+    "before_update": Array [],
+    "bound": Object {},
+    "callbacks": Object {},
+    "context": Map {},
+    "ctx": Array [
+      false,
+      "",
+      "",
+      "",
+      [Function],
+      [Function],
+      [Function],
+    ],
+    "dirty": Array [
+      -1,
+    ],
+    "fragment": Object {
+      "c": [Function],
+      "d": [Function],
+      "i": [Function],
+      "l": [Function],
+      "m": [Function],
+      "o": [Function],
+      "p": [Function],
+    },
+    "not_equal": [Function],
+    "on_destroy": Array [
+      [Function],
+    ],
+    "on_disconnect": Array [],
+    "on_mount": Array [],
+    "props": Object {
+      "signup": 6,
+      "submitting": 0,
+    },
+    "root": <div>
+      <form
+        class="flex flex-col gap-3 svelte-1i4vv2l"
+      >
+        <div
+          class="container svelte-1ulq3bj"
+          data-required="true"
+          data-sr-only="false"
+        >
+          <label
+            class="svelte-1ulq3bj"
+            for="email"
+          >
+            Email
+          </label>
+           
+          <input
+            class="svelte-1ulq3bj"
+            id="email"
+            required=""
+            title="Please enter your email."
+            type="email"
+          />
+           
+        </div>
+         
+        <div
+          class="container svelte-1ulq3bj"
+          data-required="true"
+          data-sr-only="false"
+        >
+          <label
+            class="svelte-1ulq3bj"
+            for="username"
+          >
+            Username
+          </label>
+           
+          <input
+            class="svelte-1ulq3bj"
+            id="username"
+            required=""
+            title="Please enter a username."
+            type="text"
+          />
+           
+        </div>
+         
+        <div
+          class="container svelte-1ulq3bj"
+          data-required="true"
+          data-sr-only="false"
+        >
+          <label
+            class="svelte-1ulq3bj"
+            for="password"
+          >
+            Password
+          </label>
+           
+          <input
+            class="svelte-1ulq3bj"
+            id="password"
+            required=""
+            title="Please enter your password."
+            type="password"
+          />
+           
+        </div>
+         
+        <button
+          class="mbs-2 svelte-1n3dce0"
+          data-type="primary"
+          type="button"
+        >
+          Sign up
+        </button>
+         
+        <input
+          hidden=""
+          id="Signup_submit"
+          type="submit"
+        />
+      </form>
+    </div>,
+    "skip_bound": false,
+    "update": [Function],
+  },
+  "$$set": [Function],
+  "$capture_state": [Function],
+  "$inject_state": [Function],
+}
+`;
