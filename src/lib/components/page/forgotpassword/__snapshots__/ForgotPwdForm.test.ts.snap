@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ForgotPwdForm /> component renders correctly 1`] = `
+ForgotPwdForm {
+  "$$": Object {
+    "after_update": Array [],
+    "before_update": Array [],
+    "bound": Object {},
+    "callbacks": Object {},
+    "context": Map {},
+    "ctx": Array [
+      false,
+      "",
+      [Function],
+      [Function],
+      [Function],
+    ],
+    "dirty": Array [
+      -1,
+    ],
+    "fragment": Object {
+      "c": [Function],
+      "d": [Function],
+      "i": [Function],
+      "l": [Function],
+      "m": [Function],
+      "o": [Function],
+      "p": [Function],
+    },
+    "not_equal": [Function],
+    "on_destroy": Array [
+      [Function],
+    ],
+    "on_disconnect": Array [],
+    "on_mount": Array [],
+    "props": Object {
+      "resetPassword": 4,
+      "submitting": 0,
+    },
+    "root": <div>
+      <form
+        class="svelte-1i4vv2l"
+        name="ForgotPwd"
+      >
+        <div
+          class="container svelte-1ulq3bj"
+          data-required="true"
+          data-sr-only="false"
+        >
+          <label
+            class="svelte-1ulq3bj"
+            for="email"
+          >
+            Email
+          </label>
+           
+          <input
+            class="svelte-1ulq3bj"
+            id="email"
+            required=""
+            title="Please enter your email."
+            type="email"
+          />
+           
+        </div>
+         
+        <button
+          class="mbs-2 svelte-1n3dce0"
+          data-type="primary"
+          type="button"
+        >
+          Reset password
+        </button>
+         
+        <input
+          hidden=""
+          id="ForgotPwd_submit"
+          type="submit"
+        />
+      </form>
+    </div>,
+    "skip_bound": false,
+    "update": [Function],
+  },
+  "$$set": [Function],
+  "$capture_state": [Function],
+  "$inject_state": [Function],
+}
+`;
