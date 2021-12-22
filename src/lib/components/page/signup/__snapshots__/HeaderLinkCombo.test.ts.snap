@@ -47,7 +47,6 @@ HeaderLinkCombo_1 {
         <a
           class="svelte-1u7l9fe"
           href="/signin"
-          sveltekit:prefetch="true"
         >
           Sign in
         </a>
