@@ -1,33 +1,26 @@
 <script type="ts" context="module">
+  import {
+    HomeLink,
+    HeaderLinkCombo,
+    SignupForm
+  } from '$lib/components/page/signup';
   import { goto } from '$app/navigation';
 
-  import { ArrowLeft } from '$lib/Icons';
   import { Signup } from '$lib/api/auth';
-  import { Button, Link, Flyin } from '$lib/components/atoms';
-  import {
-    EmailInput,
-    PasswordInput,
-    UserNameInput,
-    HeaderLinkCombo
-  } from '$lib/components/molecules';
+  import { Flyin } from '$lib/components/atoms';
   import { userStore } from '$lib/store/user';
   import { onMount } from 'svelte';
 </script>
 
 <script type="ts">
   let flyin: Flyin;
-  let email: EmailInput;
-  let username: UserNameInput;
-  let pwd: PasswordInput;
   let submitting = false;
 
-  const signup = async () => {
-    if (!email.validate() || !pwd.validate(true) || !username.validate())
-      return;
+  const signup = async (email: string, pwd: string, username: string) => {
     submitting = true;
 
     try {
-      await Signup(email.get(), pwd.get(), { username: username.get() });
+      await Signup(email, pwd, { username });
       flyin.show('Successfull signed up', 'success');
     } catch (e) {
       flyin.show(e.message, 'error');
@@ -43,24 +36,8 @@
   <title>Sign up</title>
 </svelte:head>
 
-<Link href="/" class="mb-2">
-  <ArrowLeft width="1.25rem" height="1.25rem" />
-  Home
-</Link>
-<HeaderLinkCombo href="/signin">
-  <svelte:fragment slot="headingText">Sign up</svelte:fragment>
-  <svelte:fragment slot="linkText">Sign in</svelte:fragment>
-</HeaderLinkCombo>
-<form on:submit|preventDefault={signup} class="flex flex-col gap-3">
-  <EmailInput disabled={submitting} bind:this={email} />
-  <UserNameInput disabled={submitting} bind:this={username} />
-  <PasswordInput disabled={submitting} bind:this={pwd} />
-  <Button disabled={submitting} type="submit" style="primary" class="mt-2">
-    Sign up
-  </Button>
-</form>
-<Link href="/forgotpassword" sveltekit:prefetch class="text-sm mt-2">
-  Forgot password?
-</Link>
+<HomeLink />
+<HeaderLinkCombo />
+<SignupForm {signup} {submitting} />
 
 <Flyin bind:this={flyin} />

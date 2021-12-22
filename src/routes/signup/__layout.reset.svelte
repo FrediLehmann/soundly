@@ -4,6 +4,6 @@
   export const prerender = true;
 </script>
 
-<PageFrame style="small" class="pt-32">
+<PageFrame style="small" marginTop="8rem">
   <slot />
 </PageFrame>
