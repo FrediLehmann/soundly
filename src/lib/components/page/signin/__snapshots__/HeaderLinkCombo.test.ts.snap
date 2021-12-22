@@ -47,7 +47,6 @@ HeaderLinkCombo_1 {
         <a
           class="svelte-1u7l9fe"
           href="/signup"
-          sveltekit:prefetch="true"
         >
           Sign up
         </a>

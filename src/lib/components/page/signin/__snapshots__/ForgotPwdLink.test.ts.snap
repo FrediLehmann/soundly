@@ -32,7 +32,6 @@ ForgotPwdLink {
       <a
         class="mbs-2 svelte-1u7l9fe"
         href="/forgotpassword"
-        sveltekit:prefetch="true"
       >
         Forgot password?
       </a>

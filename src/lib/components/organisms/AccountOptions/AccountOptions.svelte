@@ -46,7 +46,6 @@
     <Link
       href="/signin"
       class="hidden whitespace-nowrap sm:flex px-4 py-0"
-      sveltekit:prefetch
       style="secondary">
       Sign in
     </Link>

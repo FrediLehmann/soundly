@@ -9,7 +9,7 @@
 <section>
   <h1><slot name="headingText" /></h1>
   <span>/</span>
-  <Link {href} sveltekit:prefetch><slot name="linkText" /></Link>
+  <Link {href}><slot name="linkText" /></Link>
 </section>
 
 <style>
