@@ -17,7 +17,7 @@
     "chromatic": "chromatic --exit-zero-on-changes"
   },
   "dependencies": {
-    "@supabase/supabase-js": "^1.29.0",
+    "@supabase/supabase-js": "^1.29.1",
     "axios": "^0.24.0"
   },
   "devDependencies": {
