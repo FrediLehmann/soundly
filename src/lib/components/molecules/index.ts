@@ -1,4 +1,2 @@
-import SearchField from './SearchField.svelte';
-
+export { SearchField } from './SearchField';
 export { HeaderLinkCombo } from './HeaderLinkCombo';
-export { SearchField };
