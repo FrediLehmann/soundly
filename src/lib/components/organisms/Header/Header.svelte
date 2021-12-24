@@ -16,6 +16,6 @@
     margin-inline: auto;
     padding-block: 1rem;
     padding-inline: 0.5rem;
-    max-width: 56rem;
+    max-width: 72rem;
   }
 </style>
