@@ -1,11 +1,14 @@
 <script type="ts" context="module">
   import { Logo } from '$lib/components/atoms';
-  import { AccountOptions } from '$lib/components/organisms';
+  //   import { AccountOptions } from '$lib/components/organisms';
+
+  import { Navigation } from './components';
 </script>
 
 <header>
   <Logo size="medium" />
-  <AccountOptions />
+  <Navigation />
+  <!-- <AccountOptions /> -->
 </header>
 
 <style>

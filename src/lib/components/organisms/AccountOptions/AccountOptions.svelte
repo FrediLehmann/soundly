@@ -1,31 +1,30 @@
 <script type="ts" context="module">
   import { goto } from '$app/navigation';
-  import { Signout } from '$lib/api/auth';
+  //   import { Signout } from '$lib/api/auth';
 
-  import { Button, Link } from '$lib/components/atoms';
+  import { Button } from '$lib/components/atoms';
   import { Account } from '$lib/Icons';
-  import { userStore } from '$lib/store/user';
+  //   import { userStore } from '$lib/store/user';
   import { Navigation } from './components';
 </script>
 
 <script type="ts">
   let navOpen = false;
   const toggleNav = () => {
-    if ($userStore.isSignedIn) {
-      navOpen = !navOpen;
-    } else {
-      goto('/signin');
-    }
+    // if ($userStore.isSignedIn) {
+    //   navOpen = !navOpen;
+    // } else {
+    //   goto('/signin');
+    // }
   };
 
   const signout = async () => {
-    const { error } = await Signout();
-    if (error) {
-      console.error(error);
-      return;
-    }
-
-    userStore.set({ isSignedIn: false, user: undefined, session: undefined });
+    // const { error } = await Signout();
+    // if (error) {
+    //   console.error(error);
+    //   return;
+    // }
+    // userStore.set({ isSignedIn: false, user: undefined, session: undefined });
   };
 
   const signin = () => {
