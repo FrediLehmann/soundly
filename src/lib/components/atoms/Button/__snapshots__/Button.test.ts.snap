@@ -10,6 +10,7 @@ Slot {
     "context": Map {},
     "ctx": Array [
       [Function],
+      Object {},
     ],
     "dirty": Array [
       -1,
@@ -34,12 +35,69 @@ Slot {
     },
     "root": <div>
       <button
-        class="svelte-1n3dce0"
+        class="svelte-19wuz13"
         data-type="secondary"
         type="button"
       >
         Button
       </button>
+      
+      
+    </div>,
+    "skip_bound": false,
+    "update": [Function],
+  },
+  "$$set": [Function],
+  "$capture_state": [Function],
+  "$inject_state": [Function],
+}
+`;
+
+exports[`<Button /> component renders correctly as link 1`] = `
+Slot {
+  "$$": Object {
+    "after_update": Array [],
+    "before_update": Array [],
+    "bound": Object {},
+    "callbacks": Object {},
+    "context": Map {},
+    "ctx": Array [
+      [Function],
+      Object {
+        "href": "#",
+      },
+    ],
+    "dirty": Array [
+      -1,
+    ],
+    "fragment": Object {
+      "c": [Function],
+      "d": [Function],
+      "i": [Function],
+      "l": [Function],
+      "m": [Function],
+      "o": [Function],
+      "p": [Function],
+    },
+    "not_equal": [Function],
+    "on_destroy": Array [
+      [Function],
+    ],
+    "on_disconnect": Array [],
+    "on_mount": Array [],
+    "props": Object {
+      "Component": 0,
+    },
+    "root": <div>
+      <a
+        class="svelte-19wuz13"
+        data-type="secondary"
+        href="#"
+        type="button"
+      >
+        Button
+      </a>
+      
       
     </div>,
     "skip_bound": false,

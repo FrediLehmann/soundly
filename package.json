@@ -76,7 +76,8 @@
       "@testing-library/jest-dom/extend-expect"
     ],
     "moduleNameMapper": {
-      "^\\$lib(.*)$": "<rootDir>/src/lib$1"
+      "^\\$lib(.*)$": "<rootDir>/src/lib$1",
+      "\\.(png|webp)$": "<rootDir>/__mocks__/fileMock.js"
     }
   }
 }

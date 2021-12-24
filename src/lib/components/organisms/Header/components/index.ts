@@ -1,3 +1,2 @@
-import IconSection from './IconSection.svelte';
-
-export { IconSection };
+export { Navigation } from './Navigation';
+export { AccountSection } from './AccountSection';

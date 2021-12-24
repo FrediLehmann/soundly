@@ -10,6 +10,14 @@
   title="Atoms/Button"
   component={Button}
   argTypes={{
+    href: {
+      control: { type: 'text' },
+      table: {
+        type: {
+          summary: 'If href is provided component renders as <a /> tag'
+        }
+      }
+    },
     type: {
       control: { type: 'select' },
       options: ['button', 'submit', 'reset'],
@@ -57,6 +65,9 @@
   </div>
   <div class="box">
     <Button {...args} type={args.type} disabled>Button</Button>
+  </div>
+  <div class="box">
+    <Button {...args} href="#" type={args.type}>Button as a tag</Button>
   </div>
 </Template>
 
