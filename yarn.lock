@@ -2617,10 +2617,10 @@
   dependencies:
     cross-fetch "^3.0.6"
 
-"@supabase/realtime-js@^1.3.3":
-  version "1.3.3"
-  resolved "https://registry.yarnpkg.com/@supabase/realtime-js/-/realtime-js-1.3.3.tgz#973c4cacf8062b4f1e435a0b250a2758e16e15f1"
-  integrity sha512-9D79jlo/56VQf/U7TWhu24epCoj0vWJ7ALkGcqci8Luk/iOcdCxY1NJ76BbS1UnpXEIvQxQGb1R5NSexriKcUA==
+"@supabase/realtime-js@^1.3.4":
+  version "1.3.4"
+  resolved "https://registry.yarnpkg.com/@supabase/realtime-js/-/realtime-js-1.3.4.tgz#b080e7b002c47cb66764ec53babb63232aed1cec"
+  integrity sha512-N9xerTleMp6OKgsqYp0WujYJvKplMxhSJ9agTvAL6vc/+4hh5uxak4wLpgqigy3ZBzpRUSYty7hDyS017+waiw==
   dependencies:
     "@types/websocket" "^1.0.3"
     websocket "^1.0.34"
@@ -2632,14 +2632,14 @@
   dependencies:
     cross-fetch "^3.1.0"
 
-"@supabase/supabase-js@^1.29.0":
-  version "1.29.0"
-  resolved "https://registry.yarnpkg.com/@supabase/supabase-js/-/supabase-js-1.29.0.tgz#16eaec23cc689e7074603021ed224dd1a1120934"
-  integrity sha512-zdmxunUQ3MKWFcGw3akuwteHpV8wBzSjphQnDqsjVxr+a0rhffpGN22VdomRDiqrWvTvZJgUGTsZU88OmsvgFg==
+"@supabase/supabase-js@^1.29.1":
+  version "1.29.1"
+  resolved "https://registry.yarnpkg.com/@supabase/supabase-js/-/supabase-js-1.29.1.tgz#5cccf0da1caf8320fbeff09f5ee893f66bdcb450"
+  integrity sha512-5UPgB93XCzALTpbuwvEGH+Y7i3YBY3y3y96uNnzAWYerGWlqx2kIVmV++GAiEPp/tp+QRsv103AoLKiP3dP2DA==
   dependencies:
     "@supabase/gotrue-js" "^1.21.7"
     "@supabase/postgrest-js" "^0.35.0"
-    "@supabase/realtime-js" "^1.3.3"
+    "@supabase/realtime-js" "^1.3.4"
     "@supabase/storage-js" "^1.5.0"
 
 "@sveltejs/adapter-vercel@next":
@@ -4422,10 +4422,10 @@ chownr@^2.0.0:
   resolved "https://registry.yarnpkg.com/chownr/-/chownr-2.0.0.tgz#15bfbe53d2eab4cf70f18a8cd68ebe5b3cb1dece"
   integrity sha512-bIomtDF5KGpdogkLd9VspvFzk9KfpyyGlS8YFVZl7TGPBHL5snIOnxeshwVgPteQ9b4Eydl+pVbIyE1DcvCWgQ==
 
-chromatic@^6.2.3:
-  version "6.2.3"
-  resolved "https://registry.yarnpkg.com/chromatic/-/chromatic-6.2.3.tgz#d359f7603954c753bfe37e966d1f879d6879b41e"
-  integrity sha512-+uzSjyaph6xaH0nhrFu5rZIQ/nW89w8aX5/BvluQ2iBwW8QT5o8lrRw0Z/NEir54+T13M4GLNessw5ZlF2w8UQ==
+chromatic@^6.3.3:
+  version "6.3.3"
+  resolved "https://registry.yarnpkg.com/chromatic/-/chromatic-6.3.3.tgz#da7dd3502ac2fc9387eac5fc7b9e050716e001a3"
+  integrity sha512-d2l/jkD2VCxNXT69qRxuv/+7cEl5ZNR169GCG2D6HuiuyplbEF0NR/0Da2KGmAvu8KEWVJDR/HjEg0/OYCC9aQ==
 
 chrome-trace-event@^1.0.2:
   version "1.0.3"
