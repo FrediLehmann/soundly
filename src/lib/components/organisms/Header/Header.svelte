@@ -17,5 +17,6 @@
     padding-block: 1rem;
     padding-inline: 0.5rem;
     max-width: 72rem;
+    align-items: center;
   }
 </style>

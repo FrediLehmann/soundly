@@ -27,6 +27,10 @@
 
     userStore.set({ isSignedIn: false, user: undefined, session: undefined });
   };
+
+  const signin = () => {
+    goto('/signin');
+  };
 </script>
 
 <div class="relative -ml-5">
@@ -35,14 +39,15 @@
   {/if}
 </div>
 
-<div class="flex">
+<div class="accountOptions">
   <Button
     on:click={toggleNav}
     class="px-2 bg-gray-400 hover:bg-gray-500"
     aria-label="Account menu">
     <Account />
   </Button>
-  {#if !$userStore.isSignedIn}
+  <Button on:click={signin}>Sign in</Button>
+  <!-- {#if !$userStore.isSignedIn}
     <Link
       href="/signin"
       class="hidden whitespace-nowrap sm:flex px-4 py-0"
@@ -57,5 +62,12 @@
       style="secondary">
       Sign out
     </Button>
-  {/if}
+  {/if} -->
 </div>
+
+<style>
+  .accountOptions {
+    display: flex;
+    gap: 0.5rem;
+  }
+</style>
