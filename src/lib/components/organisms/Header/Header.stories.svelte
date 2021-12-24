@@ -2,7 +2,8 @@
   import { Meta, Story } from '@storybook/addon-svelte-csf';
   import { userEvent, within } from '@storybook/testing-library';
 
-  import { Navigation } from './components';
+  import { Navigation, AccountSection } from './components';
+  import Header from './Header.svelte';
 </script>
 
 <Meta title="Organisms/Header" />
@@ -18,6 +19,14 @@
   <div class="navcontainer">
     <Navigation />
   </div>
+</Story>
+
+<Story name="Account part">
+  <AccountSection />
+</Story>
+
+<Story name="Full header">
+  <Header />
 </Story>
 
 <style>

@@ -15,6 +15,7 @@
 <style>
   nav {
     margin-inline-start: auto;
+    margin-inline-end: 0.75rem;
     background: hsla(var(--primary))
       linear-gradient(
         20deg,

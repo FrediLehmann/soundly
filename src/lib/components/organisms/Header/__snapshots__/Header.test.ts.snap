@@ -30,7 +30,7 @@ Header {
     "props": Object {},
     "root": <div>
       <header
-        class="svelte-1sr20qk"
+        class="svelte-wrs6mn"
       >
         <picture
           class="svelte-4dorz4"
@@ -45,16 +45,16 @@ Header {
         </picture>
          
         <nav
-          class="svelte-1w72zer"
+          class="svelte-1upcm0y"
         >
           <ul
-            class="svelte-1w72zer"
+            class="svelte-1upcm0y"
           >
             <li
-              class="svelte-1w72zer"
+              class="svelte-1upcm0y"
             >
               <a
-                class="svelte-1w72zer"
+                class="svelte-1upcm0y"
                 href="/upload"
                 sveltekit:prefetch=""
               >
@@ -63,10 +63,10 @@ Header {
             </li>
              
             <li
-              class="svelte-1w72zer"
+              class="svelte-1upcm0y"
             >
               <a
-                class="svelte-1w72zer"
+                class="svelte-1upcm0y"
                 href="/about"
                 sveltekit:prefetch=""
               >
@@ -75,10 +75,10 @@ Header {
             </li>
              
             <li
-              class="svelte-1w72zer"
+              class="svelte-1upcm0y"
             >
               <a
-                class="svelte-1w72zer"
+                class="svelte-1upcm0y"
                 href="/api"
                 sveltekit:prefetch=""
               >
@@ -87,6 +87,50 @@ Header {
             </li>
           </ul>
         </nav>
+         
+        <div
+          class="svelte-8vfevs"
+        >
+          <a
+            aria-label="Profile"
+            class="svelte-19wuz13"
+            data-type="ghost"
+            href="/profile"
+            type="button"
+          >
+            <svg
+              fill="none"
+              height="16"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"
+              />
+              <circle
+                cx="12"
+                cy="7"
+                r="4"
+              />
+            </svg>
+          </a>
+          
+           
+          <a
+            class="svelte-19wuz13"
+            data-type="ghost"
+            href="/signin"
+            type="button"
+          >
+            Sign in
+          </a>
+          
+        </div>
       </header>
     </div>,
     "skip_bound": false,

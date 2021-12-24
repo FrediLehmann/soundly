@@ -30,16 +30,16 @@ Navigation {
     "props": Object {},
     "root": <div>
       <nav
-        class="svelte-1w72zer"
+        class="svelte-1upcm0y"
       >
         <ul
-          class="svelte-1w72zer"
+          class="svelte-1upcm0y"
         >
           <li
-            class="svelte-1w72zer"
+            class="svelte-1upcm0y"
           >
             <a
-              class="svelte-1w72zer"
+              class="svelte-1upcm0y"
               href="/upload"
               sveltekit:prefetch=""
             >
@@ -48,10 +48,10 @@ Navigation {
           </li>
            
           <li
-            class="svelte-1w72zer"
+            class="svelte-1upcm0y"
           >
             <a
-              class="svelte-1w72zer"
+              class="svelte-1upcm0y"
               href="/about"
               sveltekit:prefetch=""
             >
@@ -60,10 +60,10 @@ Navigation {
           </li>
            
           <li
-            class="svelte-1w72zer"
+            class="svelte-1upcm0y"
           >
             <a
-              class="svelte-1w72zer"
+              class="svelte-1upcm0y"
               href="/api"
               sveltekit:prefetch=""
             >
