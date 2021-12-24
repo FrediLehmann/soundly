@@ -13,4 +13,10 @@ describe('<Button /> component', () => {
     const { component } = render(Slot, { props: { Component: Button } });
     expect(component).toMatchSnapshot();
   });
+  test('renders correctly as link', () => {
+    const { component } = render(Slot, {
+      props: { Component: Button, href: '#' }
+    });
+    expect(component).toMatchSnapshot();
+  });
 });
