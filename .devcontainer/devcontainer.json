@@ -32,7 +32,7 @@
     "esbenp.prettier-vscode",
     "svelte.svelte-vscode",
     "eamodio.gitlens",
-    "bradlc.vscode-tailwindcss"
+    "silvenon.mdx"
   ],
 
   // Use 'forwardPorts' to make a list of ports inside the container available locally.

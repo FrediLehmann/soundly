@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Logo /> component renders correctly 1`] = `
+Logo {
+  "$$": Object {
+    "after_update": Array [],
+    "before_update": Array [],
+    "bound": Object {},
+    "callbacks": Object {},
+    "context": Map {},
+    "ctx": Array [
+      "primary",
+      "small",
+    ],
+    "dirty": Array [
+      -1,
+    ],
+    "fragment": Object {
+      "c": [Function],
+      "d": [Function],
+      "i": [Function],
+      "l": [Function],
+      "m": [Function],
+      "o": [Function],
+      "p": [Function],
+    },
+    "not_equal": [Function],
+    "on_destroy": Array [
+      [Function],
+    ],
+    "on_disconnect": Array [],
+    "on_mount": Array [],
+    "props": Object {
+      "color": 0,
+      "size": 1,
+    },
+    "root": <div>
+      <picture
+        class="svelte-4dorz4"
+        data-size="small"
+      >
+        <source />
+         
+        <img
+          alt="Noiceless Logo"
+          class="svelte-4dorz4"
+        />
+      </picture>
+    </div>,
+    "skip_bound": false,
+    "update": [Function],
+  },
+  "$$set": [Function],
+  "$capture_state": [Function],
+  "$inject_state": [Function],
+}
+`;

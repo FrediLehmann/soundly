@@ -1,16 +1,15 @@
 <script lang="ts" context="module">
-  import { FlyinStyles } from '../FlyinStyles.enum';
-  import { CircleCheck, AlertTriangle, XCircle } from '$lib/components/Icons';
+  import { CircleCheck, AlertTriangle, XCircle } from '$lib/Icons';
 </script>
 
 <script lang="ts">
-  export let flyinStyle: FlyinStyles;
+  export let style: string;
 </script>
 
-{#if flyinStyle === FlyinStyles.info}
-  <AlertTriangle class="w-6 h-6 mr-4" stroke-width="3" />
-{:else if flyinStyle === FlyinStyles.error}
-  <XCircle class="w-6 h-6 mr-4" stroke-width="3" />
-{:else if flyinStyle === FlyinStyles.success}
-  <CircleCheck class="w-6 h-6 mr-4" stroke-width="3" />
+{#if style === 'info'}
+  <AlertTriangle width="1.5rem" height="1.5rem" />
+{:else if style === 'error'}
+  <XCircle width="1.5rem" height="1.5rem" />
+{:else if style === 'success'}
+  <CircleCheck width="1.5rem" height="1.5rem" />
 {/if}

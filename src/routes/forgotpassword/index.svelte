@@ -1,61 +1,38 @@
 <script type="ts" context="module">
-  import {
-    Button,
-    ButtonStyles,
-    Flyin,
-    FlyinStyles
-  } from '$lib/components/atoms';
+  import { BackLink, ForgotPwdForm } from '$lib/components/page/forgotpassword';
+  import { Flyin } from '$lib/components/atoms';
   import { ForgotPassword } from '$lib/api/auth';
-  import { BackLink, EmailInput } from '$lib/components/molecules';
   import { userStore } from '$lib/store/user';
   import { onMount } from 'svelte';
   import { goto } from '$app/navigation';
-  import type { User, Session } from '@supabase/supabase-js';
 </script>
 
 <script type="ts">
   let flyin: Flyin;
-  let email: EmailInput;
   let submitting = false;
 
-  const resetPassword = async () => {
-    if (!email.validate()) return;
+  const resetPassword = async (email: string) => {
     submitting = true;
 
     try {
-      let { error } = await ForgotPassword(email.get());
+      let { error } = await ForgotPassword(email);
       if (error) throw error;
-      flyin.show({
-        message: 'A reset link has been sent to your email!',
-        style: FlyinStyles.info
-      });
+      flyin.show('A reset link has been sent to your email!', 'info');
     } catch (e) {
-      flyin.show({ message: e.message, style: FlyinStyles.error });
+      flyin.show(e.message, 'error');
     } finally {
       submitting = false;
     }
   };
 
-  let user: { isSignedIn: boolean; user?: User; session?: Session };
-  userStore.subscribe(u => (user = u));
-
-  onMount(() => user.isSignedIn && goto('/profile'));
+  onMount(() => $userStore.isSignedIn && goto('/profile'));
 </script>
 
 <svelte:head>
   <title>Reset Password</title>
 </svelte:head>
 
-<BackLink href="/signin" class="mb-4">Back</BackLink>
-<form on:submit|preventDefault={resetPassword} class="flex flex-col gap-3">
-  <EmailInput disabled={submitting} bind:this={email} />
-  <Button
-    disabled={submitting}
-    btnType={ButtonStyles.primary}
-    type="submit"
-    class="mt-2">
-    Reset password
-  </Button>
-</form>
+<BackLink />
+<ForgotPwdForm {resetPassword} {submitting} />
 
 <Flyin bind:this={flyin} />

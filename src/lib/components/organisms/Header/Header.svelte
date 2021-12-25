@@ -1,12 +1,22 @@
 <script type="ts" context="module">
-  import { IconSection } from './components';
-  import { SearchField } from '$lib/components/molecules';
-  import { AccountOptions } from '$lib/components/organisms';
+  import { Logo } from '$lib/components/atoms';
+
+  import { AccountSection, Navigation } from './components';
 </script>
 
-<header
-  class="flex justify-between gap-5 max-w-4xl mx-auto py-4 px-2 sm:px-6 lg:px-8">
-  <IconSection />
-  <SearchField />
-  <AccountOptions />
+<header>
+  <Logo size="medium" />
+  <Navigation />
+  <AccountSection />
 </header>
+
+<style>
+  header {
+    display: flex;
+    margin-inline: auto;
+    padding-block: 1rem;
+    padding-inline: 0.5rem;
+    max-width: 72rem;
+    align-items: center;
+  }
+</style>

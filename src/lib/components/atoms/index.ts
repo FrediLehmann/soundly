@@ -1,7 +1,7 @@
 export { Input } from './Input';
-export { Button, ButtonStyles } from './Button';
-export { Link, LinkStyles } from './Link';
-export { PageFrame, PageFrameStyles } from './PageFrame';
+export { Button } from './Button';
+export { Link } from './Link';
+export { PageFrame } from './PageFrame';
+export { Logo, LogoLetter } from './Logo';
 
-export { Flyin, FlyinStyles } from './Flyin';
-export type { FlyinConfig } from './Flyin';
+export { Flyin } from './Flyin';

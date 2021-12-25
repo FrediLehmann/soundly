@@ -1,44 +1,90 @@
 <script lang="ts" context="module">
-  import type { FlyinConfig } from './FlyinConfig.interface';
-  import type { FlyinStyles } from './FlyinStyles.enum';
-
   import { fly } from 'svelte/transition';
   import { Icon, CloseButton } from './components';
 </script>
 
 <script lang="ts">
-  let isVisible = false;
-  let flyinMessage: string;
-  let flyinStyle: FlyinStyles;
-  let flyinTimeout: number;
+  let open = false;
+  let message: string;
+  let style: string;
+  let timer: number;
 
-  export const show = ({
-    message,
-    timeout = 5000,
-    style
-  }: FlyinConfig): void => {
-    flyinMessage = message;
-    flyinStyle = style;
-    isVisible = true;
+  /**
+   * Open the flyin component with the settings provided.
+   * @param flyinMessage the message to show in the flyin.
+   * @param flyinStyle style of the flyin.
+   * @param [showFor=5000] - time in ms until the flyin automatically closes.
+   */
+  export const show = (
+    flyinMessage: string,
+    flyinStyle: 'info' | 'error' | 'success',
+    showFor = 5000
+  ): void => {
+    message = flyinMessage;
+    style = flyinStyle;
+    open = true;
 
-    flyinTimeout = window.setTimeout(() => (isVisible = false), timeout);
+    timer = window.setTimeout(() => (open = false), showFor);
   };
 
   const onClose = (): void => {
-    window.clearTimeout(flyinTimeout);
-    isVisible = false;
+    window.clearTimeout(timer);
+    open = false;
   };
 </script>
 
-{#if isVisible}
+{#if open}
   <div
-    class="flyinContainer"
-    data-type={flyinStyle}
+    class="flyin"
+    data-type={style}
     transition:fly={{ y: -100, duration: 300 }}>
-    <div class="flyinContent">
-      <Icon {flyinStyle} />
-      <span>{flyinMessage}</span>
-      <CloseButton on:click={onClose} />
+    <div class="content">
+      <Icon {style} />
+      <span class="text">{message}</span>
+      <CloseButton {onClose} />
     </div>
   </div>
 {/if}
+
+<style>
+  :root {
+    --yellow: 60, 80%, 48%;
+  }
+  .flyin {
+    color: hsla(var(--neutral-900));
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+  }
+
+  .flyin[data-type='info'] {
+    background-color: hsla(var(--yellow));
+  }
+
+  .flyin[data-type='success'] {
+    background-color: hsla(var(--primary-500));
+  }
+
+  .flyin[data-type='error'] {
+    background-color: hsla(var(--secondary-400));
+  }
+
+  .content {
+    display: flex;
+
+    max-width: 56rem;
+
+    margin-inline: auto;
+    padding-block: 1rem;
+    padding-inline: 2rem;
+
+    font-weight: 500;
+  }
+
+  .text {
+    align-self: center;
+    margin-inline-start: 1rem;
+  }
+</style>

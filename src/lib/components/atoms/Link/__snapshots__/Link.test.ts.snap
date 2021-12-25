@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Link /> component render Link 1`] = `
+Link {
+  "$$": Object {
+    "after_update": Array [],
+    "before_update": Array [],
+    "bound": Object {},
+    "callbacks": Object {},
+    "context": Map {},
+    "ctx": Array [
+      "/test",
+      Object {},
+      undefined,
+      Object {},
+    ],
+    "dirty": Array [
+      -1,
+    ],
+    "fragment": Object {
+      "c": [Function],
+      "d": [Function],
+      "i": [Function],
+      "l": [Function],
+      "m": [Function],
+      "o": [Function],
+      "p": [Function],
+    },
+    "not_equal": [Function],
+    "on_destroy": Array [
+      [Function],
+    ],
+    "on_disconnect": Array [],
+    "on_mount": Array [],
+    "props": Object {
+      "href": 0,
+    },
+    "root": <div>
+      <a
+        class="svelte-1u7l9fe"
+        href="/test"
+      />
+    </div>,
+    "skip_bound": false,
+    "update": [Function],
+  },
+  "$$set": [Function],
+  "$capture_state": [Function],
+  "$inject_state": [Function],
+}
+`;

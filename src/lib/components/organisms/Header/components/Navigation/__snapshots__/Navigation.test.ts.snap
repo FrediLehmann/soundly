@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Navigation /> component renders correctly 1`] = `
+Navigation {
+  "$$": Object {
+    "after_update": Array [],
+    "before_update": Array [],
+    "bound": Object {},
+    "callbacks": Object {},
+    "context": Map {},
+    "ctx": Array [],
+    "dirty": Array [
+      -1,
+    ],
+    "fragment": Object {
+      "c": [Function],
+      "d": [Function],
+      "i": [Function],
+      "l": [Function],
+      "m": [Function],
+      "o": [Function],
+      "p": [Function],
+    },
+    "not_equal": [Function],
+    "on_destroy": Array [
+      [Function],
+    ],
+    "on_disconnect": Array [],
+    "on_mount": Array [],
+    "props": Object {},
+    "root": <div>
+      <nav
+        class="svelte-1upcm0y"
+      >
+        <ul
+          class="svelte-1upcm0y"
+        >
+          <li
+            class="svelte-1upcm0y"
+          >
+            <a
+              class="svelte-1upcm0y"
+              href="/upload"
+              sveltekit:prefetch=""
+            >
+              Upload
+            </a>
+          </li>
+           
+          <li
+            class="svelte-1upcm0y"
+          >
+            <a
+              class="svelte-1upcm0y"
+              href="/about"
+              sveltekit:prefetch=""
+            >
+              About
+            </a>
+          </li>
+           
+          <li
+            class="svelte-1upcm0y"
+          >
+            <a
+              class="svelte-1upcm0y"
+              href="/api"
+              sveltekit:prefetch=""
+            >
+              API
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>,
+    "skip_bound": false,
+    "update": [Function],
+  },
+}
+`;

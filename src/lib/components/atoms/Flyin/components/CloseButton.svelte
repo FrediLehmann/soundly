@@ -1,12 +1,36 @@
 <script lang="ts" context="module">
-  import { Button, ButtonStyles } from '$lib/components/atoms';
-  import { Cross } from '$lib/components/Icons';
+  import { Cross } from '$lib/Icons';
 </script>
 
-<Button
-  class="flex items-center ml-auto font-bold"
-  on:click
-  btnType={ButtonStyles.link}>
+<script lang="ts">
+  export let onClose: (
+    //<reference types="svelte" />
+    e: MouseEvent
+  ) => unknown;
+</script>
+
+<button on:click={onClose}>
   Close
-  <Cross class="w-5 h-5" stroke-width="3" />
-</Button>
+  <Cross width="1.25rem" height="1.25rem" />
+</button>
+
+<style>
+  button {
+    display: flex;
+    gap: 0.25rem;
+
+    margin-inline-start: auto;
+    align-items: center;
+
+    background-color: transparent;
+    border: none;
+
+    color: inherit;
+    font-weight: 500;
+  }
+
+  button:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+</style>

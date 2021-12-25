@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PageFrame /> component redners PageFrame 1`] = `
+PageFrame {
+  "$$": Object {
+    "after_update": Array [],
+    "before_update": Array [],
+    "bound": Object {},
+    "callbacks": Object {},
+    "context": Map {},
+    "ctx": Array [
+      "default",
+      "0",
+      Object {},
+      undefined,
+      Object {},
+    ],
+    "dirty": Array [
+      -1,
+    ],
+    "fragment": Object {
+      "c": [Function],
+      "d": [Function],
+      "i": [Function],
+      "l": [Function],
+      "m": [Function],
+      "o": [Function],
+      "p": [Function],
+    },
+    "not_equal": [Function],
+    "on_destroy": Array [
+      [Function],
+    ],
+    "on_disconnect": Array [],
+    "on_mount": Array [],
+    "props": Object {
+      "marginTop": 1,
+      "style": 0,
+    },
+    "root": <div>
+      <main
+        class="svelte-vhl70c"
+        data-style="default"
+        style="margin-block-start: 0;"
+      />
+    </div>,
+    "skip_bound": false,
+    "update": [Function],
+  },
+  "$$set": [Function],
+  "$capture_state": [Function],
+  "$inject_state": [Function],
+}
+`;

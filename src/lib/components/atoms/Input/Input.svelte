@@ -1,7 +1,7 @@
 <script lang="ts">
   export let name: string;
   export let label: string;
-  export let value: string | number | string[];
+  export let value: string | number | string[] = '';
   export let error = '';
   export let required = false;
 
@@ -10,24 +10,72 @@
   export let labelSrOnly = false;
 </script>
 
-<div class="grid grid-cols-3 w-full">
-  <label for={name} class="self-center" class:sr-only={labelSrOnly}>
+<div class="container" data-sr-only={labelSrOnly} data-required={required}>
+  <label for={name}>
     {label}
-    {#if required}
-      <span class="ordinal">*</span>
-    {/if}
   </label>
-  <input
-    id={name}
-    {...$$restProps}
-    class={`${$$props.class ? `${$$props.class} ` : ''}input`}
-    class:col-span-2={!labelSrOnly}
-    class:col-span-3={labelSrOnly}
-    bind:value />
+  <input id={name} {...$$restProps} {required} bind:value />
   {#if error}
-    <span
-      class="text-red-500 mt-1 text-xs font-semibold col-start-2 col-span-2">
+    <span class="error">
       {error}
     </span>
   {/if}
 </div>
+
+<style>
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container[data-sr-only='true'] > label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  .container[data-required='true'] > label::after {
+    content: '*';
+    margin-inline-start: 0.25rem;
+  }
+
+  label {
+    margin-block-end: 0.5rem;
+  }
+
+  input {
+    outline: none;
+
+    padding: 0.5rem 0.75rem;
+    border: 1px solid hsla(var(--neutral-300));
+    border-radius: 0.25rem;
+
+    background-color: hsla(var(--neutral-100));
+  }
+
+  input:disabled {
+    color: hsla(var(--neutral-700));
+    background-color: hsla(var(--neutral-300));
+    border: 1px solid hsla(var(--neutral-500));
+  }
+
+  input:focus:not(:disabled),
+  input:active:not(:disabled) {
+    box-shadow: 0 0 0 1px hsla(var(--primary-400));
+  }
+
+  .error {
+    margin-block-start: 0.25rem;
+
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 600;
+    color: hsl(var(--secondary-500));
+  }
+</style>
