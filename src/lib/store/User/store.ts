@@ -1,10 +1,14 @@
+import type { User, UserInfo } from './User.type';
+
 import { writable } from 'svelte/store';
-import { supabase } from '$lib/db';
+import { supabase } from '$lib/supabase';
 
 const session = supabase.auth.session();
 
-export const userStore = writable({
+const store = writable({
   isSignedIn: !!session,
   user: supabase.auth.user(),
   session: session
 });
+
+export { store };
