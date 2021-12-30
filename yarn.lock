@@ -2643,9 +2643,9 @@
     "@supabase/storage-js" "^1.5.0"
 
 "@sveltejs/adapter-vercel@next":
-  version "1.0.0-next.32"
-  resolved "https://registry.yarnpkg.com/@sveltejs/adapter-vercel/-/adapter-vercel-1.0.0-next.32.tgz#90a8c1078a477a81d16cfd0efb27e5df2dc90189"
-  integrity sha512-ZcltaS5bAobGD5P0z7xJIjPHSlGpF7padMIkqTzJxwMEb/acGgdO5yzDS8XUEaSNgj+prpD2oG8+gm33ds8x0A==
+  version "1.0.0-next.34"
+  resolved "https://registry.yarnpkg.com/@sveltejs/adapter-vercel/-/adapter-vercel-1.0.0-next.34.tgz#8bdf5ce1fbaddbc08790a6090131eb7dd5c44550"
+  integrity sha512-TQDQK2wjDQkoSkNVuFVu4a/hzqKIWCGL15Zi7zQv740ZSd6F2Lg9QHlFfEXMglu6mhoep084h6JiLtzavNiZeA==
   dependencies:
     esbuild "^0.13.15"
 
