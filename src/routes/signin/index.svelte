@@ -6,11 +6,8 @@
     SigninForm
   } from '$lib/components/page/signin';
 
-  import { goto } from '$app/navigation';
-
   import { Signin } from '$lib/api/auth';
   import { Flyin } from '$lib/components/atoms';
-  import { userStore } from '$lib/store/user';
 </script>
 
 <script type="ts">
@@ -23,8 +20,6 @@
     try {
       const { user, session, error } = await Signin(email, pwd);
       if (error) throw error;
-      $userStore = { isSignedIn: true, user, session };
-      goto('/profile');
     } catch (e) {
       flyin.show(e.message, 'error');
     } finally {

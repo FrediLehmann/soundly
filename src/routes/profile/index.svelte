@@ -1,14 +1,6 @@
 <script lang="ts" context="module">
-  import { goto } from '$app/navigation';
-
   import { ArrowLeft } from '$lib/Icons';
   import { Link } from '$lib/components/atoms';
-  import { userStore } from '$lib/store/user';
-  import { onMount } from 'svelte';
-</script>
-
-<script lang="ts">
-  onMount(() => !$userStore.isSignedIn && goto('/signin'));
 </script>
 
 <Link href="/" class="mb-2 pt-4">
