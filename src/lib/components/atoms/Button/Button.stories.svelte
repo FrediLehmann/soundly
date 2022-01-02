@@ -117,6 +117,21 @@
   }} />
 
 <Story
+  name="Dange"
+  args={{ style: 'danger' }}
+  play={async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const buttons = canvas.getAllByRole('button');
+
+    buttons.forEach(async button => {
+      userEvent.hover(button);
+      userEvent.unhover(button);
+      button.focus();
+      button.blur();
+    });
+  }} />
+
+<Story
   name="Link"
   args={{ style: 'link' }}
   play={async ({ canvasElement }) => {
