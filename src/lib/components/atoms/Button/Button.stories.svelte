@@ -117,7 +117,7 @@
   }} />
 
 <Story
-  name="Dange"
+  name="Danger"
   args={{ style: 'danger' }}
   play={async ({ canvasElement }) => {
     const canvas = within(canvasElement);
