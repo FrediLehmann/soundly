@@ -1,4 +1,4 @@
-<script type="ts" context="module">
+<script lang="ts" context="module">
   import LogoFullBlackPNG from './assets/logo_full_black.png';
   import LogoFullBlackWEBP from './assets/logo_full_black.webp';
   import LogoFullWhitePNG from './assets/logo_full_white.png';
@@ -20,7 +20,7 @@
   };
 </script>
 
-<script type="ts">
+<script lang="ts">
   export let color: 'black' | 'white' | 'primary' = 'primary';
   export let size: 'small' | 'medium' | 'big' = 'small';
 </script>

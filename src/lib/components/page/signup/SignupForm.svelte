@@ -1,10 +1,10 @@
-<script type="ts" context="module">
+<script lang="ts" context="module">
   import { Button, Input } from '$lib/components/atoms';
 
   const Signupform = 'Signup';
 </script>
 
-<script type="ts">
+<script lang="ts">
   export let signup: (email: string, password: string) => void;
   export let submitting: boolean;
 

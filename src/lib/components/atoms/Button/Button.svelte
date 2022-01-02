@@ -1,4 +1,4 @@
-<script type="ts">
+<script lang="ts">
   export let href: string = undefined;
   export let type: 'button' | 'submit' | 'reset' = 'button';
   export let style: 'primary' | 'secondary' | 'ghost' | 'link' = 'secondary';

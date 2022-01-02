@@ -1,10 +1,10 @@
-<script type="ts" context="module">
+<script lang="ts" context="module">
   import { Button, Input } from '$lib/components/atoms';
 
   const forgotPwdForm = 'ForgotPwd';
 </script>
 
-<script type="ts">
+<script lang="ts">
   export let resetPassword: (arg0: string) => void;
   export let submitting: boolean;
 

@@ -1,4 +1,4 @@
-<script type="ts" context="module">
+<script lang="ts" context="module">
   import { supabase } from '$lib/supabase';
   import { Flyin } from '$lib/components/atoms';
   import {
@@ -9,7 +9,7 @@
   import { goto } from '$app/navigation';
 </script>
 
-<script type="ts">
+<script lang="ts">
   let flyin: Flyin;
   let submitting = false;
 

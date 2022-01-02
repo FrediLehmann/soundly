@@ -1,10 +1,10 @@
-<script type="ts" context="module">
+<script lang="ts" context="module">
   import { BackLink, ForgotPwdForm } from '$lib/components/page/forgotpassword';
   import { Flyin } from '$lib/components/atoms';
   import { ForgotPassword } from '$lib/api/auth';
 </script>
 
-<script type="ts">
+<script lang="ts">
   let flyin: Flyin;
   let submitting = false;
 

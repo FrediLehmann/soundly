@@ -1,4 +1,4 @@
-<script type="ts" context="module">
+<script lang="ts" context="module">
   import { Button } from '$lib/components/atoms';
   import { Account } from '$lib/Icons';
 </script>

@@ -1,4 +1,4 @@
-<script type="ts" context="module">
+<script lang="ts" context="module">
   import LogoLetterBlackPNG from './assets/logo_letter_black.png';
   import LogoLetterBlackWEBP from './assets/logo_letter_black.webp';
   import LogoLetterWhitePNG from './assets/logo_letter_white.png';
@@ -20,7 +20,7 @@
   };
 </script>
 
-<script type="ts">
+<script lang="ts">
   export let color: 'black' | 'white' | 'primary' = 'primary';
   export let size: 'small' | 'medium' | 'big' = 'small';
 </script>

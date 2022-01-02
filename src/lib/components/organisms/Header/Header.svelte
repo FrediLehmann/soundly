@@ -1,4 +1,4 @@
-<script type="ts" context="module">
+<script lang="ts" context="module">
   import { Logo } from '$lib/components/atoms';
 
   import { AccountSection, Navigation } from './components';

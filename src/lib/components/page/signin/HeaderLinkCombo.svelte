@@ -1,4 +1,4 @@
-<script type="ts" context="module">
+<script lang="ts" context="module">
   import { HeaderLinkCombo } from '$lib/components/molecules';
 </script>
 

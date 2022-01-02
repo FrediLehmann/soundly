@@ -1,4 +1,4 @@
-<script type="ts" context="module">
+<script lang="ts" context="module">
   import {
     HomeLink,
     HeaderLinkCombo,
@@ -10,7 +10,7 @@
   import { Flyin } from '$lib/components/atoms';
 </script>
 
-<script type="ts">
+<script lang="ts">
   let flyin: Flyin;
   let submitting = false;
 

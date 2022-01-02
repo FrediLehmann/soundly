@@ -1,4 +1,4 @@
-<script type="ts" context="module">
+<script lang="ts" context="module">
   import { Link } from '$lib/components/atoms';
   import { ArrowLeft } from '$lib/Icons';
 </script>
