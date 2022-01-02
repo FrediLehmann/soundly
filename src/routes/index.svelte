@@ -1,34 +1,31 @@
-<script type="ts" context="module">
+<script lang="ts" context="module">
   import { SearchField } from '$lib/components/molecules';
   import { Flyin } from '$lib/components/atoms';
   import { onMount } from 'svelte';
   import { page } from '$app/stores';
+  import { supabase } from '$lib/supabase';
+  import { goto } from '$app/navigation';
 </script>
 
-<script type="ts">
+<script lang="ts">
   let flyin: Flyin;
 
-  onMount(() => {
+  onMount(async () => {
+    // Email vaildation url contains session info in url
+    // In this case we will redirect to the prifle page
+    const { error } = await supabase.auth.getSessionFromUrl();
+    if (!error) goto('/profile');
+
+    // Check if there is a fly in message to be shown
+    // In case there is show the flyin
     const message = $page.url.searchParams.get('message');
-    const type = $page.url.searchParams.get('type');
+    const type = $page.url.searchParams.get('type') as
+      | 'success'
+      | 'info'
+      | 'error';
 
     if (type && message) {
-      let flyinType;
-      switch (type) {
-        case 'success':
-          flyinType = 'success';
-          break;
-        case 'info':
-          flyinType = 'info';
-          break;
-        case 'error':
-          flyinType = 'error';
-          break;
-        default:
-          flyinType = 'info';
-      }
-
-      flyin.show(message, flyinType);
+      flyin.show(message, type);
     }
   });
 </script>
