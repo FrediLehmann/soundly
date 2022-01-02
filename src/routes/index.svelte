@@ -27,6 +27,11 @@
     if (type && message) {
       flyin.show(message, type);
     }
+
+    // Supabase message
+    if (location?.hash.includes('message')) {
+      flyin.show(location.hash.split('=')[1].split('+').join(' '), 'info');
+    }
   });
 </script>
 

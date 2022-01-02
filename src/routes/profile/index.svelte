@@ -1,19 +1,25 @@
 <script lang="ts" context="module">
-  import { ArrowLeft } from '$lib/Icons';
-  import { Link } from '$lib/components/atoms';
   import { onMount } from 'svelte';
-  import { supabase } from '$lib/supabase';
   import { goto } from '$app/navigation';
+  import { supabase } from '$lib/supabase';
+
+  import {
+    ChangeMail,
+    ChangeUsername,
+    DeleteAccount,
+    Introduction
+  } from '$lib/components/page/profile';
 </script>
 
 <script lang="ts">
-  let user: { name: string; email: string } = {
-    name: '',
-    email: ''
-  };
+  let email = '';
+  let username = '';
 
   onMount(async () => {
-    let { data, error } = await supabase.from('profiles').select();
+    let { data, error } = await supabase
+      .from('profiles')
+      .select()
+      .eq('user_id', supabase.auth.user().id);
     if (error) goto('/?type=error&message=Something went wrong.');
 
     // If there is no profile yet we'll create one
@@ -26,14 +32,22 @@
       data = res.data;
     }
 
-    user.name = data[0].user_name || '';
-    user.email = supabase.auth.user().email;
+    email = supabase.auth.user().email;
+    username = data[0].user_name;
   });
 </script>
 
-<section class="grid-cols-2">
-  <label class="col-span-1" for="email">Email</label>
-  <input class="col-span-1" id="email" value={user.email} />
-  <label class="col-span-1" for="username">Username</label>
-  <input class="col-span-1" id="username" value={user.name} />
-</section>
+<Introduction />
+<div>
+  <ChangeMail {email} />
+  <ChangeUsername {username} />
+  <DeleteAccount />
+</div>
+
+<style>
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+</style>
