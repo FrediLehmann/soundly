@@ -1,4 +1,6 @@
 <script lang="ts" context="module">
+  import { goto } from '$app/navigation';
+
   import LogoLetterBlackPNG from './assets/logo_letter_black.png';
   import LogoLetterBlackWEBP from './assets/logo_letter_black.webp';
   import LogoLetterWhitePNG from './assets/logo_letter_white.png';
@@ -23,9 +25,10 @@
 <script lang="ts">
   export let color: 'black' | 'white' | 'primary' = 'primary';
   export let size: 'small' | 'medium' | 'big' = 'small';
+  export let href: string;
 </script>
 
-<picture data-size={size}>
+<picture data-size={size} on:click={() => goto(href)}>
   <source srcset={images.webp[color]} />
   <img alt="Noiceless Logo" src={images.png[color]} />
 </picture>
@@ -33,6 +36,10 @@
 <style>
   img {
     aspect-ratio: 1/1;
+  }
+
+  picture:hover {
+    cursor: pointer;
   }
 
   picture[data-size='small'] > img {

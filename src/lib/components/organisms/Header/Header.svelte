@@ -5,7 +5,7 @@
 </script>
 
 <header>
-  <Logo size="medium" />
+  <Logo href="/" size="medium" />
   <Navigation />
   <AccountSection />
 </header>

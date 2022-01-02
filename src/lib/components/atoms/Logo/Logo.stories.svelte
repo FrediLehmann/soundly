@@ -31,6 +31,14 @@
           summary: 'The size of the logo.'
         }
       }
+    },
+    href: {
+      control: { type: 'string' },
+      table: {
+        type: {
+          summary: 'Link somewehere on click'
+        }
+      }
     }
   }} />
 
