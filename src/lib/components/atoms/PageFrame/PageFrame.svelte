@@ -15,12 +15,14 @@
     max-width: 56rem;
     margin-inline: auto;
     padding-inline: 1rem;
+    margin-block-end: 3rem;
     /* default = '  sm:px-8 lg:px-10',*/
   }
   main[data-style='small'] {
     max-width: 32rem;
     margin-inline: auto;
     padding-inline: 1rem;
+    margin-block-end: 3rem;
     /*sm:px-8 lg:px-10' */
   }
 </style>
