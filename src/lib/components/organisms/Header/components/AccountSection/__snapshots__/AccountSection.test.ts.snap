@@ -34,7 +34,7 @@ AccountSection {
       >
         <a
           aria-label="Profile"
-          class="svelte-19wuz13"
+          class="svelte-1dsjpe6"
           data-type="ghost"
           href="/profile"
           type="button"
@@ -63,7 +63,7 @@ AccountSection {
         
          
         <a
-          class="svelte-19wuz13"
+          class="svelte-1dsjpe6"
           data-type="ghost"
           href="/signin"
           type="button"
