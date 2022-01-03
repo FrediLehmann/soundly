@@ -2,8 +2,11 @@
   import { Button } from '$lib/components/atoms';
   import { Account } from '$lib/Icons';
 
-  import { userStore } from '$lib/store';
   import { supabase } from '$lib/supabase';
+</script>
+
+<script lang="ts">
+  import { userStore } from '$lib/store';
 </script>
 
 <div>
