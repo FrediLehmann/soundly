@@ -4,7 +4,7 @@ module.exports = {
   webpackFinal: async config => {
     config.resolve.alias['$lib/supabase'] = path.resolve(
       __dirname,
-      '../__mocks__/fileMock.js'
+      '../__mocks__/supabase.js'
     );
     config.resolve.alias['$lib'] = path.resolve(__dirname, '../src/lib');
     config.resolve.alias['$app/navigation'] = path.resolve(
