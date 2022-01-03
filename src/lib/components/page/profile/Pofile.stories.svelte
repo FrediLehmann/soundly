@@ -97,8 +97,6 @@
     await userEvent.type(canvas.getByLabelText('Password'), 'Password1');
     await userEvent.type(canvas.getByLabelText('Repeat Password'), 'Password1');
     await userEvent.click(confirmButton);
-
-    await userEvent.click(cancelButton);
   }}>
   <div class="wrapper">
     <ChangePassword />
