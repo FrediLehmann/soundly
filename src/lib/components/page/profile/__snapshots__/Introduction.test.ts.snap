@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Introduction /> component renders correctly 1`] = `
+Introduction {
+  "$$": Object {
+    "after_update": Array [],
+    "before_update": Array [],
+    "bound": Object {},
+    "callbacks": Object {},
+    "context": Map {},
+    "ctx": Array [],
+    "dirty": Array [
+      -1,
+    ],
+    "fragment": Object {
+      "c": [Function],
+      "d": [Function],
+      "i": [Function],
+      "l": [Function],
+      "m": [Function],
+      "o": [Function],
+      "p": [Function],
+    },
+    "not_equal": [Function],
+    "on_destroy": Array [
+      [Function],
+    ],
+    "on_disconnect": Array [],
+    "on_mount": Array [],
+    "props": Object {},
+    "root": <div>
+      <h1
+        class="svelte-dwpor9"
+      >
+        Profile
+      </h1>
+    </div>,
+    "skip_bound": false,
+    "update": [Function],
+  },
+}
+`;
