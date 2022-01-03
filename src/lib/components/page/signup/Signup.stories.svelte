@@ -42,9 +42,6 @@
     const pwdInput = canvas.getByLabelText('Password');
     await userEvent.type(pwdInput, 'sldkfjskldf');
 
-    const usernameInput = canvas.getByLabelText('Username');
-    await userEvent.type(usernameInput, 'Test-name');
-
     const submitBtn = canvas.getByRole('button');
     await userEvent.click(submitBtn);
   }}>
