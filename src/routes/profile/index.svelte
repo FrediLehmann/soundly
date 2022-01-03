@@ -6,6 +6,7 @@
   import {
     ChangeMail,
     ChangeUsername,
+    ChangePassword,
     DeleteAccount,
     Introduction
   } from '$lib/components/page/profile';
@@ -39,8 +40,9 @@
 
 <Introduction />
 <div>
-  <ChangeMail {email} />
   <ChangeUsername {username} />
+  <ChangePassword />
+  <ChangeMail {email} />
   <DeleteAccount />
 </div>
 

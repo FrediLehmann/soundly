@@ -6,6 +6,7 @@
   import Introduction from './Introduction.svelte';
   import ChangeMail from './ChangeMail.svelte';
   import ChangeUsername from './ChangeUsername.svelte';
+  import ChangePassword from './ChangePassword.svelte';
   import DeleteAccount from './DeleteAccount.svelte';
 </script>
 
@@ -73,6 +74,34 @@
   }}>
   <div class="wrapper">
     <DeleteAccount />
+  </div>
+</Story>
+
+<Story
+  name="Change password"
+  play={async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    const editMode = canvas.getByRole('button');
+    await userEvent.click(editMode);
+
+    const confirmButton = canvas.getByText('Save new Password');
+    expect(confirmButton).not.toBeNull();
+    const cancelButton = canvas.getByText('Cancel');
+    expect(cancelButton).not.toBeNull();
+
+    await userEvent.type(canvas.getByLabelText('Password'), 'Password1');
+    await userEvent.type(canvas.getByLabelText('Repeat Password'), 'Password2');
+    await userEvent.click(confirmButton);
+
+    await userEvent.type(canvas.getByLabelText('Password'), 'Password1');
+    await userEvent.type(canvas.getByLabelText('Repeat Password'), 'Password1');
+    await userEvent.click(confirmButton);
+
+    await userEvent.click(cancelButton);
+  }}>
+  <div class="wrapper">
+    <ChangePassword />
   </div>
 </Story>
 

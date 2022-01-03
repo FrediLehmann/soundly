@@ -24,7 +24,9 @@
   </p>
   {#if isDeleting}
     <div class="warning">
-      <AlertTriangle width="2rem" height="2rem" />
+      <div>
+        <AlertTriangle width="1.75rem" height="1.75rem" />
+      </div>
       <p>
         Are you sure you want to delete your account and all connected data?
         This cannot be reverted and all data will be lost forever.
@@ -45,6 +47,7 @@
 
   .warning {
     display: flex;
+    align-items: center;
     gap: 1rem;
     background-color: hsla(var(--secondary-100));
 
@@ -57,6 +60,10 @@
 
   .warning > p {
     margin: 0;
+  }
+
+  .warning > div {
+    flex-shrink: 0;
   }
 
   section {
