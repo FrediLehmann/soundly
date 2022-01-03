@@ -11,6 +11,8 @@ Logo {
     "ctx": Array [
       "primary",
       "small",
+      "/test",
+      [Function],
     ],
     "dirty": Array [
       -1,
@@ -32,18 +34,19 @@ Logo {
     "on_mount": Array [],
     "props": Object {
       "color": 0,
+      "href": 2,
       "size": 1,
     },
     "root": <div>
       <picture
-        class="svelte-4dorz4"
+        class="svelte-1svwpk4"
         data-size="small"
       >
         <source />
          
         <img
           alt="Noiceless Logo"
-          class="svelte-4dorz4"
+          class="svelte-1svwpk4"
         />
       </picture>
     </div>,

@@ -9,7 +9,7 @@ import LogoLetter from './LogoLetter.svelte';
 
 describe('<LogoLetter /> component', () => {
   test('renders correctly', () => {
-    const { component } = render(LogoLetter);
+    const { component } = render(LogoLetter, { props: { href: '/test' } });
     expect(component).toMatchSnapshot();
   });
 });
