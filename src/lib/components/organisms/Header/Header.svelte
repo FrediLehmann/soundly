@@ -1,11 +1,11 @@
-<script type="ts" context="module">
+<script lang="ts" context="module">
   import { Logo } from '$lib/components/atoms';
 
   import { AccountSection, Navigation } from './components';
 </script>
 
 <header>
-  <Logo size="medium" />
+  <Logo href="/" size="medium" />
   <Navigation />
   <AccountSection />
 </header>

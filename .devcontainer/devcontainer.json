@@ -16,10 +16,6 @@
     "editor.quickSuggestions": {
       "strings": true
     },
-    "tailwindCSS.classAttributes": ["class"],
-    "tailwindCSS.includeLanguages": {
-      "svelte": "html"
-    },
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "[typescript]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode"

@@ -1,4 +1,4 @@
-<script type="ts" context="module">
+<script lang="ts" context="module">
   import {
     HomeLink,
     HeaderLinkCombo,
@@ -6,14 +6,13 @@
     SigninForm
   } from '$lib/components/page/signin';
 
-  import { goto } from '$app/navigation';
-
   import { Signin } from '$lib/api/auth';
   import { Flyin } from '$lib/components/atoms';
-  import { userStore } from '$lib/store/user';
+  import { userStore } from '$lib/store';
+  import { goto } from '$app/navigation';
 </script>
 
-<script type="ts">
+<script lang="ts">
   let flyin: Flyin;
   let submitting = false;
 
@@ -23,8 +22,9 @@
     try {
       const { user, session, error } = await Signin(email, pwd);
       if (error) throw error;
-      $userStore = { isSignedIn: true, user, session };
-      goto('/profile');
+
+      userStore.set({ isSignedIn: true, user, session });
+      goto('/');
     } catch (e) {
       flyin.show(e.message, 'error');
     } finally {

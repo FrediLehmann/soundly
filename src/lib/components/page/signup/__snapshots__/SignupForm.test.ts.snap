@@ -12,7 +12,6 @@ SignupForm {
       false,
       "",
       "",
-      "",
       [Function],
       [Function],
       [Function],
@@ -36,12 +35,13 @@ SignupForm {
     "on_disconnect": Array [],
     "on_mount": Array [],
     "props": Object {
-      "signup": 6,
+      "signup": 5,
       "submitting": 0,
     },
     "root": <div>
       <form
-        class="flex flex-col gap-3 svelte-1i4vv2l"
+        class="svelte-1i4vv2l"
+        name="Signup"
       >
         <div
           class="container svelte-1ulq3bj"
@@ -72,28 +72,6 @@ SignupForm {
         >
           <label
             class="svelte-1ulq3bj"
-            for="username"
-          >
-            Username
-          </label>
-           
-          <input
-            class="svelte-1ulq3bj"
-            id="username"
-            required=""
-            title="Please enter a username."
-            type="text"
-          />
-           
-        </div>
-         
-        <div
-          class="container svelte-1ulq3bj"
-          data-required="true"
-          data-sr-only="false"
-        >
-          <label
-            class="svelte-1ulq3bj"
             for="password"
           >
             Password
@@ -110,7 +88,7 @@ SignupForm {
         </div>
          
         <button
-          class="mbs-2 svelte-19wuz13"
+          class="mbs-2 svelte-1dsjpe6"
           data-type="primary"
           type="button"
         >

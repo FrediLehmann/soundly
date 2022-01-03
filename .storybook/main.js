@@ -2,7 +2,15 @@ const path = require('path');
 
 module.exports = {
   webpackFinal: async config => {
+    config.resolve.alias['$lib/supabase'] = path.resolve(
+      __dirname,
+      '../__mocks__/supabase.js'
+    );
     config.resolve.alias['$lib'] = path.resolve(__dirname, '../src/lib');
+    config.resolve.alias['$app/navigation'] = path.resolve(
+      __dirname,
+      '../__mocks__/fileMock.js'
+    );
 
     const svelteLoader = config.module.rules.find(
       r => r.loader && r.loader.includes('svelte-loader')

@@ -35,7 +35,7 @@ Slot {
     },
     "root": <div>
       <button
-        class="svelte-19wuz13"
+        class="svelte-1dsjpe6"
         data-type="secondary"
         type="button"
       >
@@ -90,7 +90,7 @@ Slot {
     },
     "root": <div>
       <a
-        class="svelte-19wuz13"
+        class="svelte-1dsjpe6"
         data-type="secondary"
         href="#"
         type="button"

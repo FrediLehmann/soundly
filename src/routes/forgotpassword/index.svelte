@@ -1,13 +1,10 @@
-<script type="ts" context="module">
+<script lang="ts" context="module">
   import { BackLink, ForgotPwdForm } from '$lib/components/page/forgotpassword';
   import { Flyin } from '$lib/components/atoms';
   import { ForgotPassword } from '$lib/api/auth';
-  import { userStore } from '$lib/store/user';
-  import { onMount } from 'svelte';
-  import { goto } from '$app/navigation';
 </script>
 
-<script type="ts">
+<script lang="ts">
   let flyin: Flyin;
   let submitting = false;
 
@@ -24,8 +21,6 @@
       submitting = false;
     }
   };
-
-  onMount(() => $userStore.isSignedIn && goto('/profile'));
 </script>
 
 <svelte:head>

@@ -9,7 +9,7 @@ import Logo from './Logo.svelte';
 
 describe('<Logo /> component', () => {
   test('renders correctly', () => {
-    const { component } = render(Logo);
+    const { component } = render(Logo, { props: { href: '/test' } });
     expect(component).toMatchSnapshot();
   });
 });

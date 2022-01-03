@@ -1,7 +1,8 @@
-<script type="ts">
+<script lang="ts">
   export let href: string = undefined;
   export let type: 'button' | 'submit' | 'reset' = 'button';
-  export let style: 'primary' | 'secondary' | 'ghost' | 'link' = 'secondary';
+  export let style: 'primary' | 'secondary' | 'ghost' | 'link' | 'danger' =
+    'secondary';
 </script>
 
 {#if href}
@@ -101,6 +102,27 @@
   button[data-type='ghost']:active:not(:disabled) {
     box-shadow: 0 0 0 1px hsla(var(--neutral-000)),
       0 0 0 3px hsla(var(--primary-600)), 0 0 #0000;
+  }
+
+  a[data-type='danger'],
+  button[data-type='danger'] {
+    background-color: hsla(var(--transparent), 0);
+    color: hsla(var(--secondary-500));
+    border: 1px solid hsla(var(--secondary-500));
+  }
+
+  a[data-type='danger']:hover:not(:disabled),
+  button[data-type='danger']:hover:not(:disabled) {
+    background-color: hsla(var(--secondary-500));
+    color: hsla(var(--neutral-000));
+  }
+
+  a[data-type='danger']:focus:not(:disabled),
+  button[data-type='danger']:focus:not(:disabled),
+  a[data-type='danger']:active:not(:disabled),
+  button[data-type='danger']:active:not(:disabled) {
+    box-shadow: 0 0 0 1px hsla(var(--neutral-000)),
+      0 0 0 3px hsla(var(--seconary-600)), 0 0 #0000;
   }
 
   a[data-type='link'],

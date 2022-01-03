@@ -1,21 +1,58 @@
 <script lang="ts" context="module">
-  import { goto } from '$app/navigation';
-
-  import { ArrowLeft } from '$lib/Icons';
-  import { Link } from '$lib/components/atoms';
-  import { userStore } from '$lib/store/user';
   import { onMount } from 'svelte';
+  import { goto } from '$app/navigation';
+  import { supabase } from '$lib/supabase';
+
+  import {
+    ChangeMail,
+    ChangeUsername,
+    ChangePassword,
+    DeleteAccount,
+    Introduction
+  } from '$lib/components/page/profile';
+  import { userStore } from '$lib/store';
 </script>
 
 <script lang="ts">
-  onMount(() => !$userStore.isSignedIn && goto('/signin'));
+  let email = '';
+  let username = '';
+
+  onMount(async () => {
+    if (!$userStore.isSignedIn) goto('/signin');
+
+    let { data, error } = await supabase
+      .from('profiles')
+      .select()
+      .eq('user_id', supabase.auth.user().id);
+    if (error) goto('/?type=error&message=Something went wrong.');
+
+    // If there is no profile yet we'll create one
+    if (data.length === 0) {
+      const res = await supabase
+        .from('profiles')
+        .insert({ user_id: supabase.auth.user().id });
+      if (res.error) goto('/?type=error&message=Something went wrong.');
+
+      data = res.data;
+    }
+
+    email = supabase.auth.user().email;
+    username = data[0].user_name;
+  });
 </script>
 
-<Link href="/" class="mb-2 pt-4">
-  <ArrowLeft width="1.25rem" height="1.25rem" />
-  Home
-</Link>
-<section class="grid-cols-2">
-  <label class="col-span-1" for="email">Email</label>
-  <input class="col-span-1" id="email" />
-</section>
+<Introduction />
+<div>
+  <ChangeUsername {username} />
+  <ChangePassword />
+  <ChangeMail {email} />
+  <DeleteAccount />
+</div>
+
+<style>
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+</style>

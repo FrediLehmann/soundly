@@ -1,46 +1,35 @@
-<script type="ts" context="module">
+<script lang="ts" context="module">
   import { Button, Input } from '$lib/components/atoms';
 
   const Signupform = 'Signup';
 </script>
 
-<script type="ts">
-  export let signup: (
-    email: string,
-    password: string,
-    username: string
-  ) => void;
+<script lang="ts">
+  export let signup: (email: string, password: string) => void;
   export let submitting: boolean;
 
   let emailError = '';
   let pwdError = '';
-  let userNameError = '';
 
   const submit = (e: any) => {
-    signup(
-      e.target.email.value,
-      e.target.password.value,
-      e.target.username.value
-    );
+    signup(e.target.email.value, e.target.password.value);
   };
 
   const click = async () => {
     const email = document.forms[Signupform].email;
     const pwd = document.forms[Signupform].password;
-    const username = document.forms[Signupform].username;
 
-    if (email.validity.valid && pwd.validity.valid && username.validity.valid) {
+    if (email.validity.valid && pwd.validity.valid) {
       document.getElementById(`${Signupform}_submit`).click();
       return;
     }
 
     emailError = email.validationMessage;
     pwdError = pwd.validationMessage;
-    userNameError = username.validationMessage;
   };
 </script>
 
-<form on:submit|preventDefault={submit} class="flex flex-col gap-3">
+<form on:submit|preventDefault={submit} name={Signupform}>
   <Input
     required
     type="email"
@@ -48,14 +37,6 @@
     label="Email"
     title="Please enter your email."
     error={emailError}
-    disabled={submitting} />
-  <Input
-    required
-    type="text"
-    name="username"
-    label="Username"
-    title="Please enter a username."
-    error={userNameError}
     disabled={submitting} />
   <Input
     required

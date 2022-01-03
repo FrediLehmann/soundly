@@ -8,7 +8,14 @@ AccountSection {
     "bound": Object {},
     "callbacks": Object {},
     "context": Map {},
-    "ctx": Array [],
+    "ctx": Array [
+      Object {
+        "isSignedIn": false,
+        "session": undefined,
+        "user": undefined,
+      },
+      [Function],
+    ],
     "dirty": Array [
       -1,
     ],
@@ -24,6 +31,7 @@ AccountSection {
     "not_equal": [Function],
     "on_destroy": Array [
       [Function],
+      [Function],
     ],
     "on_disconnect": Array [],
     "on_mount": Array [],
@@ -34,7 +42,7 @@ AccountSection {
       >
         <a
           aria-label="Profile"
-          class="svelte-19wuz13"
+          class="svelte-1dsjpe6"
           data-type="ghost"
           href="/profile"
           type="button"
@@ -63,7 +71,7 @@ AccountSection {
         
          
         <a
-          class="svelte-19wuz13"
+          class="svelte-1dsjpe6"
           data-type="ghost"
           href="/signin"
           type="button"

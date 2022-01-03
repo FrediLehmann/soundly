@@ -1,4 +1,4 @@
-import { supabase } from '$lib/db';
+import { supabase } from '$lib/supabase';
 import type { ApiError } from '@supabase/supabase-js';
 
 const forgotPassword = async (

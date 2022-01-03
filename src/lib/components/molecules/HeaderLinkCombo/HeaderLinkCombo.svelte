@@ -1,8 +1,8 @@
-<script type="ts" context="module">
+<script lang="ts" context="module">
   import { Link } from '$lib/components/atoms';
 </script>
 
-<script type="ts">
+<script lang="ts">
   export let href: string;
 </script>
 
