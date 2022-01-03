@@ -76,7 +76,7 @@
       "@testing-library/jest-dom/extend-expect"
     ],
     "moduleNameMapper": {
-      "^\\$lib/supabase$": "<rootDir>__mocks__/fileMock.js",
+      "^\\$lib/supabase$": "<rootDir>__mocks__/supabase.js",
       "^\\$lib(.*)$": "<rootDir>/src/lib$1",
       "^\\$app(.*)$": "<rootDir>/__mocks__/fileMock.js",
       "\\.(png|webp)$": "<rootDir>/__mocks__/fileMock.js"

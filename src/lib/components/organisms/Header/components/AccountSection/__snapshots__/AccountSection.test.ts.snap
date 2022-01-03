@@ -8,7 +8,14 @@ AccountSection {
     "bound": Object {},
     "callbacks": Object {},
     "context": Map {},
-    "ctx": Array [],
+    "ctx": Array [
+      Object {
+        "isSignedIn": false,
+        "session": undefined,
+        "user": undefined,
+      },
+      [Function],
+    ],
     "dirty": Array [
       -1,
     ],
@@ -23,6 +30,7 @@ AccountSection {
     },
     "not_equal": [Function],
     "on_destroy": Array [
+      [Function],
       [Function],
     ],
     "on_disconnect": Array [],
