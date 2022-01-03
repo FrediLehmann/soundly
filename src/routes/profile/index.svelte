@@ -10,6 +10,7 @@
     DeleteAccount,
     Introduction
   } from '$lib/components/page/profile';
+  import { userStore } from '$lib/store';
 </script>
 
 <script lang="ts">
@@ -17,6 +18,8 @@
   let username = '';
 
   onMount(async () => {
+    if (!$userStore.isSignedIn) goto('/signin');
+
     let { data, error } = await supabase
       .from('profiles')
       .select()

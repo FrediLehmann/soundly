@@ -1,13 +1,22 @@
 <script lang="ts" context="module">
   import { Button } from '$lib/components/atoms';
   import { Account } from '$lib/Icons';
+
+  import { userStore } from '$lib/store';
+  import { supabase } from '$lib/supabase';
 </script>
 
 <div>
   <Button href="/profile" style="ghost" aria-label="Profile">
     <Account />
   </Button>
-  <Button href="/signin" style="ghost">Sign in</Button>
+  {#if $userStore.isSignedIn}
+    <Button style="ghost" on:click={() => supabase.auth.signOut()}>
+      Sign out
+    </Button>
+  {:else}
+    <Button href="/signin" style="ghost">Sign in</Button>
+  {/if}
 </div>
 
 <style>

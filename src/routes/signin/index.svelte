@@ -8,6 +8,8 @@
 
   import { Signin } from '$lib/api/auth';
   import { Flyin } from '$lib/components/atoms';
+  import { userStore } from '$lib/store';
+  import { goto } from '$app/navigation';
 </script>
 
 <script lang="ts">
@@ -20,6 +22,9 @@
     try {
       const { user, session, error } = await Signin(email, pwd);
       if (error) throw error;
+
+      userStore.set({ isSignedIn: true, user, session });
+      goto('/');
     } catch (e) {
       flyin.show(e.message, 'error');
     } finally {
