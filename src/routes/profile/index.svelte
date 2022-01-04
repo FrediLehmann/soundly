@@ -19,6 +19,9 @@
 
   onMount(async () => {
     if (!$userStore.isSignedIn) goto('/signin');
+    userStore.subscribe(value => {
+      if (!value.isSignedIn) goto('/');
+    });
 
     let { data, error } = await supabase
       .from('profiles')
