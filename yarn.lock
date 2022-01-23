@@ -3231,10 +3231,10 @@
   dependencies:
     cross-fetch "^3.1.0"
 
-"@supabase/supabase-js@^1.29.2":
-  version "1.29.2"
-  resolved "https://registry.yarnpkg.com/@supabase/supabase-js/-/supabase-js-1.29.2.tgz#04e3ddfcb676a4f1f1f972255c7aff276bc8fffd"
-  integrity sha512-zyURfsWxGeuVQd4QfqeSyzhpplYIQznL92mATcb8uUjnoXRC+oDiVQ3Ak5mtFJlPPT1tRwEWTr5o9fr0AncOcg==
+"@supabase/supabase-js@^1.29.3":
+  version "1.29.3"
+  resolved "https://registry.yarnpkg.com/@supabase/supabase-js/-/supabase-js-1.29.3.tgz#8b50dd5c09c4f87345ad1f47960450e22b5461c5"
+  integrity sha512-HHdyPSTWoI3b5IAp6XuM9w+R+RFOifSZC/hMqDNgdy8Aywl9JZda9pqP7X+sunyQQRoQCLxXTeokzRFg0CvSOQ==
   dependencies:
     "@supabase/gotrue-js" "^1.21.7"
     "@supabase/postgrest-js" "^0.35.0"
@@ -3249,9 +3249,9 @@
     esbuild "^0.13.15"
 
 "@sveltejs/kit@next":
-  version "1.0.0-next.234"
-  resolved "https://registry.yarnpkg.com/@sveltejs/kit/-/kit-1.0.0-next.234.tgz#49adec37dcd49ff0905bdb880132321475e27f6e"
-  integrity sha512-vnXLkk4GakytCM+TxFVVXfvJaXq/vY6AWpaUAKr1ZsQD2LSKteoaBlca1qI7fCRwccaPSkI+DOc+bNdgGiBBSQ==
+  version "1.0.0-next.239"
+  resolved "https://registry.yarnpkg.com/@sveltejs/kit/-/kit-1.0.0-next.239.tgz#715847a9de39ca589676a8b7d2c45f1e6e39db10"
+  integrity sha512-+qmiYVdNMmdnjni6/T4sj6yCUf02KvTLpnPZ5yca2grAgMuQkA/sW5Gnce9Zsop0sRKRvM1GY9Pnp8NhERXC6Q==
   dependencies:
     "@sveltejs/vite-plugin-svelte" "^1.0.0-next.32"
     sade "^1.7.4"
@@ -5005,10 +5005,10 @@ chownr@^2.0.0:
   resolved "https://registry.yarnpkg.com/chownr/-/chownr-2.0.0.tgz#15bfbe53d2eab4cf70f18a8cd68ebe5b3cb1dece"
   integrity sha512-bIomtDF5KGpdogkLd9VspvFzk9KfpyyGlS8YFVZl7TGPBHL5snIOnxeshwVgPteQ9b4Eydl+pVbIyE1DcvCWgQ==
 
-chromatic@^6.4.0:
-  version "6.4.0"
-  resolved "https://registry.yarnpkg.com/chromatic/-/chromatic-6.4.0.tgz#e27cfb18aa2717e6263cc9b5ca44f0ad3d8964fc"
-  integrity sha512-eJyWij9WHSyH84Crhm6WDiaBrRBIgK2W96EJmCDPG/2MYqNzVKcn6tOWW+94uT+CkASBGL77QN+MMCUnm46w+Q==
+chromatic@^6.4.1:
+  version "6.4.1"
+  resolved "https://registry.yarnpkg.com/chromatic/-/chromatic-6.4.1.tgz#fd8fad82282be030f4e4697dd992bbcbcbe75dc9"
+  integrity sha512-i3WLhIORS8vu9OStJwPQ487/MYZiXT7byU5c9we1Vvfus/w1Kwbj/2n11EozokomGEw5o3VAeiRrZkTCXM8xew==
 
 chrome-trace-event@^1.0.2:
   version "1.0.3"
@@ -11926,10 +11926,10 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-typescript@*, typescript@^4.5.4:
-  version "4.5.4"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.5.4.tgz#a17d3a0263bf5c8723b9c52f43c5084edf13c2e8"
-  integrity sha512-VgYs2A2QIRuGphtzFV7aQJduJ2gyfTljngLzjpfW9FoYZF6xuw1W0vW9ghCKLfcWrCFxK81CSGRAvS1pn4fIUg==
+typescript@*, typescript@^4.5.5:
+  version "4.5.5"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.5.5.tgz#d8c953832d28924a9e3d37c73d729c846c5896f3"
+  integrity sha512-TCTIul70LyWe6IJWT8QSYeA54WQe8EjQFU4wY52Fasj5UKx88LNYKCgBEHcOMOrFF1rKGbD8v/xcNWVUq9SymA==
 
 uglify-js@^3.1.4:
   version "3.14.4"
