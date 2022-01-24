@@ -26,7 +26,7 @@
     "@storybook/addon-actions": "^6.4.10",
     "@storybook/addon-essentials": "^6.4.14",
     "@storybook/addon-interactions": "^6.4.13",
-    "@storybook/addon-links": "^6.4.13",
+    "@storybook/addon-links": "^6.4.14",
     "@storybook/addon-svelte-csf": "^1.1.0",
     "@storybook/jest": "^0.0.5",
     "@storybook/svelte": "^6.4.13",

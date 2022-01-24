@@ -1822,16 +1822,16 @@
     polished "^4.0.5"
     ts-dedent "^2.2.0"
 
-"@storybook/addon-links@^6.4.13":
-  version "6.4.13"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-links/-/addon-links-6.4.13.tgz#fbec1ef4d29a14d6d0dc85c6be473eebad91a31a"
-  integrity sha512-d/uxMZoEjgCRhVvJXYIKJ0VtHARA7p7/oDxBMiexBDGZ2FzZWtq/nejdER539X71JMUkjkaqTs+ekTunZe0eMg==
+"@storybook/addon-links@^6.4.14":
+  version "6.4.14"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-links/-/addon-links-6.4.14.tgz#7dedd5502cf1fecdcfc845e59a10769cb32ec175"
+  integrity sha512-Y+5tdmAdkFzk0OC9wJnHdpVfhq3uqqlrAUFE3QYeof4uL6wLNSr2pl0BzCGQtnTfLs0i0bExXaTP5pZhwSnQoA==
   dependencies:
-    "@storybook/addons" "6.4.13"
-    "@storybook/client-logger" "6.4.13"
-    "@storybook/core-events" "6.4.13"
+    "@storybook/addons" "6.4.14"
+    "@storybook/client-logger" "6.4.14"
+    "@storybook/core-events" "6.4.14"
     "@storybook/csf" "0.0.2--canary.87bc651.0"
-    "@storybook/router" "6.4.13"
+    "@storybook/router" "6.4.14"
     "@types/qs" "^6.9.5"
     core-js "^3.8.2"
     global "^4.4.0"
@@ -2311,7 +2311,7 @@
     core-js "^3.8.2"
     global "^4.4.0"
 
-"@storybook/client-logger@6.4.13", "@storybook/client-logger@^6.4.0":
+"@storybook/client-logger@6.4.13":
   version "6.4.13"
   resolved "https://registry.yarnpkg.com/@storybook/client-logger/-/client-logger-6.4.13.tgz#2467ee13c7f85e9f6c0d9cd64c11ee7a109b060a"
   integrity sha512-VPrrgJRURztXAKTeHOpzKMAHnNupkGApUDNlPIs0Qxyn5gaSiy806q4XPoROno3mVgEe+7Chf86hRiL8pJnlCA==
@@ -2319,7 +2319,7 @@
     core-js "^3.8.2"
     global "^4.4.0"
 
-"@storybook/client-logger@6.4.14":
+"@storybook/client-logger@6.4.14", "@storybook/client-logger@^6.4.0":
   version "6.4.14"
   resolved "https://registry.yarnpkg.com/@storybook/client-logger/-/client-logger-6.4.14.tgz#a7aed982407e4146548f9ac4b3af5eba24cd045e"
   integrity sha512-4VmFWZxhpeiG5fDhfqAyQbCfXZSBKS4fNKf35ABWiHStZRDndxml8K5WFtmOmMvVzjrGQx8HesenYMawK6xo/Q==
