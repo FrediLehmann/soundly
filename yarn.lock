@@ -1804,19 +1804,19 @@
     regenerator-runtime "^0.13.7"
     ts-dedent "^2.0.0"
 
-"@storybook/addon-interactions@^6.4.13":
-  version "6.4.13"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-interactions/-/addon-interactions-6.4.13.tgz#e3db450fd9625726fadcf00857eff121caa207c0"
-  integrity sha512-kZGHgTA1412nD9EMcEZSCKyhuECBmOu/648k+OADTzBqB9QBGH3jsFvlgOuTJjajdWC6gpgbEys4sZNa0X8wiQ==
+"@storybook/addon-interactions@^6.4.14":
+  version "6.4.14"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-interactions/-/addon-interactions-6.4.14.tgz#7915a63d4b5b60b43a1e89607cd788aa3312fe08"
+  integrity sha512-/9YvAk1rEuN5LqG/QsH/Zm1UCoklvxsKP11RY3TpwjEN+dX1lF8fJa8A5/8IVFPMBtRcJqPO1b0lfC8CQjSfpg==
   dependencies:
-    "@storybook/addons" "6.4.13"
-    "@storybook/api" "6.4.13"
-    "@storybook/components" "6.4.13"
-    "@storybook/core-common" "6.4.13"
-    "@storybook/core-events" "6.4.13"
+    "@storybook/addons" "6.4.14"
+    "@storybook/api" "6.4.14"
+    "@storybook/components" "6.4.14"
+    "@storybook/core-common" "6.4.14"
+    "@storybook/core-events" "6.4.14"
     "@storybook/csf" "0.0.2--canary.87bc651.0"
-    "@storybook/instrumenter" "6.4.13"
-    "@storybook/theming" "6.4.13"
+    "@storybook/instrumenter" "6.4.14"
+    "@storybook/theming" "6.4.14"
     global "^4.4.0"
     jest-mock "^27.0.6"
     polished "^4.0.5"
@@ -2757,14 +2757,14 @@
     "@storybook/core-events" "6.4.0-rc.5"
     global "^4.4.0"
 
-"@storybook/instrumenter@6.4.13", "@storybook/instrumenter@^6.4.0":
-  version "6.4.13"
-  resolved "https://registry.yarnpkg.com/@storybook/instrumenter/-/instrumenter-6.4.13.tgz#4528ccedb3949777f249deafc5e7811741c1ebc6"
-  integrity sha512-rfdZ1w+9KTD2nndbNo9SnG1pQJsDqRTkaEfkn47+qHwCukcM+D3HqDSJd2w85iMh/ieiBKn4wJp+4A2oE+dDWQ==
+"@storybook/instrumenter@6.4.14", "@storybook/instrumenter@^6.4.0":
+  version "6.4.14"
+  resolved "https://registry.yarnpkg.com/@storybook/instrumenter/-/instrumenter-6.4.14.tgz#ed8cd0b9c0814fb9fbee5a5040d6beb59f4d057f"
+  integrity sha512-hThUb0qp+yt9EKp0OckP1KmdxR792jyE5jbowW8UH3gAuduP3gsswKfO+V16CIqiiWOIHdkK12w+z3q3rk4xTw==
   dependencies:
-    "@storybook/addons" "6.4.13"
-    "@storybook/client-logger" "6.4.13"
-    "@storybook/core-events" "6.4.13"
+    "@storybook/addons" "6.4.14"
+    "@storybook/client-logger" "6.4.14"
+    "@storybook/core-events" "6.4.14"
     global "^4.4.0"
 
 "@storybook/jest@^0.0.5":
